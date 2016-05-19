@@ -3,15 +3,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'MedievalSharpBold';
-  font-size: 12px;
 }
 
 h1 {
-  padding: 10px;
+  padding: 30px;
   border: 5px double black;
   text-transform: capitalize;
-  font-size: 26px;
-  margin: 10px;
+  font-size: 40px;
+  margin: 40px;
+  height: 60px;
   text-align: center;
   text-shadow: 1px 1px 1px black;
 }
@@ -22,7 +22,7 @@ h1 {
     height: 310px;
     border-radius: 0 0 250px 250px;
     display: block;
-    margin: 20px auto;
+    margin: 54px auto;
     overflow: hidden;
     transition: background-color 2s;
     background: transparent;
@@ -32,15 +32,20 @@ h1 {
 .color-menu, .ordinaries-menu, .ordinaries-color, .icons-menu {
   margin-left: 10px;
   width: 100px;
-  background: black;
+  background-image: url("http://www.fbcabbeville.net/wp-content/uploads/2013/12/fireworks-wallpapers-in-the-dark-wood-texture-backgrounds.jpg") !important;
   float: left;
   display: block;
   list-style: none;
   padding: 10px;
   color: oldlace;
+  box-shadow: inset 2px 2px 1px oldlace;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: inset 2px 2px 1px oldlace;
+  cursor: pointer;
+}
+
+.color-menu {
+  margin-left: 40px;
 }
 
 li {
@@ -50,7 +55,6 @@ li {
   border-radius: 2px;
   margin: 3px;
   background: oldlace;
-  cursor: pointer;
   overflow: hidden;
   font-size: 8px;
   color: black;
@@ -63,30 +67,37 @@ li:hover, li:active {
 
 .gules {
   background: #8b0000 !important;
+  background: linear-gradient(to right, #8b0000, #f10000, darkred) !important;
 }
 
 .azure {
-  background: #000066 !important;
+  background: #bfbfbf066 !important;
+  background: linear-gradient(to right, #000066, #0000cc, #000066) !important;
 }
 
 .vert {
   background: #004d00 !important;
+  background: linear-gradient(to right, #004d00, #00b300, #004d00) !important;
 }
 
 .purpure {
   background: #4d004d !important;
+  background: linear-gradient(to right, #4d004d, #b300b3, #4d004d) !important;
 }
 
 .sable {
   background: #000 !important;
+  background: linear-gradient(to right, #000, #333333, #000) !important;
 }
 
 .argent {
   background: #bfbfbf !important;
+  background: linear-gradient(to right, #bfbfbf, #f1f1f1, #bfbfbf) !important;
 }
 
 .or {
   background: #ccac00 !important;
+  background: linear-gradient(to right, #ccac00, #ffdf33, #ccac00) !important;
 }
 
 
