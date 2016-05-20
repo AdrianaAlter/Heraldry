@@ -83,6 +83,13 @@ var ColorMenu = React.createClass({
   partitionPerPale: function () {
     this.setState({ partition: "per-pale"});
   },
+  partitionPerChevron: function () {
+    this.setState({ partition: "per-chevron"});
+  },
+  partitionPerQuarter: function () {
+    this.setState({ partition: "per-quarter"});
+  },
+
 
   changeHorizontal: function () {
     this.setState({ ordinaries: "fess" })
@@ -165,6 +172,8 @@ var ColorMenu = React.createClass({
         <ul className="partitions-menu">Partition
           <li onClick={this.partitionPerFess}>Per Fess</li>
           <li onClick={this.partitionPerPale}>Per Pale</li>
+          <li onClick={this.partitionPerChevron}>Per Chevron</li>
+          <li onClick={this.partitionPerQuarter}>Quarterly</li>
         </ul>
         <ul className="color-menu">Partition Color
           <li className="gules" onClick={this.partGules}></li>

@@ -158,6 +158,34 @@ li:hover, li:active {
   height: 310px;
 }
 
+.per-chevron {
+  height: 300px;
+  width: 300px;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 4.5%;
+}
+
+.per-quarter {
+  height: 165px;
+  width: 180px;
+  left: -5%;
+  top: -5%;
+
+}
+
+.per-quarter:after {
+  background: inherit;
+  display: block;
+  content: "";
+  position: absolute;
+  height: 164px;
+  width: 164px;
+  top: 100%;
+  left: 100%;
+  border: 1px solid black;
+}
+
 .ordinary {
   position: absolute;
   background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
@@ -166,8 +194,9 @@ li:hover, li:active {
 }
 
 .fess {
-  width: 330px;
+  width: 340px;
   height: 40px;
+  left: -2%;
   top: 44%;
 }
 
@@ -202,8 +231,8 @@ li:hover, li:active {
 }
 
 .canton {
-  height: 120px;
-  width: 120px;
+  height: 83px;
+  width: 83px;
   position: absolute;
 }
 

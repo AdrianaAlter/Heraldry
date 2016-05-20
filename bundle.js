@@ -20266,6 +20266,12 @@
 	  partitionPerPale: function () {
 	    this.setState({ partition: "per-pale" });
 	  },
+	  partitionPerChevron: function () {
+	    this.setState({ partition: "per-chevron" });
+	  },
+	  partitionPerQuarter: function () {
+	    this.setState({ partition: "per-quarter" });
+	  },
 	
 	  changeHorizontal: function () {
 	    this.setState({ ordinaries: "fess" });
@@ -20369,6 +20375,16 @@
 	          'li',
 	          { onClick: this.partitionPerPale },
 	          'Per Pale'
+	        ),
+	        React.createElement(
+	          'li',
+	          { onClick: this.partitionPerChevron },
+	          'Per Chevron'
+	        ),
+	        React.createElement(
+	          'li',
+	          { onClick: this.partitionPerQuarter },
+	          'Quarterly'
 	        )
 	      ),
 	      React.createElement(
