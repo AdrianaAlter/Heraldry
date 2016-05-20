@@ -16,6 +16,16 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 
+button {
+  margin: 10px;
+  padding: 10px;
+  color: oldlace;
+  font-family: 'MedievalSharpBold';
+  border: 6px outset oldlace;
+  border-radius: 4%;
+  background-image: url("http://www.fbcabbeville.net/wp-content/uploads/2013/12/fireworks-wallpapers-in-the-dark-wood-texture-backgrounds.jpg") !important;
+}
+
 .shield {
     position: relative;
     width: 330px;
@@ -171,7 +181,6 @@ li:hover, li:active {
   width: 180px;
   left: -5%;
   top: -5%;
-
 }
 
 .per-quarter:after {
@@ -183,6 +192,26 @@ li:hover, li:active {
   width: 164px;
   top: 100%;
   left: 100%;
+  border: 1px solid black;
+}
+
+.per-saltire {
+  height: 300px;
+  width: 300px;
+  transform: rotate(45deg);
+  top: 66%;
+  left: 4.5%;
+}
+
+.per-saltire:after {
+  background: inherit;
+  display: block;
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  bottom: 65%;
+  left: 4.5%;
   border: 1px solid black;
 }
 
@@ -249,6 +278,25 @@ li:hover, li:active {
   width: 330px;
   bottom: 0;
 }
+
+.cross {
+  width: 340px;
+  height: 40px;
+  left: -2%;
+  top: 44%;
+}
+
+.cross:after {
+  height: 320px;
+  width: 40px;
+  left: 44%;
+  top: -350%;
+  border: 1px solid black;
+  content: "";
+  position: absolute;
+  background: inherit;
+}
+
 
 .icon {
   position: absolute;

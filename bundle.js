@@ -20272,6 +20272,9 @@
 	  partitionPerQuarter: function () {
 	    this.setState({ partition: "per-quarter" });
 	  },
+	  partitionPerSaltire: function () {
+	    this.setState({ partition: "per-saltire" });
+	  },
 	
 	  changeHorizontal: function () {
 	    this.setState({ ordinaries: "fess" });
@@ -20305,6 +20308,10 @@
 	    this.setState({ ordinaries: "base" });
 	  },
 	
+	  changeCross: function () {
+	    this.setState({ ordinaries: "cross" });
+	  },
+	
 	  changeFleur: function () {
 	    this.setState({ icons: "fleur" });
 	  },
@@ -20331,6 +20338,25 @@
 	
 	  changeGate: function () {
 	    this.setState({ icons: "gate" });
+	  },
+	
+	  randomize: function (array) {
+	    var i = Math.floor(Math.random() * (array.length - 0));
+	    return array[i];
+	  },
+	
+	  makeRandom: function () {
+	    var colors = ["gules", "azure", "vert", "sable", "purpure", "argent", "or"];
+	    var partitions = ["per-fess", "per-pale", "per-chevron", "per-quarter", ""];
+	    var ordinaries = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", ""];
+	    var icons = ["fleur", "lion passant", "eagle", "rose", "unicorn", "bow", "gate", ""];
+	
+	    this.setState({ color: this.randomize(colors) });
+	    this.setState({ partition: this.randomize(partitions) });
+	    this.setState({ partitionColor: this.randomize(colors) });
+	    this.setState({ ordinaries: this.randomize(ordinaries) });
+	    this.setState({ ordinariesColor: this.randomize(colors) });
+	    this.setState({ icons: this.randomize(icons) });
 	  },
 	
 	  render: function () {
@@ -20437,6 +20463,11 @@
 	          'li',
 	          { className: 'base-opt', onClick: this.changeBase },
 	          'Base'
+	        ),
+	        React.createElement(
+	          'li',
+	          { className: 'cross-opt', onClick: this.changeCross },
+	          'Cross'
 	        )
 	      ),
 	      React.createElement(
@@ -20469,6 +20500,11 @@
 	        React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
 	        React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
 	        React.createElement('section', { className: "icon " + this.state.icons })
+	      ),
+	      React.createElement(
+	        'button',
+	        { onClick: this.makeRandom },
+	        'RANDOM!'
 	      )
 	    );
 	  }

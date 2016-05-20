@@ -89,6 +89,9 @@ var ColorMenu = React.createClass({
   partitionPerQuarter: function () {
     this.setState({ partition: "per-quarter"});
   },
+  partitionPerSaltire: function () {
+    this.setState({ partition: "per-saltire"});
+  },
 
 
   changeHorizontal: function () {
@@ -123,6 +126,10 @@ var ColorMenu = React.createClass({
     this.setState({ ordinaries: "base" })
   },
 
+  changeCross: function () {
+    this.setState({ ordinaries: "cross" })
+  },
+
   changeFleur: function () {
     this.setState({ icons: "fleur" })
   },
@@ -150,6 +157,26 @@ var ColorMenu = React.createClass({
   changeGate: function () {
     this.setState({ icons: "gate" })
   },
+
+  randomize: function (array) {
+     var i = Math.floor(Math.random() * (array.length - 0));
+     return array[i];
+  },
+
+  makeRandom: function () {
+    var colors = ["gules", "azure", "vert", "sable", "purpure", "argent", "or"];
+    var partitions = ["per-fess", "per-pale", "per-chevron", "per-quarter", ""];
+    var ordinaries = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", ""];
+    var icons = ["fleur", "lion passant", "eagle", "rose", "unicorn", "bow", "gate", ""];
+
+    this.setState({ color: this.randomize(colors)});
+    this.setState({ partition: this.randomize(partitions)});
+    this.setState({ partitionColor: this.randomize(colors)});
+    this.setState({ ordinaries: this.randomize(ordinaries)});
+    this.setState({ ordinariesColor: this.randomize(colors)});
+    this.setState({ icons: this.randomize(icons)});
+  },
+
 
   render: function () {
     var mainColor = this.state.color.length > 0 ? this.state.color : "";
@@ -192,6 +219,7 @@ var ColorMenu = React.createClass({
           <li className="canton-opt" onClick={this.changeCanton}>Canton</li>
           <li className="lozenge-opt" onClick={this.changeLozenge}>Lozenge</li>
           <li className="base-opt" onClick={this.changeBase}>Base</li>
+          <li className="cross-opt" onClick={this.changeCross}>Cross</li>
         </ul>
         <ul className="ordinaries-color">Secondary
           <li className="gules" onClick={this.ordinaryGules}></li>
@@ -216,6 +244,7 @@ var ColorMenu = React.createClass({
           <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
           <section className={"icon " + this.state.icons}></section>
         </section>
+        <button onClick={this.makeRandom}>RANDOM!</button>
       </div>
     )
 
