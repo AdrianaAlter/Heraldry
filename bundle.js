@@ -20190,7 +20190,7 @@
 	  render: function () {
 	    return React.createElement(
 	      'header',
-	      null,
+	      { className: "group" },
 	      'HERALDRY'
 	    );
 	  }
@@ -20210,7 +20210,7 @@
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
+	    return { color: "", partitionMenuDisplayed: false, partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
 	  },
 	
 	  resetColor: function () {
@@ -20410,6 +20410,10 @@
 	    this.setState({ icons: "gate" });
 	  },
 	
+	  togglePartitionDisplay: function () {
+	    this.state.partitionMenuDisplayed ? this.setState({ partitionMenuDisplayed: false }) : this.setState({ partitionMenuDisplayed: true });
+	  },
+	
 	  randomize: function (array) {
 	    var i = Math.floor(Math.random() * (array.length - 0));
 	    return array[i];
@@ -20447,10 +20451,11 @@
 	    var icon = this.state.icons.length > 0 ? ", " + this.state.icons : "";
 	
 	    var iconWithColor = this.state.icons + "-" + this.state.iconColor;
+	    var partitionMenu = this.state.partitionMenuDisplayed ? "partitions-menu" : "hidden";
 	
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'group' },
 	      React.createElement(
 	        'h1',
 	        null,
@@ -20460,158 +20465,207 @@
 	        icon
 	      ),
 	      React.createElement(
-	        'ul',
-	        { className: 'color-menu' },
-	        'Main',
-	        React.createElement('li', { className: 'gules', onClick: this.changeGules }),
-	        React.createElement('li', { className: 'azure', onClick: this.changeAzure }),
-	        React.createElement('li', { className: 'vert', onClick: this.changeVert }),
-	        React.createElement('li', { className: 'purpure', onClick: this.changePurpure }),
-	        React.createElement('li', { className: 'sable', onClick: this.changeSable }),
-	        React.createElement('li', { className: 'argent', onClick: this.changeArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.changeOr }),
-	        React.createElement('li', { onClick: this.resetColor })
+	        'div',
+	        { className: 'shield-div group' },
+	        React.createElement(
+	          'div',
+	          { className: 'inner group' },
+	          React.createElement(
+	            'section',
+	            { className: "shield " + this.state.color },
+	            React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
+	            React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
+	            React.createElement('section', { className: "icon " + iconWithColor })
+	          )
+	        )
 	      ),
 	      React.createElement(
-	        'ul',
-	        { className: 'partitions-menu' },
-	        'Partition',
+	        'div',
+	        { className: 'menu-div group' },
 	        React.createElement(
-	          'li',
-	          { onClick: this.partitionPerFess },
-	          'Per Fess'
+	          'ul',
+	          { className: 'color-menu group' },
+	          React.createElement(
+	            'h2',
+	            null,
+	            'Main Color'
+	          ),
+	          React.createElement('li', { className: 'gules', onClick: this.changeGules }),
+	          React.createElement('li', { className: 'azure', onClick: this.changeAzure }),
+	          React.createElement('li', { className: 'vert', onClick: this.changeVert }),
+	          React.createElement('li', { className: 'purpure', onClick: this.changePurpure }),
+	          React.createElement('li', { className: 'sable', onClick: this.changeSable }),
+	          React.createElement('li', { className: 'argent', onClick: this.changeArgent }),
+	          React.createElement('li', { className: 'or', onClick: this.changeOr }),
+	          React.createElement('li', { onClick: this.resetColor }),
+	          React.createElement(
+	            'button',
+	            { onClick: this.togglePartitionDisplay },
+	            'Partition?'
+	          )
 	        ),
 	        React.createElement(
-	          'li',
-	          { onClick: this.partitionPerPale },
-	          'Per Pale'
+	          'ul',
+	          { className: partitionMenu + " group" },
+	          React.createElement(
+	            'h2',
+	            null,
+	            'Partition'
+	          ),
+	          React.createElement(
+	            'li',
+	            { onClick: this.partitionPerFess },
+	            'Per Fess'
+	          ),
+	          React.createElement(
+	            'li',
+	            { onClick: this.partitionPerPale },
+	            'Per Pale'
+	          ),
+	          React.createElement(
+	            'li',
+	            { onClick: this.partitionPerChevron },
+	            'Per Chevron'
+	          ),
+	          React.createElement(
+	            'li',
+	            { onClick: this.partitionPerQuarter },
+	            'Quarterly'
+	          ),
+	          React.createElement('li', { onClick: this.resetPartition }),
+	          React.createElement(
+	            'ul',
+	            null,
+	            React.createElement(
+	              'h3',
+	              null,
+	              'Partition Color'
+	            ),
+	            React.createElement('li', { className: 'gules', onClick: this.partGules }),
+	            React.createElement('li', { className: 'azure', onClick: this.partAzure }),
+	            React.createElement('li', { className: 'vert', onClick: this.partVert }),
+	            React.createElement('li', { className: 'purpure', onClick: this.partPurpure }),
+	            React.createElement('li', { className: 'sable', onClick: this.partSable }),
+	            React.createElement('li', { className: 'argent', onClick: this.partArgent }),
+	            React.createElement('li', { className: 'or', onClick: this.partOr }),
+	            React.createElement('li', { onClick: this.resetPartitionColor })
+	          )
 	        ),
 	        React.createElement(
-	          'li',
-	          { onClick: this.partitionPerChevron },
-	          'Per Chevron'
+	          'ul',
+	          { className: 'ordinaries-menu group' },
+	          React.createElement(
+	            'h2',
+	            null,
+	            'Ordinary'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'horizontal-opt', onClick: this.changeHorizontal },
+	            'Fess'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'vertical-opt', onClick: this.changeVertical },
+	            'Pale'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'chief-opt', onClick: this.changeChief },
+	            'Chief'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'diagonal-opt', onClick: this.changeDiagonal },
+	            'Bend'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'canton-opt', onClick: this.changeCanton },
+	            'Canton'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'lozenge-opt', onClick: this.changeLozenge },
+	            'Lozenge'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'base-opt', onClick: this.changeBase },
+	            'Base'
+	          ),
+	          React.createElement(
+	            'li',
+	            { className: 'cross-opt', onClick: this.changeCross },
+	            'Cross'
+	          ),
+	          React.createElement('li', { onClick: this.resetOrdinaries }),
+	          React.createElement(
+	            'ul',
+	            null,
+	            React.createElement(
+	              'h3',
+	              null,
+	              'Ordinary Color'
+	            ),
+	            React.createElement('li', { className: 'gules', onClick: this.ordinaryGules }),
+	            React.createElement('li', { className: 'azure', onClick: this.ordinaryAzure }),
+	            React.createElement('li', { className: 'vert', onClick: this.ordinaryVert }),
+	            React.createElement('li', { className: 'purpure', onClick: this.ordinaryPurpure }),
+	            React.createElement('li', { className: 'sable', onClick: this.ordinarySable }),
+	            React.createElement('li', { className: 'argent', onClick: this.ordinaryArgent }),
+	            React.createElement('li', { className: 'or', onClick: this.ordinaryOr }),
+	            React.createElement('li', { onClick: this.resetOrdinariesColor })
+	          )
 	        ),
 	        React.createElement(
-	          'li',
-	          { onClick: this.partitionPerQuarter },
-	          'Quarterly'
-	        ),
-	        React.createElement('li', { onClick: this.resetPartition })
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'color-menu' },
-	        'Partition Color',
-	        React.createElement('li', { className: 'gules', onClick: this.partGules }),
-	        React.createElement('li', { className: 'azure', onClick: this.partAzure }),
-	        React.createElement('li', { className: 'vert', onClick: this.partVert }),
-	        React.createElement('li', { className: 'purpure', onClick: this.partPurpure }),
-	        React.createElement('li', { className: 'sable', onClick: this.partSable }),
-	        React.createElement('li', { className: 'argent', onClick: this.partArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.partOr }),
-	        React.createElement('li', { onClick: this.resetPartitionColor })
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'ordinaries-menu' },
-	        'Ordinary',
-	        React.createElement(
-	          'li',
-	          { className: 'horizontal-opt', onClick: this.changeHorizontal },
-	          'Fess'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'vertical-opt', onClick: this.changeVertical },
-	          'Pale'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'chief-opt', onClick: this.changeChief },
-	          'Chief'
+	          'ul',
+	          { className: 'icons-menu group' },
+	          React.createElement(
+	            'h2',
+	            null,
+	            'Charge'
+	          ),
+	          React.createElement('li', { className: 'fleur', onClick: this.changeFleur }),
+	          React.createElement('li', { className: 'lion', onClick: this.changeLion }),
+	          React.createElement('li', { className: 'eagle', onClick: this.changeEagle }),
+	          React.createElement('li', { className: 'rose', onClick: this.changeRose }),
+	          React.createElement('li', { className: 'unicorn', onClick: this.changeUnicorn }),
+	          React.createElement('li', { className: 'bow', onClick: this.changeBow }),
+	          React.createElement('li', { className: 'gate', onClick: this.changeGate }),
+	          React.createElement('li', { onClick: this.resetIcons }),
+	          React.createElement(
+	            'ul',
+	            null,
+	            React.createElement(
+	              'h3',
+	              null,
+	              'Charge Color'
+	            ),
+	            React.createElement('li', { className: 'gules', onClick: this.iconGules }),
+	            React.createElement('li', { className: 'azure', onClick: this.iconAzure }),
+	            React.createElement('li', { className: 'vert', onClick: this.iconVert }),
+	            React.createElement('li', { className: 'purpure', onClick: this.iconPurpure }),
+	            React.createElement('li', { className: 'sable', onClick: this.iconSable }),
+	            React.createElement('li', { className: 'argent', onClick: this.iconArgent }),
+	            React.createElement('li', { className: 'or', onClick: this.iconOr }),
+	            React.createElement('li', { onClick: this.resetIconColor })
+	          )
 	        ),
 	        React.createElement(
-	          'li',
-	          { className: 'diagonal-opt', onClick: this.changeDiagonal },
-	          'Bend'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'canton-opt', onClick: this.changeCanton },
-	          'Canton'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'lozenge-opt', onClick: this.changeLozenge },
-	          'Lozenge'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'base-opt', onClick: this.changeBase },
-	          'Base'
-	        ),
-	        React.createElement(
-	          'li',
-	          { className: 'cross-opt', onClick: this.changeCross },
-	          'Cross'
-	        ),
-	        React.createElement('li', { onClick: this.resetOrdinaries })
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'ordinaries-color' },
-	        'Secondary',
-	        React.createElement('li', { className: 'gules', onClick: this.ordinaryGules }),
-	        React.createElement('li', { className: 'azure', onClick: this.ordinaryAzure }),
-	        React.createElement('li', { className: 'vert', onClick: this.ordinaryVert }),
-	        React.createElement('li', { className: 'purpure', onClick: this.ordinaryPurpure }),
-	        React.createElement('li', { className: 'sable', onClick: this.ordinarySable }),
-	        React.createElement('li', { className: 'argent', onClick: this.ordinaryArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.ordinaryOr }),
-	        React.createElement('li', { onClick: this.resetOrdinariesColor })
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'icons-menu' },
-	        'Charge',
-	        React.createElement('li', { className: 'fleur', onClick: this.changeFleur }),
-	        React.createElement('li', { className: 'lion', onClick: this.changeLion }),
-	        React.createElement('li', { className: 'eagle', onClick: this.changeEagle }),
-	        React.createElement('li', { className: 'rose', onClick: this.changeRose }),
-	        React.createElement('li', { className: 'unicorn', onClick: this.changeUnicorn }),
-	        React.createElement('li', { className: 'bow', onClick: this.changeBow }),
-	        React.createElement('li', { className: 'gate', onClick: this.changeGate }),
-	        React.createElement('li', { onClick: this.resetIcons })
-	      ),
-	      React.createElement(
-	        'ul',
-	        { className: 'icons-color' },
-	        'Charge Color',
-	        React.createElement('li', { className: 'gules', onClick: this.iconGules }),
-	        React.createElement('li', { className: 'azure', onClick: this.iconAzure }),
-	        React.createElement('li', { className: 'vert', onClick: this.iconVert }),
-	        React.createElement('li', { className: 'purpure', onClick: this.iconPurpure }),
-	        React.createElement('li', { className: 'sable', onClick: this.iconSable }),
-	        React.createElement('li', { className: 'argent', onClick: this.iconArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.iconOr }),
-	        React.createElement('li', { onClick: this.resetIconColor })
-	      ),
-	      React.createElement(
-	        'section',
-	        { className: "shield " + this.state.color },
-	        React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
-	        React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
-	        React.createElement('section', { className: "icon " + iconWithColor })
-	      ),
-	      React.createElement(
-	        'button',
-	        { onClick: this.makeRandom },
-	        'RANDOM!'
-	      ),
-	      React.createElement(
-	        'button',
-	        { onClick: this.resetAll },
-	        'RESET'
+	          'div',
+	          { className: 'buttons group' },
+	          React.createElement(
+	            'button',
+	            { onClick: this.makeRandom },
+	            'RANDOM'
+	          ),
+	          React.createElement(
+	            'button',
+	            { onClick: this.resetAll },
+	            'RESET'
+	          )
+	        )
 	      )
 	    );
 	  }

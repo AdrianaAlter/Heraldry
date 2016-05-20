@@ -4,7 +4,7 @@ var Shield = require('./shield.jsx');
 
 var ColorMenu = React.createClass({
   getInitialState: function () {
-      return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
+      return { color: "", partitionMenuDisplayed: false, partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
   },
 
   resetColor: function () {
@@ -205,6 +205,10 @@ var ColorMenu = React.createClass({
     this.setState({ icons: "gate" })
   },
 
+  togglePartitionDisplay: function () {
+    this.state.partitionMenuDisplayed ? this.setState({ partitionMenuDisplayed: false}) : this.setState({ partitionMenuDisplayed: true });
+  },
+
   randomize: function (array) {
      var i = Math.floor(Math.random() * (array.length - 0));
      return array[i];
@@ -243,85 +247,97 @@ var ColorMenu = React.createClass({
     var icon = this.state.icons.length > 0 ? ", " + this.state.icons : "";
 
     var iconWithColor = this.state.icons + "-" + this.state.iconColor;
+    var partitionMenu = this.state.partitionMenuDisplayed ? "partitions-menu" : "hidden";
+
 
     return(
-      <div>
+      <div className="group">
         <h1>{mainColor}{ordinary}{ordinaryColor}{icon}</h1>
-        <ul className="color-menu">Main
-          <li className="gules" onClick={this.changeGules}></li>
-          <li className="azure" onClick={this.changeAzure}></li>
-          <li className="vert" onClick={this.changeVert}></li>
-          <li className="purpure" onClick={this.changePurpure}></li>
-          <li className="sable" onClick={this.changeSable}></li>
-          <li className="argent" onClick={this.changeArgent}></li>
-          <li className="or" onClick={this.changeOr}></li>
-          <li onClick={this.resetColor}></li>
-        </ul>
-        <ul className="partitions-menu">Partition
-          <li onClick={this.partitionPerFess}>Per Fess</li>
-          <li onClick={this.partitionPerPale}>Per Pale</li>
-          <li onClick={this.partitionPerChevron}>Per Chevron</li>
-          <li onClick={this.partitionPerQuarter}>Quarterly</li>
-          <li onClick={this.resetPartition}></li>
-        </ul>
-        <ul className="color-menu">Partition Color
-          <li className="gules" onClick={this.partGules}></li>
-          <li className="azure" onClick={this.partAzure}></li>
-          <li className="vert" onClick={this.partVert}></li>
-          <li className="purpure" onClick={this.partPurpure}></li>
-          <li className="sable" onClick={this.partSable}></li>
-          <li className="argent" onClick={this.partArgent}></li>
-          <li className="or" onClick={this.partOr}></li>
-          <li onClick={this.resetPartitionColor}></li>
-        </ul>
-        <ul className="ordinaries-menu">Ordinary
-          <li className="horizontal-opt" onClick={this.changeHorizontal}>Fess</li>
-          <li className="vertical-opt" onClick={this.changeVertical}>Pale</li>
-          <li className="chief-opt" onClick={this.changeChief}>Chief</li>
-          <li className="diagonal-opt" onClick={this.changeDiagonal}>Bend</li>
-          <li className="canton-opt" onClick={this.changeCanton}>Canton</li>
-          <li className="lozenge-opt" onClick={this.changeLozenge}>Lozenge</li>
-          <li className="base-opt" onClick={this.changeBase}>Base</li>
-          <li className="cross-opt" onClick={this.changeCross}>Cross</li>
-          <li onClick={this.resetOrdinaries}></li>
-        </ul>
-        <ul className="ordinaries-color">Secondary
-          <li className="gules" onClick={this.ordinaryGules}></li>
-          <li className="azure" onClick={this.ordinaryAzure}></li>
-          <li className="vert" onClick={this.ordinaryVert}></li>
-          <li className="purpure" onClick={this.ordinaryPurpure}></li>
-          <li className="sable" onClick={this.ordinarySable}></li>
-          <li className="argent" onClick={this.ordinaryArgent}></li>
-          <li className="or" onClick={this.ordinaryOr}></li>
-          <li onClick={this.resetOrdinariesColor}></li>
-        </ul>
-        <ul className="icons-menu">Charge
-          <li className="fleur" onClick={this.changeFleur}></li>
-          <li className="lion" onClick={this.changeLion}></li>
-          <li className="eagle" onClick={this.changeEagle}></li>
-          <li className="rose" onClick={this.changeRose}></li>
-          <li className="unicorn" onClick={this.changeUnicorn}></li>
-          <li className="bow" onClick={this.changeBow}></li>
-          <li className="gate" onClick={this.changeGate}></li>
-          <li onClick={this.resetIcons}></li>
-        </ul>
-        <ul className="icons-color">Charge Color
-          <li className="gules" onClick={this.iconGules}></li>
-          <li className="azure" onClick={this.iconAzure}></li>
-          <li className="vert" onClick={this.iconVert}></li>
-          <li className="purpure" onClick={this.iconPurpure}></li>
-          <li className="sable" onClick={this.iconSable}></li>
-          <li className="argent" onClick={this.iconArgent}></li>
-          <li className="or" onClick={this.iconOr}></li>
-          <li onClick={this.resetIconColor}></li>
-        </ul>
-        <section className={"shield " + this.state.color}>
-          <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
-          <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
-          <section className={"icon " + iconWithColor}></section>
-        </section>
-        <button onClick={this.makeRandom}>RANDOM!</button>
-        <button onClick={this.resetAll}>RESET</button>
+          <div className="shield-div group">
+            <div className="inner group">
+                <section className={"shield " + this.state.color}>
+                  <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
+                  <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
+                  <section className={"icon " + iconWithColor}></section>
+                </section>
+              </div>
+          </div>
+        <div className="menu-div group">
+          <ul className="color-menu group">
+            <h2>Main Color</h2>
+            <li className="gules" onClick={this.changeGules}></li>
+            <li className="azure" onClick={this.changeAzure}></li>
+            <li className="vert" onClick={this.changeVert}></li>
+            <li className="purpure" onClick={this.changePurpure}></li>
+            <li className="sable" onClick={this.changeSable}></li>
+            <li className="argent" onClick={this.changeArgent}></li>
+            <li className="or" onClick={this.changeOr}></li>
+            <li onClick={this.resetColor}></li>
+            <button onClick={this.togglePartitionDisplay}>Partition?</button>
+          </ul>
+          <ul className={partitionMenu + " group"}>
+            <h2>Partition</h2>
+            <li onClick={this.partitionPerFess}>Per Fess</li>
+            <li onClick={this.partitionPerPale}>Per Pale</li>
+            <li onClick={this.partitionPerChevron}>Per Chevron</li>
+            <li onClick={this.partitionPerQuarter}>Quarterly</li>
+            <li onClick={this.resetPartition}></li>
+            <ul><h3>Partition Color</h3>
+            <li className="gules" onClick={this.partGules}></li>
+            <li className="azure" onClick={this.partAzure}></li>
+            <li className="vert" onClick={this.partVert}></li>
+            <li className="purpure" onClick={this.partPurpure}></li>
+            <li className="sable" onClick={this.partSable}></li>
+            <li className="argent" onClick={this.partArgent}></li>
+            <li className="or" onClick={this.partOr}></li>
+            <li onClick={this.resetPartitionColor}></li></ul>
+          </ul>
+          <ul className="ordinaries-menu group">
+            <h2>Ordinary</h2>
+            <li className="horizontal-opt" onClick={this.changeHorizontal}>Fess</li>
+            <li className="vertical-opt" onClick={this.changeVertical}>Pale</li>
+            <li className="chief-opt" onClick={this.changeChief}>Chief</li>
+            <li className="diagonal-opt" onClick={this.changeDiagonal}>Bend</li>
+            <li className="canton-opt" onClick={this.changeCanton}>Canton</li>
+            <li className="lozenge-opt" onClick={this.changeLozenge}>Lozenge</li>
+            <li className="base-opt" onClick={this.changeBase}>Base</li>
+            <li className="cross-opt" onClick={this.changeCross}>Cross</li>
+            <li onClick={this.resetOrdinaries}></li>
+            <ul><h3>Ordinary Color</h3>
+            <li className="gules" onClick={this.ordinaryGules}></li>
+            <li className="azure" onClick={this.ordinaryAzure}></li>
+            <li className="vert" onClick={this.ordinaryVert}></li>
+            <li className="purpure" onClick={this.ordinaryPurpure}></li>
+            <li className="sable" onClick={this.ordinarySable}></li>
+            <li className="argent" onClick={this.ordinaryArgent}></li>
+            <li className="or" onClick={this.ordinaryOr}></li>
+            <li onClick={this.resetOrdinariesColor}></li></ul>
+          </ul>
+          <ul className="icons-menu group">
+            <h2>Charge</h2>
+            <li className="fleur" onClick={this.changeFleur}></li>
+            <li className="lion" onClick={this.changeLion}></li>
+            <li className="eagle" onClick={this.changeEagle}></li>
+            <li className="rose" onClick={this.changeRose}></li>
+            <li className="unicorn" onClick={this.changeUnicorn}></li>
+            <li className="bow" onClick={this.changeBow}></li>
+            <li className="gate" onClick={this.changeGate}></li>
+            <li onClick={this.resetIcons}></li>
+            <ul><h3>Charge Color</h3>
+            <li className="gules" onClick={this.iconGules}></li>
+            <li className="azure" onClick={this.iconAzure}></li>
+            <li className="vert" onClick={this.iconVert}></li>
+            <li className="purpure" onClick={this.iconPurpure}></li>
+            <li className="sable" onClick={this.iconSable}></li>
+            <li className="argent" onClick={this.iconArgent}></li>
+            <li className="or" onClick={this.iconOr}></li>
+            <li onClick={this.resetIconColor}></li></ul>
+          </ul>
+          <div className="buttons group">
+            <button onClick={this.makeRandom}>RANDOM</button>
+            <button onClick={this.resetAll}>RESET</button>
+          </div>
+        </div>
       </div>
     )
 

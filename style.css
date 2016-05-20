@@ -2,14 +2,15 @@ html, body {
   background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'MedievalSharpBold';
+  font-family: 'MedievalSharpBold' !important;
   padding: 0;
   margin: 0;
 }
 
 header {
+  display: none;
   height: 40px;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
   margin: auto;
   background: linear-gradient(#8b0000, #f10000, #8b0000);
@@ -17,23 +18,49 @@ header {
   font-size: 36px;
   color: oldlace;
   text-shadow: 1px 1px 1px black;
+  position: relative;
 }
 
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header:before {
+  content: "";
+  display: none;
+  float: left;
+  background-image: url("./images/knight.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: 40%;
+  margin: auto !important;
+  height: 50px;
+  width: 50px;
+
+}
+
+.hidden {
+  display: none !important;
+}
 
 h1 {
   padding: 30px;
-  border: 5px double black;
+  border: 3px solid #8b0000;
   text-transform: capitalize;
   font-size: 40px;
-  margin: 40px;
+  margin: 20px 10px;
   height: 60px;
   text-align: center;
   text-shadow: 1px 1px 1px black;
 }
 
 button {
-  margin: 10px;
-  padding: 10px;
+  margin: 4px;
+  padding: 8px 5px;
   color: oldlace;
   font-family: 'MedievalSharpBold';
   border: 6px outset oldlace;
@@ -42,44 +69,98 @@ button {
 }
 
 .shield {
+    display: block;
+    float: right;
     position: relative;
     width: 330px;
     height: 310px;
     border-radius: 0 0 250px 250px;
     display: block;
-    margin: 54px auto;
     overflow: hidden;
     transition: background-color 2s;
-    background: transparent;
+    background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
     border: 1px solid black;
-  }
+}
 
-ul, .color-menu, .ordinaries-menu, .ordinaries-color, .icons-menu {
-  margin-left: 10px;
-  width: 100px;
+ul {
+  margin: 10px 10px 0 10px;
   background-image: url("http://www.fbcabbeville.net/wp-content/uploads/2013/12/fireworks-wallpapers-in-the-dark-wood-texture-backgrounds.jpg") !important;
   float: left;
   display: block;
   list-style: none;
-  padding: 10px;
+  padding: 4px 12px 8px 12px;
   color: oldlace;
   box-shadow: inset 2px 2px 1px oldlace;
   border-radius: 2px;
-  overflow: hidden;
-  cursor: pointer !important;
-  overflow-y: scroll;
 }
 
-.color-menu {
-  margin-left: 40px;
+ul > h2, ul > h3 {
+  font-family: 'MedievalSharpBold' !important;
+  margin: 4px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+ul > h3 {
+  border-top: 1px solid oldlace;
+  border-bottom: 1px solid oldlace;
+}
+
+ul > ul {
+  box-shadow: none;
+  font-family: 'MedievalSharpBold' !important;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-div {
+  float: left;
+  width: 38%;
+}
+.divider {
+  background-image: url("./images/divider.png");
+  background-size: contain;
+  border: 1px solid blue;
+  width: 20px;
+
+  height: 700px;
+  display: none;
+  float: left;
+}
+.shield-div {
+  display: block;
+  height: 0;
+  width: 0;
+  float: right;
+  border-left: 1px solid #8b0000;
+  background-image: url("./images/frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 360px;
+  position: relative;
+}
+
+.inner {
+  background: transparent;
+  position: absolute;
+  padding: 10px;
+  top: 27%;
+  left: 25.5%;
+}
+
+.buttons {
+  margin: 16px 8px;
 }
 
 li {
-  padding: 4px;
-  height: 32px;
-  width: 32px;
+  padding: 3px;
+  display: block;
+  float: left;
+  height: 20px;
+  width: 20px;
   border-radius: 2px;
-  margin: 3px;
+  margin: 4px;
   background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
   background: oldlace;
   overflow: hidden;
@@ -90,6 +171,7 @@ li {
 
 li:hover, li:active {
   border: 5px inset oldlace;
+  cursor: pointer;
 }
 
 .gules {
