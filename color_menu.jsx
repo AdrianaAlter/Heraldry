@@ -4,7 +4,29 @@ var Shield = require('./shield.jsx');
 
 var ColorMenu = React.createClass({
   getInitialState: function () {
-      return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "" };
+      return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
+  },
+
+  resetColor: function () {
+    this.setState({ color: "" })
+  },
+  resetPartition: function () {
+    this.setState({ partition: "" })
+  },
+  resetPartitionColor: function () {
+    this.setState({ partitionColor: "" })
+  },
+  resetOrdinaries: function () {
+    this.setState({ ordinaries: "" })
+  },
+  resetOrdinariesColor: function () {
+    this.setState({ ordinariesColor: "" })
+  },
+  resetIcons: function () {
+    this.setState({ icons: "" })
+  },
+  resetIconColor: function () {
+    this.setState({ iconColor: "sable" })
   },
 
   changeGules: function () {
@@ -16,6 +38,9 @@ var ColorMenu = React.createClass({
   partGules: function () {
     this.setState({ partitionColor: "gules" });
   },
+  iconGules: function () {
+    this.setState({ iconColor: "gules" });
+  },
 
   changeAzure: function () {
     this.setState({ color: "azure" });
@@ -25,6 +50,9 @@ var ColorMenu = React.createClass({
   },
   partAzure: function () {
     this.setState({ partitionColor: "azure" });
+  },
+  iconAzure: function () {
+    this.setState({ iconColor: "azure" });
   },
 
   changeVert: function () {
@@ -36,6 +64,9 @@ var ColorMenu = React.createClass({
   partVert: function () {
     this.setState({ partitionColor: "vert" });
   },
+  iconVert: function () {
+    this.setState({ iconColor: "vert" });
+  },
 
   changePurpure: function () {
     this.setState({ color: "purpure" });
@@ -45,6 +76,9 @@ var ColorMenu = React.createClass({
   },
   partPurpure: function () {
     this.setState({ partitionColor: "purpure" });
+  },
+  iconPurpure: function () {
+    this.setState({ iconColor: "purpure" });
   },
 
   changeSable: function () {
@@ -56,6 +90,9 @@ var ColorMenu = React.createClass({
   partSable: function () {
     this.setState({ partitionColor: "sable" });
   },
+  iconSable: function () {
+    this.setState({ iconColor: "sable" });
+  },
 
   changeArgent: function () {
     this.setState({ color: "argent" })
@@ -66,6 +103,9 @@ var ColorMenu = React.createClass({
   partArgent: function () {
     this.setState({ partitionColor: "argent" });
   },
+  iconArgent: function () {
+    this.setState({ iconColor: "argent" });
+  },
 
   changeOr: function () {
     this.setState({ color: "or" })
@@ -75,6 +115,9 @@ var ColorMenu = React.createClass({
   },
   partOr: function () {
     this.setState({ partitionColor: "or" })
+  },
+  iconOr: function () {
+    this.setState({ iconColor: "or" })
   },
 
   partitionPerFess: function () {
@@ -130,12 +173,16 @@ var ColorMenu = React.createClass({
     this.setState({ ordinaries: "cross" })
   },
 
+  changeChevron: function () {
+    this.setState({ ordinaries: "chevron" })
+  },
+
   changeFleur: function () {
     this.setState({ icons: "fleur" })
   },
 
   changeLion: function () {
-    this.setState({ icons: "lion passant" })
+    this.setState({ icons: "lion" })
   },
 
   changeEagle: function () {
@@ -167,7 +214,7 @@ var ColorMenu = React.createClass({
     var colors = ["gules", "azure", "vert", "sable", "purpure", "argent", "or"];
     var partitions = ["per-fess", "per-pale", "per-chevron", "per-quarter", ""];
     var ordinaries = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", ""];
-    var icons = ["fleur", "lion passant", "eagle", "rose", "unicorn", "bow", "gate", ""];
+    var icons = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", ""];
 
     this.setState({ color: this.randomize(colors)});
     this.setState({ partition: this.randomize(partitions)});
@@ -175,6 +222,17 @@ var ColorMenu = React.createClass({
     this.setState({ ordinaries: this.randomize(ordinaries)});
     this.setState({ ordinariesColor: this.randomize(colors)});
     this.setState({ icons: this.randomize(icons)});
+    this.setState({ iconColor: this.randomize(colors)});
+  },
+
+  resetAll: function () {
+    this.setState({ color: "" });
+    this.setState({ partition: "" });
+    this.setState({ partitionColor: "" });
+    this.setState({ ordinaries: "" });
+    this.setState({ ordinariesColor: "" });
+    this.setState({ icons: "" });
+    this.setState({ iconColor: "sable" });
   },
 
 
@@ -183,6 +241,8 @@ var ColorMenu = React.createClass({
     var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
     var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
     var icon = this.state.icons.length > 0 ? ", " + this.state.icons : "";
+
+    var iconWithColor = this.state.icons + "-" + this.state.iconColor;
 
     return(
       <div>
@@ -195,12 +255,14 @@ var ColorMenu = React.createClass({
           <li className="sable" onClick={this.changeSable}></li>
           <li className="argent" onClick={this.changeArgent}></li>
           <li className="or" onClick={this.changeOr}></li>
+          <li onClick={this.resetColor}></li>
         </ul>
         <ul className="partitions-menu">Partition
           <li onClick={this.partitionPerFess}>Per Fess</li>
           <li onClick={this.partitionPerPale}>Per Pale</li>
           <li onClick={this.partitionPerChevron}>Per Chevron</li>
           <li onClick={this.partitionPerQuarter}>Quarterly</li>
+          <li onClick={this.resetPartition}></li>
         </ul>
         <ul className="color-menu">Partition Color
           <li className="gules" onClick={this.partGules}></li>
@@ -210,6 +272,7 @@ var ColorMenu = React.createClass({
           <li className="sable" onClick={this.partSable}></li>
           <li className="argent" onClick={this.partArgent}></li>
           <li className="or" onClick={this.partOr}></li>
+          <li onClick={this.resetPartitionColor}></li>
         </ul>
         <ul className="ordinaries-menu">Ordinary
           <li className="horizontal-opt" onClick={this.changeHorizontal}>Fess</li>
@@ -220,6 +283,7 @@ var ColorMenu = React.createClass({
           <li className="lozenge-opt" onClick={this.changeLozenge}>Lozenge</li>
           <li className="base-opt" onClick={this.changeBase}>Base</li>
           <li className="cross-opt" onClick={this.changeCross}>Cross</li>
+          <li onClick={this.resetOrdinaries}></li>
         </ul>
         <ul className="ordinaries-color">Secondary
           <li className="gules" onClick={this.ordinaryGules}></li>
@@ -229,6 +293,7 @@ var ColorMenu = React.createClass({
           <li className="sable" onClick={this.ordinarySable}></li>
           <li className="argent" onClick={this.ordinaryArgent}></li>
           <li className="or" onClick={this.ordinaryOr}></li>
+          <li onClick={this.resetOrdinariesColor}></li>
         </ul>
         <ul className="icons-menu">Charge
           <li className="fleur" onClick={this.changeFleur}></li>
@@ -238,13 +303,25 @@ var ColorMenu = React.createClass({
           <li className="unicorn" onClick={this.changeUnicorn}></li>
           <li className="bow" onClick={this.changeBow}></li>
           <li className="gate" onClick={this.changeGate}></li>
+          <li onClick={this.resetIcons}></li>
+        </ul>
+        <ul className="icons-color">Charge Color
+          <li className="gules" onClick={this.iconGules}></li>
+          <li className="azure" onClick={this.iconAzure}></li>
+          <li className="vert" onClick={this.iconVert}></li>
+          <li className="purpure" onClick={this.iconPurpure}></li>
+          <li className="sable" onClick={this.iconSable}></li>
+          <li className="argent" onClick={this.iconArgent}></li>
+          <li className="or" onClick={this.iconOr}></li>
+          <li onClick={this.resetIconColor}></li>
         </ul>
         <section className={"shield " + this.state.color}>
           <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
           <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
-          <section className={"icon " + this.state.icons}></section>
+          <section className={"icon " + iconWithColor}></section>
         </section>
         <button onClick={this.makeRandom}>RANDOM!</button>
+        <button onClick={this.resetAll}>RESET</button>
       </div>
     )
 

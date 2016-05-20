@@ -47,7 +47,8 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
 	var Shield = __webpack_require__(168);
-	var ColorMenu = __webpack_require__(169);
+	var Header = __webpack_require__(169);
+	var ColorMenu = __webpack_require__(170);
 	
 	var App = React.createClass({
 	  displayName: 'App',
@@ -56,6 +57,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement(Header, null),
 	      React.createElement(ColorMenu, null)
 	    );
 	  }
@@ -20181,13 +20183,56 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
+	
+	var Header = React.createClass({
+	  displayName: 'Header',
+	
+	  render: function () {
+	    return React.createElement(
+	      'header',
+	      null,
+	      'HERALDRY'
+	    );
+	  }
+	});
+	
+	module.exports = Header;
+
+/***/ },
+/* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
 	var Shield = __webpack_require__(168);
 	
 	var ColorMenu = React.createClass({
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "" };
+	    return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
+	  },
+	
+	  resetColor: function () {
+	    this.setState({ color: "" });
+	  },
+	  resetPartition: function () {
+	    this.setState({ partition: "" });
+	  },
+	  resetPartitionColor: function () {
+	    this.setState({ partitionColor: "" });
+	  },
+	  resetOrdinaries: function () {
+	    this.setState({ ordinaries: "" });
+	  },
+	  resetOrdinariesColor: function () {
+	    this.setState({ ordinariesColor: "" });
+	  },
+	  resetIcons: function () {
+	    this.setState({ icons: "" });
+	  },
+	  resetIconColor: function () {
+	    this.setState({ iconColor: "sable" });
 	  },
 	
 	  changeGules: function () {
@@ -20199,6 +20244,9 @@
 	  partGules: function () {
 	    this.setState({ partitionColor: "gules" });
 	  },
+	  iconGules: function () {
+	    this.setState({ iconColor: "gules" });
+	  },
 	
 	  changeAzure: function () {
 	    this.setState({ color: "azure" });
@@ -20208,6 +20256,9 @@
 	  },
 	  partAzure: function () {
 	    this.setState({ partitionColor: "azure" });
+	  },
+	  iconAzure: function () {
+	    this.setState({ iconColor: "azure" });
 	  },
 	
 	  changeVert: function () {
@@ -20219,6 +20270,9 @@
 	  partVert: function () {
 	    this.setState({ partitionColor: "vert" });
 	  },
+	  iconVert: function () {
+	    this.setState({ iconColor: "vert" });
+	  },
 	
 	  changePurpure: function () {
 	    this.setState({ color: "purpure" });
@@ -20228,6 +20282,9 @@
 	  },
 	  partPurpure: function () {
 	    this.setState({ partitionColor: "purpure" });
+	  },
+	  iconPurpure: function () {
+	    this.setState({ iconColor: "purpure" });
 	  },
 	
 	  changeSable: function () {
@@ -20239,6 +20296,9 @@
 	  partSable: function () {
 	    this.setState({ partitionColor: "sable" });
 	  },
+	  iconSable: function () {
+	    this.setState({ iconColor: "sable" });
+	  },
 	
 	  changeArgent: function () {
 	    this.setState({ color: "argent" });
@@ -20249,6 +20309,9 @@
 	  partArgent: function () {
 	    this.setState({ partitionColor: "argent" });
 	  },
+	  iconArgent: function () {
+	    this.setState({ iconColor: "argent" });
+	  },
 	
 	  changeOr: function () {
 	    this.setState({ color: "or" });
@@ -20258,6 +20321,9 @@
 	  },
 	  partOr: function () {
 	    this.setState({ partitionColor: "or" });
+	  },
+	  iconOr: function () {
+	    this.setState({ iconColor: "or" });
 	  },
 	
 	  partitionPerFess: function () {
@@ -20312,12 +20378,16 @@
 	    this.setState({ ordinaries: "cross" });
 	  },
 	
+	  changeChevron: function () {
+	    this.setState({ ordinaries: "chevron" });
+	  },
+	
 	  changeFleur: function () {
 	    this.setState({ icons: "fleur" });
 	  },
 	
 	  changeLion: function () {
-	    this.setState({ icons: "lion passant" });
+	    this.setState({ icons: "lion" });
 	  },
 	
 	  changeEagle: function () {
@@ -20349,7 +20419,7 @@
 	    var colors = ["gules", "azure", "vert", "sable", "purpure", "argent", "or"];
 	    var partitions = ["per-fess", "per-pale", "per-chevron", "per-quarter", ""];
 	    var ordinaries = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", ""];
-	    var icons = ["fleur", "lion passant", "eagle", "rose", "unicorn", "bow", "gate", ""];
+	    var icons = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", ""];
 	
 	    this.setState({ color: this.randomize(colors) });
 	    this.setState({ partition: this.randomize(partitions) });
@@ -20357,6 +20427,17 @@
 	    this.setState({ ordinaries: this.randomize(ordinaries) });
 	    this.setState({ ordinariesColor: this.randomize(colors) });
 	    this.setState({ icons: this.randomize(icons) });
+	    this.setState({ iconColor: this.randomize(colors) });
+	  },
+	
+	  resetAll: function () {
+	    this.setState({ color: "" });
+	    this.setState({ partition: "" });
+	    this.setState({ partitionColor: "" });
+	    this.setState({ ordinaries: "" });
+	    this.setState({ ordinariesColor: "" });
+	    this.setState({ icons: "" });
+	    this.setState({ iconColor: "sable" });
 	  },
 	
 	  render: function () {
@@ -20364,6 +20445,8 @@
 	    var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
 	    var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
 	    var icon = this.state.icons.length > 0 ? ", " + this.state.icons : "";
+	
+	    var iconWithColor = this.state.icons + "-" + this.state.iconColor;
 	
 	    return React.createElement(
 	      'div',
@@ -20386,7 +20469,8 @@
 	        React.createElement('li', { className: 'purpure', onClick: this.changePurpure }),
 	        React.createElement('li', { className: 'sable', onClick: this.changeSable }),
 	        React.createElement('li', { className: 'argent', onClick: this.changeArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.changeOr })
+	        React.createElement('li', { className: 'or', onClick: this.changeOr }),
+	        React.createElement('li', { onClick: this.resetColor })
 	      ),
 	      React.createElement(
 	        'ul',
@@ -20411,7 +20495,8 @@
 	          'li',
 	          { onClick: this.partitionPerQuarter },
 	          'Quarterly'
-	        )
+	        ),
+	        React.createElement('li', { onClick: this.resetPartition })
 	      ),
 	      React.createElement(
 	        'ul',
@@ -20423,7 +20508,8 @@
 	        React.createElement('li', { className: 'purpure', onClick: this.partPurpure }),
 	        React.createElement('li', { className: 'sable', onClick: this.partSable }),
 	        React.createElement('li', { className: 'argent', onClick: this.partArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.partOr })
+	        React.createElement('li', { className: 'or', onClick: this.partOr }),
+	        React.createElement('li', { onClick: this.resetPartitionColor })
 	      ),
 	      React.createElement(
 	        'ul',
@@ -20468,7 +20554,8 @@
 	          'li',
 	          { className: 'cross-opt', onClick: this.changeCross },
 	          'Cross'
-	        )
+	        ),
+	        React.createElement('li', { onClick: this.resetOrdinaries })
 	      ),
 	      React.createElement(
 	        'ul',
@@ -20480,7 +20567,8 @@
 	        React.createElement('li', { className: 'purpure', onClick: this.ordinaryPurpure }),
 	        React.createElement('li', { className: 'sable', onClick: this.ordinarySable }),
 	        React.createElement('li', { className: 'argent', onClick: this.ordinaryArgent }),
-	        React.createElement('li', { className: 'or', onClick: this.ordinaryOr })
+	        React.createElement('li', { className: 'or', onClick: this.ordinaryOr }),
+	        React.createElement('li', { onClick: this.resetOrdinariesColor })
 	      ),
 	      React.createElement(
 	        'ul',
@@ -20492,19 +20580,38 @@
 	        React.createElement('li', { className: 'rose', onClick: this.changeRose }),
 	        React.createElement('li', { className: 'unicorn', onClick: this.changeUnicorn }),
 	        React.createElement('li', { className: 'bow', onClick: this.changeBow }),
-	        React.createElement('li', { className: 'gate', onClick: this.changeGate })
+	        React.createElement('li', { className: 'gate', onClick: this.changeGate }),
+	        React.createElement('li', { onClick: this.resetIcons })
+	      ),
+	      React.createElement(
+	        'ul',
+	        { className: 'icons-color' },
+	        'Charge Color',
+	        React.createElement('li', { className: 'gules', onClick: this.iconGules }),
+	        React.createElement('li', { className: 'azure', onClick: this.iconAzure }),
+	        React.createElement('li', { className: 'vert', onClick: this.iconVert }),
+	        React.createElement('li', { className: 'purpure', onClick: this.iconPurpure }),
+	        React.createElement('li', { className: 'sable', onClick: this.iconSable }),
+	        React.createElement('li', { className: 'argent', onClick: this.iconArgent }),
+	        React.createElement('li', { className: 'or', onClick: this.iconOr }),
+	        React.createElement('li', { onClick: this.resetIconColor })
 	      ),
 	      React.createElement(
 	        'section',
 	        { className: "shield " + this.state.color },
 	        React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
 	        React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
-	        React.createElement('section', { className: "icon " + this.state.icons })
+	        React.createElement('section', { className: "icon " + iconWithColor })
 	      ),
 	      React.createElement(
 	        'button',
 	        { onClick: this.makeRandom },
 	        'RANDOM!'
+	      ),
+	      React.createElement(
+	        'button',
+	        { onClick: this.resetAll },
+	        'RESET'
 	      )
 	    );
 	  }

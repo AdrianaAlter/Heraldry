@@ -1,9 +1,24 @@
-html {
+html, body {
   background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'MedievalSharpBold';
+  padding: 0;
+  margin: 0;
 }
+
+header {
+  height: 40px;
+  padding: 10px;
+  margin: 0;
+  margin: auto;
+  background: linear-gradient(#8b0000, #f10000, #8b0000);
+  text-align: center;
+  font-size: 36px;
+  color: oldlace;
+  text-shadow: 1px 1px 1px black;
+}
+
 
 h1 {
   padding: 30px;
@@ -65,6 +80,7 @@ li {
   width: 32px;
   border-radius: 2px;
   margin: 3px;
+  background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
   background: oldlace;
   overflow: hidden;
   font-size: 8px;
@@ -77,22 +93,22 @@ li:hover, li:active {
 }
 
 .gules {
-  background: #8b0000 !important;
-  background: linear-gradient(to right, #8b0000, #f10000, darkred) !important;
+  background: #be0000 !important;
+  background: linear-gradient(to right, #8b0000, #f10000, #8b0000) !important;
 }
 
 .azure {
-  background: #bfbfbf066 !important;
+  background: #000099;
   background: linear-gradient(to right, #000066, #0000cc, #000066) !important;
 }
 
 .vert {
-  background: #004d00 !important;
+  background: #008000 !important;
   background: linear-gradient(to right, #004d00, #00b300, #004d00) !important;
 }
 
 .purpure {
-  background: #4d004d !important;
+  background: #800080 !important;
   background: linear-gradient(to right, #4d004d, #b300b3, #4d004d) !important;
 }
 
@@ -102,12 +118,12 @@ li:hover, li:active {
 }
 
 .argent {
-  background: #bfbfbf !important;
+  background: #d8d8d8 !important;
   background: linear-gradient(to right, #bfbfbf, #f1f1f1, #bfbfbf) !important;
 }
 
 .or {
-  background: #ccac00 !important;
+  background: #ffd700 !important;
   background: linear-gradient(to right, #ccac00, #ffdf33, #ccac00) !important;
 }
 
@@ -252,12 +268,31 @@ li:hover, li:active {
 }
 
 .bend {
+  height: 709px;
+  width: 40px;
+  left: 23%;
+  top: -45%;
+  transform: rotate(47deg);
+}
+
+/*.bend {
   height: 420px;
   width: 40px;
-  left: 185px;
-  top: -57px;
-  transform: rotate(38deg);
+  left: 18px;
+  top: -92px;
+  transform: rotate(47deg);
 }
+
+.bend:after {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  height: 420px;
+  width: 40px;
+  left: 18px;
+  top: -92px;
+  transform: rotate(90deg);
+}*/
 
 .canton {
   height: 83px;
@@ -297,6 +332,27 @@ li:hover, li:active {
   background: inherit;
 }
 
+.chevron {
+  height: 300px;
+  width: 300px;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 4.5%;
+}
+
+.chevron:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 300px;
+  width: 300px;
+  color: inherit;
+  border: 1px solid black;
+  top: 10%;
+  left: 10%;
+  /*top: 50%;
+  left: 4.5%;*/
+}
 
 .icon {
   position: absolute;
@@ -306,55 +362,203 @@ li:hover, li:active {
   width: 300px;
   left: 4%;
   transition: background-image 2s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .fleur {
-  background-image: url("http://www.freebordersandclipart.com/images/FleurDeLisBlk.png") !important;
+  background-image: url("./images/fleur/fleur.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.fleur-gules {
+  background-image: url("./images/fleur/fleur-gules.png") !important;
+}
+.fleur-azure {
+  background-image: url("./images/fleur/fleur-azure.png") !important;
+}
+.fleur-vert {
+  background-image: url("./images/fleur/fleur-vert.png") !important;
+}
+.fleur-purpure {
+  background-image: url("./images/fleur/fleur-purpure.png") !important;
+}
+.fleur-sable {
+  background-image: url("./images/fleur/fleur-sable.png") !important;
+}
+.fleur-argent {
+  background-image: url("./images/fleur/fleur-argent.png") !important;
+}
+.fleur-or {
+  background-image: url("./images/fleur/fleur-or.png") !important;
 }
 
 .lion {
-  background-image: url("https://pixabay.com/static/uploads/photo/2014/04/03/10/41/lion-311123_960_720.png") !important;
-  /*background-image: url("http://www.heraldicclipart.com/catalog/LionRampant2.gif") !important;*/
+  background-image: url("./images/lion/lion-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.lion-gules {
+  background-image: url("./images/lion/lion-gules.png") !important;
+}
+.lion-azure {
+  background-image: url("./images/lion/lion-azure.png") !important;
+}
+.lion-vert {
+  background-image: url("./images/lion/lion-vert.png") !important;
+}
+.lion-purpure {
+  background-image: url("./images/lion/lion-purpure.png") !important;
+}
+.lion-sable {
+  background-image: url("./images/lion/lion-sable.png") !important;
+}
+.lion-argent {
+  background-image: url("./images/lion/lion-argent.png") !important;
+}
+.lion-or {
+  background-image: url("./images/lion/lion-or.png") !important;
 }
 
 .eagle {
-  background-image: url("http://www.personal.psu.edu/users/m/j/mjc398/stuff/eagle.png") !important;
+  background-image: url("./images/eagle/eagle-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.eagle-gules {
+  background-image: url("./images/eagle/eagle-gules.png") !important;
+}
+.eagle-azure {
+  background-image: url("./images/eagle/eagle-azure.png") !important;
+}
+.eagle-vert {
+  background-image: url("./images/eagle/eagle-vert.png") !important;
+}
+.eagle-purpure {
+  background-image: url("./images/eagle/eagle-purpure.png") !important;
+}
+.eagle-sable {
+  background-image: url("./images/eagle/eagle-sable.png") !important;
+}
+.eagle-argent {
+  background-image: url("./images/eagle/eagle-argent.png") !important;
+}
+.eagle-or {
+  background-image: url("./images/eagle/eagle-or.png") !important;
 }
 
 .rose {
-  background-image: url("https://openclipart.org/image/2400px/svg_to_png/232473/DerbyshireFlower.png") !important;
+  background-image: url("./images/rose/rose-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.rose-gules {
+  background-image: url("./images/rose/rose-gules.png") !important;
+}
+.rose-azure {
+  background-image: url("./images/rose/rose-azure.png") !important;
+}
+.rose-vert {
+  background-image: url("./images/rose/rose-vert.png") !important;
+}
+.rose-purpure {
+  background-image: url("./images/rose/rose-purpure.png") !important;
+}
+.rose-sable {
+  background-image: url("./images/rose/rose-sable.png") !important;
+}
+.rose-argent {
+  background-image: url("./images/rose/rose-argent.png") !important;
+}
+.rose-or {
+  background-image: url("./images/rose/rose-or.png") !important;
 }
 
 .unicorn {
-  /*background-image: url("https://image.spreadshirtmedia.com/image-server/v1/designs/1006112218,width=178,height=178,version=1450778677/Unicorn.png") !important;*/
-  background-image: url("http://silhouettesfree.com/animals/mythical-creatures/unicorn-silhouette-image-4.png") !important;
+  background-image: url("./images/unicorn/unicorn-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.unicorn-gules {
+  background-image: url("./images/unicorn/unicorn-gules.png") !important;
+}
+.unicorn-azure {
+  background-image: url("./images/unicorn/unicorn-azure.png") !important;
+}
+.unicorn-vert {
+  background-image: url("./images/unicorn/unicorn-vert.png") !important;
+}
+.unicorn-purpure {
+  background-image: url("./images/unicorn/unicorn-purpure.png") !important;
+}
+.unicorn-sable {
+  background-image: url("./images/unicorn/unicorn-sable.png") !important;
+}
+.unicorn-argent {
+  background-image: url("./images/unicorn/unicorn-argent.png") !important;
+}
+.unicorn-or {
+  background-image: url("./images/unicorn/unicorn-or.png") !important;
 }
 
 .bow {
-  background-image: url("http://www.pd4pic.com/images/arrow-bow-heraldic-heraldry.png") !important;
+  background-image: url("./images/bow/bow-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
+.bow-gules {
+  background-image: url("./images/bow/bow-gules.png") !important;
+}
+.bow-azure {
+  background-image: url("./images/bow/bow-azure.png") !important;
+}
+.bow-vert {
+  background-image: url("./images/bow/bow-vert.png") !important;
+}
+.bow-purpure {
+  background-image: url("./images/bow/bow-purpure.png") !important;
+}
+.bow-sable {
+  background-image: url("./images/bow/bow-sable.png") !important;
+}
+.bow-argent {
+  background-image: url("./images/bow/bow-argent.png") !important;
+}
+.bow-or {
+  background-image: url("./images/bow/bow-or.png") !important;
+}
 
 .gate {
-  background-image: url("http://coloradorenaissance.com/cr/wp-content/uploads/2012/11/Castle-Silhouette-26.gif") !important;
+  background-image: url("./images/gate/gate-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.gate-gules {
+  background-image: url("./images/gate/gate-gules.png") !important;
+}
+.gate-azure {
+  background-image: url("./images/gate/gate-azure.png") !important;
+}
+.gate-vert {
+  background-image: url("./images/gate/gate-vert.png") !important;
+}
+.gate-purpure {
+  background-image: url("./images/gate/gate-purpure.png") !important;
+}
+.gate-sable {
+  background-image: url("./images/gate/gate-sable.png") !important;
+}
+.gate-argent {
+  background-image: url("./images/gate/gate-argent.png") !important;
+}
+.gate-or {
+  background-image: url("./images/gate/gate-or.png") !important;
 }
