@@ -4,7 +4,7 @@ var Shield = require('./shield.jsx');
 
 var ColorMenu = React.createClass({
   getInitialState: function () {
-      return { color: "", ordinaries: "", ordinariesColor: "", icons: "" };
+      return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "" };
   },
 
   changeGules: function () {
@@ -13,12 +13,18 @@ var ColorMenu = React.createClass({
   ordinaryGules: function () {
     this.setState({ ordinariesColor: "gules" });
   },
+  partGules: function () {
+    this.setState({ partitionColor: "gules" });
+  },
 
   changeAzure: function () {
     this.setState({ color: "azure" });
   },
   ordinaryAzure: function () {
     this.setState({ ordinariesColor: "azure" });
+  },
+  partAzure: function () {
+    this.setState({ partitionColor: "azure" });
   },
 
   changeVert: function () {
@@ -27,12 +33,18 @@ var ColorMenu = React.createClass({
   ordinaryVert: function () {
     this.setState({ ordinariesColor: "vert" });
   },
+  partVert: function () {
+    this.setState({ partitionColor: "vert" });
+  },
 
   changePurpure: function () {
     this.setState({ color: "purpure" });
   },
   ordinaryPurpure: function () {
     this.setState({ ordinariesColor: "purpure" });
+  },
+  partPurpure: function () {
+    this.setState({ partitionColor: "purpure" });
   },
 
   changeSable: function () {
@@ -41,6 +53,9 @@ var ColorMenu = React.createClass({
   ordinarySable: function () {
     this.setState({ ordinariesColor: "sable" });
   },
+  partSable: function () {
+    this.setState({ partitionColor: "sable" });
+  },
 
   changeArgent: function () {
     this.setState({ color: "argent" })
@@ -48,12 +63,25 @@ var ColorMenu = React.createClass({
   ordinaryArgent: function () {
     this.setState({ ordinariesColor: "argent" });
   },
+  partArgent: function () {
+    this.setState({ partitionColor: "argent" });
+  },
 
   changeOr: function () {
     this.setState({ color: "or" })
   },
   ordinaryOr: function () {
     this.setState({ ordinariesColor: "or" })
+  },
+  partOr: function () {
+    this.setState({ partitionColor: "or" })
+  },
+
+  partitionPerFess: function () {
+    this.setState({ partition: "per-fess"});
+  },
+  partitionPerPale: function () {
+    this.setState({ partition: "per-pale"});
   },
 
   changeHorizontal: function () {
@@ -134,6 +162,19 @@ var ColorMenu = React.createClass({
           <li className="argent" onClick={this.changeArgent}></li>
           <li className="or" onClick={this.changeOr}></li>
         </ul>
+        <ul className="partitions-menu">Partition
+          <li onClick={this.partitionPerFess}>Per Fess</li>
+          <li onClick={this.partitionPerPale}>Per Pale</li>
+        </ul>
+        <ul className="color-menu">Partition Color
+          <li className="gules" onClick={this.partGules}></li>
+          <li className="azure" onClick={this.partAzure}></li>
+          <li className="vert" onClick={this.partVert}></li>
+          <li className="purpure" onClick={this.partPurpure}></li>
+          <li className="sable" onClick={this.partSable}></li>
+          <li className="argent" onClick={this.partArgent}></li>
+          <li className="or" onClick={this.partOr}></li>
+        </ul>
         <ul className="ordinaries-menu">Ordinary
           <li className="horizontal-opt" onClick={this.changeHorizontal}>Fess</li>
           <li className="vertical-opt" onClick={this.changeVertical}>Pale</li>
@@ -162,6 +203,7 @@ var ColorMenu = React.createClass({
           <li className="gate" onClick={this.changeGate}></li>
         </ul>
         <section className={"shield " + this.state.color}>
+          <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
           <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
           <section className={"icon " + this.state.icons}></section>
         </section>

@@ -20187,7 +20187,7 @@
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { color: "", ordinaries: "", ordinariesColor: "", icons: "" };
+	    return { color: "", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "" };
 	  },
 	
 	  changeGules: function () {
@@ -20196,12 +20196,18 @@
 	  ordinaryGules: function () {
 	    this.setState({ ordinariesColor: "gules" });
 	  },
+	  partGules: function () {
+	    this.setState({ partitionColor: "gules" });
+	  },
 	
 	  changeAzure: function () {
 	    this.setState({ color: "azure" });
 	  },
 	  ordinaryAzure: function () {
 	    this.setState({ ordinariesColor: "azure" });
+	  },
+	  partAzure: function () {
+	    this.setState({ partitionColor: "azure" });
 	  },
 	
 	  changeVert: function () {
@@ -20210,12 +20216,18 @@
 	  ordinaryVert: function () {
 	    this.setState({ ordinariesColor: "vert" });
 	  },
+	  partVert: function () {
+	    this.setState({ partitionColor: "vert" });
+	  },
 	
 	  changePurpure: function () {
 	    this.setState({ color: "purpure" });
 	  },
 	  ordinaryPurpure: function () {
 	    this.setState({ ordinariesColor: "purpure" });
+	  },
+	  partPurpure: function () {
+	    this.setState({ partitionColor: "purpure" });
 	  },
 	
 	  changeSable: function () {
@@ -20224,6 +20236,9 @@
 	  ordinarySable: function () {
 	    this.setState({ ordinariesColor: "sable" });
 	  },
+	  partSable: function () {
+	    this.setState({ partitionColor: "sable" });
+	  },
 	
 	  changeArgent: function () {
 	    this.setState({ color: "argent" });
@@ -20231,12 +20246,25 @@
 	  ordinaryArgent: function () {
 	    this.setState({ ordinariesColor: "argent" });
 	  },
+	  partArgent: function () {
+	    this.setState({ partitionColor: "argent" });
+	  },
 	
 	  changeOr: function () {
 	    this.setState({ color: "or" });
 	  },
 	  ordinaryOr: function () {
 	    this.setState({ ordinariesColor: "or" });
+	  },
+	  partOr: function () {
+	    this.setState({ partitionColor: "or" });
+	  },
+	
+	  partitionPerFess: function () {
+	    this.setState({ partition: "per-fess" });
+	  },
+	  partitionPerPale: function () {
+	    this.setState({ partition: "per-pale" });
 	  },
 	
 	  changeHorizontal: function () {
@@ -20330,6 +20358,33 @@
 	      ),
 	      React.createElement(
 	        'ul',
+	        { className: 'partitions-menu' },
+	        'Partition',
+	        React.createElement(
+	          'li',
+	          { onClick: this.partitionPerFess },
+	          'Per Fess'
+	        ),
+	        React.createElement(
+	          'li',
+	          { onClick: this.partitionPerPale },
+	          'Per Pale'
+	        )
+	      ),
+	      React.createElement(
+	        'ul',
+	        { className: 'color-menu' },
+	        'Partition Color',
+	        React.createElement('li', { className: 'gules', onClick: this.partGules }),
+	        React.createElement('li', { className: 'azure', onClick: this.partAzure }),
+	        React.createElement('li', { className: 'vert', onClick: this.partVert }),
+	        React.createElement('li', { className: 'purpure', onClick: this.partPurpure }),
+	        React.createElement('li', { className: 'sable', onClick: this.partSable }),
+	        React.createElement('li', { className: 'argent', onClick: this.partArgent }),
+	        React.createElement('li', { className: 'or', onClick: this.partOr })
+	      ),
+	      React.createElement(
+	        'ul',
 	        { className: 'ordinaries-menu' },
 	        'Ordinary',
 	        React.createElement(
@@ -20395,6 +20450,7 @@
 	      React.createElement(
 	        'section',
 	        { className: "shield " + this.state.color },
+	        React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
 	        React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
 	        React.createElement('section', { className: "icon " + this.state.icons })
 	      )
