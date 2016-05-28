@@ -57,7 +57,6 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(Header, null),
 	      React.createElement(ColorMenu, null)
 	    );
 	  }
@@ -20204,214 +20203,78 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	var Shield = __webpack_require__(168);
+	var ColorItem = __webpack_require__(171);
+	var PartitionItem = __webpack_require__(172);
+	var OrdinaryItem = __webpack_require__(173);
+	var ChargeItem = __webpack_require__(174);
+	var BackgroundItem = __webpack_require__(175);
+	
+	COLORS = ["gules", "azure", "vert", "sable", "purpure", "murrey", "argent", "or", "RESET"];
+	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-quarter", "RESET"];
+	ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "RESET"];
+	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", ""];
+	BACKGROUNDS = ["white", "parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", ""];
+	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu"];
 	
 	var ColorMenu = React.createClass({
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { color: "", partitionMenuDisplayed: false, partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", icons: "", iconColor: "sable" };
+	    return { color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "" };
 	  },
 	
-	  resetColor: function () {
-	    this.setState({ color: "" });
-	  },
-	  resetPartition: function () {
-	    this.setState({ partition: "" });
-	  },
-	  resetPartitionColor: function () {
-	    this.setState({ partitionColor: "" });
-	  },
-	  resetOrdinaries: function () {
-	    this.setState({ ordinaries: "" });
-	  },
-	  resetOrdinariesColor: function () {
-	    this.setState({ ordinariesColor: "" });
-	  },
-	  resetIcons: function () {
-	    this.setState({ icons: "" });
-	  },
-	  resetIconColor: function () {
-	    this.setState({ iconColor: "sable" });
+	  setColor: function (e) {
+	    var color = e.currentTarget.className;
+	    this.setState({ color: color });
 	  },
 	
-	  changeGules: function () {
-	    this.setState({ color: "gules" });
-	  },
-	  ordinaryGules: function () {
-	    this.setState({ ordinariesColor: "gules" });
-	  },
-	  partGules: function () {
-	    this.setState({ partitionColor: "gules" });
-	  },
-	  iconGules: function () {
-	    this.setState({ iconColor: "gules" });
+	  setMenu: function (e) {
+	    var menu = e.currentTarget.className.split("-")[0] + "-" + e.currentTarget.className.split("-")[1];
+	    this.setState({ menu: menu });
 	  },
 	
-	  changeAzure: function () {
-	    this.setState({ color: "azure" });
-	  },
-	  ordinaryAzure: function () {
-	    this.setState({ ordinariesColor: "azure" });
-	  },
-	  partAzure: function () {
-	    this.setState({ partitionColor: "azure" });
-	  },
-	  iconAzure: function () {
-	    this.setState({ iconColor: "azure" });
+	  setPartition: function (e) {
+	    var broken = e.currentTarget.className.split("-");
+	    var partition = broken[0] + "-" + broken[1];
+	    this.setState({ partition: partition });
 	  },
 	
-	  changeVert: function () {
-	    this.setState({ color: "vert" });
-	  },
-	  ordinaryVert: function () {
-	    this.setState({ ordinariesColor: "vert" });
-	  },
-	  partVert: function () {
-	    this.setState({ partitionColor: "vert" });
-	  },
-	  iconVert: function () {
-	    this.setState({ iconColor: "vert" });
+	  setPartitionColor: function (e) {
+	    var color = e.currentTarget.className;
+	    this.setState({ partitionColor: color });
 	  },
 	
-	  changePurpure: function () {
-	    this.setState({ color: "purpure" });
-	  },
-	  ordinaryPurpure: function () {
-	    this.setState({ ordinariesColor: "purpure" });
-	  },
-	  partPurpure: function () {
-	    this.setState({ partitionColor: "purpure" });
-	  },
-	  iconPurpure: function () {
-	    this.setState({ iconColor: "purpure" });
+	  setOrdinary: function (e) {
+	    var broken = e.currentTarget.className.split("-");
+	    var ordinary = broken[0];
+	    this.setState({ ordinaries: ordinary });
 	  },
 	
-	  changeSable: function () {
-	    this.setState({ color: "sable" });
-	  },
-	  ordinarySable: function () {
-	    this.setState({ ordinariesColor: "sable" });
-	  },
-	  partSable: function () {
-	    this.setState({ partitionColor: "sable" });
-	  },
-	  iconSable: function () {
-	    this.setState({ iconColor: "sable" });
+	  setOrdinaryColor: function (e) {
+	    var color = e.currentTarget.className;
+	    this.setState({ ordinariesColor: color });
 	  },
 	
-	  changeArgent: function () {
-	    this.setState({ color: "argent" });
-	  },
-	  ordinaryArgent: function () {
-	    this.setState({ ordinariesColor: "argent" });
-	  },
-	  partArgent: function () {
-	    this.setState({ partitionColor: "argent" });
-	  },
-	  iconArgent: function () {
-	    this.setState({ iconColor: "argent" });
+	  setCharge: function (e) {
+	    var charge = e.currentTarget.className.split("-")[0];
+	    this.setState({ charge: charge });
 	  },
 	
-	  changeOr: function () {
-	    this.setState({ color: "or" });
-	  },
-	  ordinaryOr: function () {
-	    this.setState({ ordinariesColor: "or" });
-	  },
-	  partOr: function () {
-	    this.setState({ partitionColor: "or" });
-	  },
-	  iconOr: function () {
-	    this.setState({ iconColor: "or" });
+	  setChargeColor: function (e) {
+	    var color = e.currentTarget.className;
+	    this.setState({ chargeColor: color });
 	  },
 	
-	  partitionPerFess: function () {
-	    this.setState({ partition: "per-fess" });
-	  },
-	  partitionPerPale: function () {
-	    this.setState({ partition: "per-pale" });
-	  },
-	  partitionPerChevron: function () {
-	    this.setState({ partition: "per-chevron" });
-	  },
-	  partitionPerQuarter: function () {
-	    this.setState({ partition: "per-quarter" });
-	  },
-	  partitionPerSaltire: function () {
-	    this.setState({ partition: "per-saltire" });
+	  setBackground: function (e) {
+	    var background = e.currentTarget.className;
+	    this.setState({ background: background });
 	  },
 	
-	  changeHorizontal: function () {
-	    this.setState({ ordinaries: "fess" });
-	  },
-	
-	  changeVertical: function () {
-	    this.setState({ ordinaries: "pale" });
-	  },
-	
-	  changeTriangle: function () {
-	    this.setState({ ordinaries: "pile" });
-	  },
-	
-	  changeDiagonal: function () {
-	    this.setState({ ordinaries: "bend" });
-	  },
-	
-	  changeChief: function () {
-	    this.setState({ ordinaries: "chief" });
-	  },
-	
-	  changeCanton: function () {
-	    this.setState({ ordinaries: "canton" });
-	  },
-	
-	  changeLozenge: function () {
-	    this.setState({ ordinaries: "lozenge" });
-	  },
-	
-	  changeBase: function () {
-	    this.setState({ ordinaries: "base" });
-	  },
-	
-	  changeCross: function () {
-	    this.setState({ ordinaries: "cross" });
-	  },
-	
-	  changeChevron: function () {
-	    this.setState({ ordinaries: "chevron" });
-	  },
-	
-	  changeFleur: function () {
-	    this.setState({ icons: "fleur" });
-	  },
-	
-	  changeLion: function () {
-	    this.setState({ icons: "lion" });
-	  },
-	
-	  changeEagle: function () {
-	    this.setState({ icons: "eagle" });
-	  },
-	
-	  changeRose: function () {
-	    this.setState({ icons: "rose" });
-	  },
-	
-	  changeUnicorn: function () {
-	    this.setState({ icons: "unicorn" });
-	  },
-	
-	  changeBow: function () {
-	    this.setState({ icons: "bow" });
-	  },
-	
-	  changeGate: function () {
-	    this.setState({ icons: "gate" });
-	  },
-	
-	  togglePartitionDisplay: function () {
-	    this.state.partitionMenuDisplayed ? this.setState({ partitionMenuDisplayed: false }) : this.setState({ partitionMenuDisplayed: true });
+	  setTab: function (e) {
+	    var broken = e.currentTarget.className.split("-");
+	    var tab = broken[0] + "-" + broken[1];
+	    this.setState({ selected: tab });
+	    this.setMenu(e);
 	  },
 	
 	  randomize: function (array) {
@@ -20420,18 +20283,15 @@
 	  },
 	
 	  makeRandom: function () {
-	    var colors = ["gules", "azure", "vert", "sable", "purpure", "argent", "or"];
-	    var partitions = ["per-fess", "per-pale", "per-chevron", "per-quarter", ""];
-	    var ordinaries = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", ""];
-	    var icons = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", ""];
 	
-	    this.setState({ color: this.randomize(colors) });
-	    this.setState({ partition: this.randomize(partitions) });
-	    this.setState({ partitionColor: this.randomize(colors) });
-	    this.setState({ ordinaries: this.randomize(ordinaries) });
-	    this.setState({ ordinariesColor: this.randomize(colors) });
-	    this.setState({ icons: this.randomize(icons) });
-	    this.setState({ iconColor: this.randomize(colors) });
+	    this.setState({ color: this.randomize(COLORS) });
+	    this.setState({ partition: this.randomize(PARTITIONS) });
+	    this.setState({ partitionColor: this.randomize(COLORS) });
+	    this.setState({ ordinaries: this.randomize(ORDINARIES) });
+	    this.setState({ ordinariesColor: this.randomize(COLORS) });
+	    this.setState({ charge: this.randomize(CHARGES) });
+	    this.setState({ chargeColor: this.randomize(COLORS) });
+	    this.setState({ background: this.randomize(BACKGROUNDS) });
 	  },
 	
 	  resetAll: function () {
@@ -20440,18 +20300,107 @@
 	    this.setState({ partitionColor: "" });
 	    this.setState({ ordinaries: "" });
 	    this.setState({ ordinariesColor: "" });
-	    this.setState({ icons: "" });
-	    this.setState({ iconColor: "sable" });
+	    this.setState({ charge: "" });
+	    this.setState({ chargeColor: "" });
+	    this.setState({ menu: "main-tab" });
+	    this.setState({ selected: "main-tab" });
+	    this.setState({ background: "" });
 	  },
 	
 	  render: function () {
+	    var self = this;
+	
+	    var tabs = TABS.map(function (tab) {
+	      var active = tab == self.state.selected ? " active" : "";
+	      return React.createElement(
+	        'li',
+	        { className: tab + "-tab" + active, key: TABS.indexOf(tab), onClick: self.setTab },
+	        tab.split("-")[0]
+	      );
+	    });
+	
+	    MENU_OPTIONS = {
+	      "main": this.setColor,
+	      "partition": this.setPartitionColor,
+	      "ordinaries": this.setOrdinaryColor,
+	      "charge": this.setChargeColor,
+	      "background": this.setBackground
+	    };
+	
+	    var brokenMenu = this.state.menu.split("-");
+	    var currentMenu = brokenMenu.slice(0, brokenMenu.length - 1).join("-");
+	
+	    var clickToSet = MENU_OPTIONS[currentMenu];
+	    var colorLis = COLORS.map(function (color) {
+	      return React.createElement(ColorItem, { color: color, key: COLORS.indexOf(color), setColor: clickToSet });
+	    });
+	
+	    var partitionLis = PARTITIONS.map(function (partition) {
+	      return React.createElement(PartitionItem, { partition: partition + "-opt", key: PARTITIONS.indexOf(partition), name: partition, setPartition: self.setPartition });
+	    });
+	
+	    var ordinaryLis = ORDINARIES.map(function (ordinary) {
+	      return React.createElement(OrdinaryItem, { ordinary: ordinary + "-opt", key: ORDINARIES.indexOf(ordinary), name: ordinary, setOrdinary: self.setOrdinary });
+	    });
+	
+	    var chargeLis = CHARGES.map(function (charge) {
+	      return React.createElement(ChargeItem, { charge: charge, key: CHARGES.indexOf(charge), setCharge: self.setCharge });
+	    });
+	
+	    var backgroundLis = BACKGROUNDS.map(function (background) {
+	      return React.createElement(BackgroundItem, { background: background, key: BACKGROUNDS.indexOf(background), setBackground: self.setBackground });
+	    });
+	
 	    var mainColor = this.state.color.length > 0 ? this.state.color : "";
 	    var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
 	    var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
-	    var icon = this.state.icons.length > 0 ? ", " + this.state.icons : "";
+	    var charge = this.state.charge.length > 0 ? ", " + this.state.charge : "";
+	    var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
+	    var mainMenu = React.createElement(
+	      'ul',
+	      { className: 'main-menu group' },
+	      React.createElement(
+	        'li',
+	        { onClick: this.makeRandom },
+	        'RANDOM'
+	      ),
+	      React.createElement(
+	        'li',
+	        { onClick: this.resetAll },
+	        'RESET ALL'
+	      )
+	    );
+	    var partitionMenu = React.createElement(
+	      'ul',
+	      { className: 'partitions-menu group' },
+	      partitionLis
+	    );
+	    var ordinariesMenu = React.createElement(
+	      'ul',
+	      { className: 'ordinaries-menu group' },
+	      ordinaryLis
+	    );
+	    var chargeMenu = React.createElement(
+	      'ul',
+	      { className: 'charge-menu group', onClick: this.setMenu },
+	      chargeLis
+	    );
+	    var backgroundMenu = React.createElement(
+	      'ul',
+	      { className: 'background-menu group' },
+	      backgroundLis
+	    );
+	    var menu = this.state.menu;
 	
-	    var iconWithColor = this.state.icons + "-" + this.state.iconColor;
-	    var partitionMenu = this.state.partitionMenuDisplayed ? "partitions-menu" : "hidden";
+	    var tabOptions = {
+	      "main-tab": mainMenu,
+	      "partition-menu": partitionMenu,
+	      "ordinaries-menu": ordinariesMenu,
+	      "charge-menu": chargeMenu,
+	      "background-menu": backgroundMenu
+	    };
+	
+	    var selected = tabOptions[this.state.selected];
 	
 	    return React.createElement(
 	      'div',
@@ -20461,12 +20410,26 @@
 	        null,
 	        mainColor,
 	        ordinary,
-	        ordinaryColor,
-	        icon
+	        ordinaryColor
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'shield-div group' },
+	        { className: 'menu-div group' },
+	        React.createElement(
+	          'ul',
+	          { className: 'tabs group' },
+	          tabs
+	        ),
+	        selected,
+	        React.createElement(
+	          'ul',
+	          { className: 'color-menu group' },
+	          colorLis
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: "shield-div group " + this.state.background },
 	        React.createElement(
 	          'div',
 	          { className: 'inner group' },
@@ -20475,195 +20438,7 @@
 	            { className: "shield " + this.state.color },
 	            React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
 	            React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
-	            React.createElement('section', { className: "icon " + iconWithColor })
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'menu-div group' },
-	        React.createElement(
-	          'ul',
-	          { className: 'color-menu group' },
-	          React.createElement(
-	            'h2',
-	            null,
-	            'Main Color'
-	          ),
-	          React.createElement('li', { className: 'gules', onClick: this.changeGules }),
-	          React.createElement('li', { className: 'azure', onClick: this.changeAzure }),
-	          React.createElement('li', { className: 'vert', onClick: this.changeVert }),
-	          React.createElement('li', { className: 'purpure', onClick: this.changePurpure }),
-	          React.createElement('li', { className: 'sable', onClick: this.changeSable }),
-	          React.createElement('li', { className: 'argent', onClick: this.changeArgent }),
-	          React.createElement('li', { className: 'or', onClick: this.changeOr }),
-	          React.createElement('li', { onClick: this.resetColor }),
-	          React.createElement(
-	            'button',
-	            { onClick: this.togglePartitionDisplay },
-	            'Partition?'
-	          )
-	        ),
-	        React.createElement(
-	          'ul',
-	          { className: partitionMenu + " group" },
-	          React.createElement(
-	            'h2',
-	            null,
-	            'Partition'
-	          ),
-	          React.createElement(
-	            'li',
-	            { onClick: this.partitionPerFess },
-	            'Per Fess'
-	          ),
-	          React.createElement(
-	            'li',
-	            { onClick: this.partitionPerPale },
-	            'Per Pale'
-	          ),
-	          React.createElement(
-	            'li',
-	            { onClick: this.partitionPerChevron },
-	            'Per Chevron'
-	          ),
-	          React.createElement(
-	            'li',
-	            { onClick: this.partitionPerQuarter },
-	            'Quarterly'
-	          ),
-	          React.createElement('li', { onClick: this.resetPartition }),
-	          React.createElement(
-	            'ul',
-	            null,
-	            React.createElement(
-	              'h3',
-	              null,
-	              'Partition Color'
-	            ),
-	            React.createElement('li', { className: 'gules', onClick: this.partGules }),
-	            React.createElement('li', { className: 'azure', onClick: this.partAzure }),
-	            React.createElement('li', { className: 'vert', onClick: this.partVert }),
-	            React.createElement('li', { className: 'purpure', onClick: this.partPurpure }),
-	            React.createElement('li', { className: 'sable', onClick: this.partSable }),
-	            React.createElement('li', { className: 'argent', onClick: this.partArgent }),
-	            React.createElement('li', { className: 'or', onClick: this.partOr }),
-	            React.createElement('li', { onClick: this.resetPartitionColor })
-	          )
-	        ),
-	        React.createElement(
-	          'ul',
-	          { className: 'ordinaries-menu group' },
-	          React.createElement(
-	            'h2',
-	            null,
-	            'Ordinary'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'horizontal-opt', onClick: this.changeHorizontal },
-	            'Fess'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'vertical-opt', onClick: this.changeVertical },
-	            'Pale'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'chief-opt', onClick: this.changeChief },
-	            'Chief'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'diagonal-opt', onClick: this.changeDiagonal },
-	            'Bend'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'canton-opt', onClick: this.changeCanton },
-	            'Canton'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'lozenge-opt', onClick: this.changeLozenge },
-	            'Lozenge'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'base-opt', onClick: this.changeBase },
-	            'Base'
-	          ),
-	          React.createElement(
-	            'li',
-	            { className: 'cross-opt', onClick: this.changeCross },
-	            'Cross'
-	          ),
-	          React.createElement('li', { onClick: this.resetOrdinaries }),
-	          React.createElement(
-	            'ul',
-	            null,
-	            React.createElement(
-	              'h3',
-	              null,
-	              'Ordinary Color'
-	            ),
-	            React.createElement('li', { className: 'gules', onClick: this.ordinaryGules }),
-	            React.createElement('li', { className: 'azure', onClick: this.ordinaryAzure }),
-	            React.createElement('li', { className: 'vert', onClick: this.ordinaryVert }),
-	            React.createElement('li', { className: 'purpure', onClick: this.ordinaryPurpure }),
-	            React.createElement('li', { className: 'sable', onClick: this.ordinarySable }),
-	            React.createElement('li', { className: 'argent', onClick: this.ordinaryArgent }),
-	            React.createElement('li', { className: 'or', onClick: this.ordinaryOr }),
-	            React.createElement('li', { onClick: this.resetOrdinariesColor })
-	          )
-	        ),
-	        React.createElement(
-	          'ul',
-	          { className: 'icons-menu group' },
-	          React.createElement(
-	            'h2',
-	            null,
-	            'Charge'
-	          ),
-	          React.createElement('li', { className: 'fleur', onClick: this.changeFleur }),
-	          React.createElement('li', { className: 'lion', onClick: this.changeLion }),
-	          React.createElement('li', { className: 'eagle', onClick: this.changeEagle }),
-	          React.createElement('li', { className: 'rose', onClick: this.changeRose }),
-	          React.createElement('li', { className: 'unicorn', onClick: this.changeUnicorn }),
-	          React.createElement('li', { className: 'bow', onClick: this.changeBow }),
-	          React.createElement('li', { className: 'gate', onClick: this.changeGate }),
-	          React.createElement('li', { onClick: this.resetIcons }),
-	          React.createElement(
-	            'ul',
-	            null,
-	            React.createElement(
-	              'h3',
-	              null,
-	              'Charge Color'
-	            ),
-	            React.createElement('li', { className: 'gules', onClick: this.iconGules }),
-	            React.createElement('li', { className: 'azure', onClick: this.iconAzure }),
-	            React.createElement('li', { className: 'vert', onClick: this.iconVert }),
-	            React.createElement('li', { className: 'purpure', onClick: this.iconPurpure }),
-	            React.createElement('li', { className: 'sable', onClick: this.iconSable }),
-	            React.createElement('li', { className: 'argent', onClick: this.iconArgent }),
-	            React.createElement('li', { className: 'or', onClick: this.iconOr }),
-	            React.createElement('li', { onClick: this.resetIconColor })
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'buttons group' },
-	          React.createElement(
-	            'button',
-	            { onClick: this.makeRandom },
-	            'RANDOM'
-	          ),
-	          React.createElement(
-	            'button',
-	            { onClick: this.resetAll },
-	            'RESET'
+	            React.createElement('section', { className: "icon " + chargeWithColor })
 	          )
 	        )
 	      )
@@ -20672,6 +20447,109 @@
 	});
 	
 	module.exports = ColorMenu;
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var ColorItem = React.createClass({
+	  displayName: 'ColorItem',
+	
+	
+	  render: function () {
+	    return React.createElement('li', { className: this.props.color, onClick: this.props.setColor });
+	  }
+	
+	});
+	
+	module.exports = ColorItem;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var PartitionItem = React.createClass({
+	  displayName: 'PartitionItem',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'li',
+	      { className: this.props.partition, onClick: this.props.setPartition },
+	      this.props.name
+	    );
+	  }
+	
+	});
+	
+	module.exports = PartitionItem;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var OrdinaryItem = React.createClass({
+	  displayName: 'OrdinaryItem',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'li',
+	      { className: this.props.ordinary, onClick: this.props.setOrdinary },
+	      this.props.name
+	    );
+	  }
+	
+	});
+	
+	module.exports = OrdinaryItem;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var ChargeItem = React.createClass({
+	  displayName: 'ChargeItem',
+	
+	
+	  render: function () {
+	    return React.createElement('li', { className: this.props.charge + "-gules", onClick: this.props.setCharge });
+	  }
+	
+	});
+	
+	module.exports = ChargeItem;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var BackgroundItem = React.createClass({
+	  displayName: 'BackgroundItem',
+	
+	
+	  render: function () {
+	    return React.createElement('li', { className: this.props.background, onClick: this.props.setBackground });
+	  }
+	
+	});
+	
+	module.exports = BackgroundItem;
 
 /***/ }
 /******/ ]);
