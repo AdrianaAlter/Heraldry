@@ -20209,18 +20209,22 @@
 	var ChargeItem = __webpack_require__(174);
 	var BackgroundItem = __webpack_require__(175);
 	
-	COLORS = ["gules", "azure", "vert", "sable", "purpure", "murrey", "argent", "or", "RESET"];
-	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-quarter", "RESET"];
+	COLORS = ["gules", "azure", "vert", "sable", "purpure", "murrey", "argent", "or", "white", "RESET"];
+	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-quarter", "per-bend", "RESET"];
 	ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "RESET"];
-	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", ""];
-	BACKGROUNDS = ["white", "parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", ""];
+	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "RESET"];
+	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
 	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu"];
 	
 	var ColorMenu = React.createClass({
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "" };
+	    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "" };
+	  },
+	
+	  toggleShow: function () {
+	    this.state.show == true ? this.setState({ show: false }) : this.setState({ show: true });
 	  },
 	
 	  setColor: function (e) {
@@ -20308,6 +20312,7 @@
 	  },
 	
 	  render: function () {
+	    var menuClass = this.state.show ? "menu-div group" : "hidden";
 	    var self = this;
 	
 	    var tabs = TABS.map(function (tab) {
@@ -20414,7 +20419,7 @@
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: 'menu-div group' },
+	        { className: menuClass },
 	        React.createElement(
 	          'ul',
 	          { className: 'tabs group' },

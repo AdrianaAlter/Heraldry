@@ -42,7 +42,7 @@ li {
   display: block;
   width: 21%;
   float: left;
-  height: 402px;
+  /*height: 402px;*/
   list-style: none;
   border-radius: 2px;
   border-right: 2px solid #8b0000;
@@ -175,6 +175,7 @@ li {
 }
 
 .murrey {
+
   background: #4d0000 !important;
   border-color: #4d0000 !important;
 }
@@ -297,6 +298,14 @@ li {
   top: 100%;
   left: 100%;
   border: 1px solid black;
+}
+
+.per-bend {
+  height: 145%;
+  width: 108%;
+  transform: rotate(45deg);
+  top: 4.5%;
+  left: 50%;
 }
 
 .per-saltire {
@@ -506,6 +515,10 @@ li {
 .fleur-purpure {
   background-image: url("./images/fleur/fleur-purpure.png") !important;
 }
+
+.fleur-murrey {
+  background-image: url("./images/fleur/fleur-murrey.png") !important;
+}
 .fleur-sable {
   background-image: url("./images/fleur/fleur-sable.png") !important;
 }
@@ -514,6 +527,9 @@ li {
 }
 .fleur-or {
   background-image: url("./images/fleur/fleur-or.png") !important;
+}
+.fleur-white {
+  background-image: url("./images/fleur/fleur-white.png") !important;
 }
 
 .lion {
@@ -534,6 +550,9 @@ li {
 .lion-purpure {
   background-image: url("./images/lion/lion-purpure.png") !important;
 }
+.lion-murrey {
+  background-image: url("./images/lion/lion-murrey.png") !important;
+}
 .lion-sable {
   background-image: url("./images/lion/lion-sable.png") !important;
 }
@@ -542,6 +561,9 @@ li {
 }
 .lion-or {
   background-image: url("./images/lion/lion-or.png") !important;
+}
+.lion-white {
+  background-image: url("./images/lion/lion-white.png") !important;
 }
 
 .eagle {
@@ -562,6 +584,9 @@ li {
 .eagle-purpure {
   background-image: url("./images/eagle/eagle-purpure.png") !important;
 }
+.eagle-murrey {
+  background-image: url("./images/eagle/eagle-murrey.png") !important;
+}
 .eagle-sable {
   background-image: url("./images/eagle/eagle-sable.png") !important;
 }
@@ -570,6 +595,9 @@ li {
 }
 .eagle-or {
   background-image: url("./images/eagle/eagle-or.png") !important;
+}
+.eagle-white {
+  background-image: url("./images/eagle/eagle-white.png") !important;
 }
 
 .rose {
@@ -590,6 +618,9 @@ li {
 .rose-purpure {
   background-image: url("./images/rose/rose-purpure.png") !important;
 }
+.rose-murrey {
+  background-image: url("./images/rose/rose-murrey.png") !important;
+}
 .rose-sable {
   background-image: url("./images/rose/rose-sable.png") !important;
 }
@@ -598,6 +629,9 @@ li {
 }
 .rose-or {
   background-image: url("./images/rose/rose-or.png") !important;
+}
+.rose-white {
+  background-image: url("./images/rose/rose-white.png") !important;
 }
 
 .unicorn {
@@ -618,6 +652,9 @@ li {
 .unicorn-purpure {
   background-image: url("./images/unicorn/unicorn-purpure.png") !important;
 }
+.unicorn-murrey {
+  background-image: url("./images/unicorn/unicorn-murrey.png") !important;
+}
 .unicorn-sable {
   background-image: url("./images/unicorn/unicorn-sable.png") !important;
 }
@@ -626,6 +663,9 @@ li {
 }
 .unicorn-or {
   background-image: url("./images/unicorn/unicorn-or.png") !important;
+}
+.unicorn-white {
+  background-image: url("./images/unicorn/unicorn-white.png") !important;
 }
 
 .bow {
@@ -646,6 +686,9 @@ li {
 .bow-purpure {
   background-image: url("./images/bow/bow-purpure.png") !important;
 }
+.bow-murrey {
+  background-image: url("./images/bow/bow-murrey.png") !important;
+}
 .bow-sable {
   background-image: url("./images/bow/bow-sable.png") !important;
 }
@@ -654,6 +697,9 @@ li {
 }
 .bow-or {
   background-image: url("./images/bow/bow-or.png") !important;
+}
+.bow-white {
+  background-image: url("./images/bow/bow-white.png") !important;
 }
 
 .gate {
@@ -674,6 +720,9 @@ li {
 .gate-purpure {
   background-image: url("./images/gate/gate-purpure.png") !important;
 }
+.gate-murrey {
+  background-image: url("./images/gate/gate-murrey.png") !important;
+}
 .gate-sable {
   background-image: url("./images/gate/gate-sable.png") !important;
 }
@@ -683,8 +732,17 @@ li {
 .gate-or {
   background-image: url("./images/gate/gate-or.png") !important;
 }
+.gate-white {
+  background-image: url("./images/gate/gate-white.png") !important;
+}
 
-
+.serpent, .serpent-sable, .serpent-gules {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /*background-image: url("http://pngimg.com/upload/tattoo_PNG5459.png") !important;*/
+  background-image: url("http://www.clker.com/cliparts/w/Z/v/3/e/S/snake-silhouette-hi.png") !important;
+}
 
 
 
@@ -744,4 +802,21 @@ li {
 .scroll {
   background-size: contain;
   background-image: url("./images/backgrounds/scroll.png") !important;
+}
+
+.gold {
+  background-size: cover;
+  background-image: url("./images/backgrounds/gold.jpg") !important;
+}
+
+
+
+
+.hidden {
+  display: none !important;
+}
+
+.button {
+
+
 }
