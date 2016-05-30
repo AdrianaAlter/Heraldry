@@ -175,7 +175,6 @@ li {
 }
 
 .murrey {
-
   background: #4d0000 !important;
   border-color: #4d0000 !important;
 }
@@ -196,6 +195,11 @@ li {
   background: #ffd700 !important;
   border-color: #ffd700 !important;
   /*background: linear-gradient(to right, #ccac00, #ffdf33, #ccac00) !important;*/
+}
+
+.white {
+  background: #fff !important;
+  border-color: #fff !important;
 }
 
 .reset:after {
@@ -308,12 +312,21 @@ li {
   left: 50%;
 }
 
+.per-chaussé {
+  width: 0;
+  height: 0;
+  border-left: 169px solid transparent;
+  border-right: 169px solid transparent;
+  border-top: 313px solid #f00;
+  border-top-color: inherit !important;
+}
+
 .per-saltire {
-  height: 300px;
-  width: 300px;
+  height: 145%;
+  width: 108%;
   transform: rotate(45deg);
   top: 66%;
-  left: 4.5%;
+  left: -13%;
 }
 
 .per-saltire:after {
@@ -321,15 +334,31 @@ li {
   display: block;
   content: "";
   position: absolute;
-  height: 300px;
-  width: 300px;
+  height: 145%;
+  width: 108%;
   bottom: 65%;
   left: 4.5%;
   border: 1px solid black;
 }
 
 
-
+.per-flaunches {
+  height: 100%;
+  width: 100%;
+  border-radius: 40%;
+  left: -67%;
+}
+.per-flaunches:after {
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  border-radius: 40%;
+  left: 133%;
+  position: absolute;
+}
 
 
 
@@ -451,25 +480,24 @@ li {
 }
 
 .chevron {
-  height: 300px;
-  width: 300px;
+  width: 30px;
+  height: 350px;
   transform: rotate(45deg);
-  top: 50%;
-  left: 4.5%;
-}
-
-.chevron:after {
-  content: "";
+  top: 21%;
+  left: 10.5%;
   position: absolute;
-  display: block;
-  height: 300px;
-  width: 300px;
-  color: inherit;
+}
+.chevron:before {
+  background: inherit !important;
+  border-color: inherit !important;
   border: 1px solid black;
-  top: 10%;
-  left: 10%;
-  /*top: 50%;
-  left: 4.5%;*/
+  content: "";
+  width: 30px;
+  height: 302px;
+  transform: rotate(88deg);
+  top: -40.5%;
+  right: -464%;
+  position: absolute;
 }
 
 
@@ -736,23 +764,77 @@ li {
   background-image: url("./images/gate/gate-white.png") !important;
 }
 
-.serpent, .serpent-sable, .serpent-gules {
+.serpent {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  /*background-image: url("http://pngimg.com/upload/tattoo_PNG5459.png") !important;*/
-  background-image: url("http://www.clker.com/cliparts/w/Z/v/3/e/S/snake-silhouette-hi.png") !important;
+  background-image: url('./images/serpent/serpent.png');
 }
 
+.serpent-gules {
+  background-image: url("./images/serpent/serpent-gules.png") !important;
+}
+.serpent-azure {
+  background-image: url("./images/serpent/serpent-azure.png") !important;
+}
+.serpent-vert {
+  background-image: url("./images/serpent/serpent-vert.png") !important;
+}
+.serpent-purpure {
+  background-image: url("./images/serpent/serpent-purpure.png") !important;
+}
+.serpent-murrey {
+  background-image: url("./images/serpent/serpent-murrey.png") !important;
+}
+.serpent-sable {
+  background-image: url("./images/serpent/serpent-sable.png") !important;
+}
+.serpent-argent {
+  background-image: url("./images/serpent/serpent-argent.png") !important;
+}
+.serpent-or {
+  background-image: url("./images/serpent/serpent-or.png") !important;
+}
+.serpent-white {
+  background-image: url("./images/serpent/serpent-white.png") !important;
+}
+
+.bear {
+  background-image: url("./images/bear/bear.png");
+}
+
+.bear-gules {
+  background-image: url("./images/bear/bear-gules.png") !important;
+}
+.bear-azure {
+  background-image: url("./images/bear/bear-azure.png") !important;
+}
+.bear-vert {
+  background-image: url("./images/bear/bear-vert.png") !important;
+}
+.bear-purpure {
+  background-image: url("./images/bear/bear-purpure.png") !important;
+}
+.bear-murrey {
+  background-image: url("./images/bear/bear-murrey.png") !important;
+}
+.bear-sable {
+  background-image: url("./images/bear/bear-sable.png") !important;
+}
+.bear-argent {
+  background-image: url("./images/bear/bear-argent.png") !important;
+}
+.bear-or {
+  background-image: url("./images/bear/bear-or.png") !important;
+}
+.bear-white {
+  background-image: url("./images/bear/bear-white.png") !important;
+}
 
 
 /*BACKGROUNDS*/
 .black {
   background: #000;
-}
-
-.white {
-  background: #fff;
 }
 
 .parchment {
