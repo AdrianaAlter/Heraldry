@@ -66,7 +66,7 @@ li {
   background: transparent;
 }
 
-.main-menu, .partitions-menu, .ordinaries-menu, .charge-menu, .background-menu {
+.main-menu, .partitions-menu, .ordinaries-menu, .charge-menu, .background-menu, .motto-menu {
   border: none;
   background: none;
   color: oldlace;
@@ -84,7 +84,7 @@ li {
   padding-top: 0;
 }
 
-.tabs > li, .main-menu > li, .color-menu > li, .partitions-menu > li, .ordinaries-menu > li, .charge-menu > li, .background-menu > li {
+.tabs > li, .main-menu > li, .color-menu > li, .partitions-menu > li, .ordinaries-menu > li, .charge-menu > li, .background-menu > li, .motto-menu > .li {
   border-bottom: 1px solid oldlace;
   margin-top: 5%;
   padding: 1%;
@@ -93,7 +93,7 @@ li {
   background-size: contain;
 }
 
-.color-menu > li, .charge-menu > li, .background-menu > li {
+.color-menu > li, .charge-menu > li, .background-menu > li, .motto-menu > li {
   margin: 0;
   height: 29px;
 }
@@ -105,11 +105,22 @@ li {
 .background-menu > li {
   background-size: cover;
 }
+
+input {
+  width: 96%;
+  padding: 4% 0;
+  outline: none;
+  border: none;
+  text-align: center;
+  border-radius: 2%;
+  background: oldlace;
+  font: inherit;
+}
 /*SHIELD*/
 
 .shield-div {
   display: block;
-  height: 402px;
+  height: 501px;
   width: 78.5%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -153,63 +164,73 @@ li {
 .gules {
   background: #be0000 !important;
   border-color: #be0000 !important;
+  color: #be0000 !important;
   /*background: linear-gradient(to right, #8b0000, #f10000, #8b0000) !important;*/
 }
 
 .azure {
   background: #000099 !important;
   border-color: #000099 !important;
+  color: #000099 !important;
   /*background: linear-gradient(to right, #000066, #0000cc, #000066) !important;*/
 }
 
 .vert {
   background: #008000 !important;
   border-color: #008000 !important;
+  color: #008000 !important;
   /*background: linear-gradient(to right, #004d00, #00b300, #004d00) !important;*/
 }
 
 .purpure {
   background: #4d004d !important;
   border-color: #4d004d !important;
+  color: #4d004d !important;
   /*background: linear-gradient(to right, #4d004d, #b300b3, #4d004d) !important;*/
 }
 
 .murrey {
   background: #4d0000 !important;
   border-color: #4d0000 !important;
+  color: #4d0000 !important;
 }
 
 .sable {
   background: #000 !important;
   border-color: #000 !important;
+  color: #000 !important;
   /*background: linear-gradient(to right, #000, #333333, #000) !important;*/
 }
 
 .argent {
   background: #d8d8d8 !important;
   border-color: #d8d8d8 !important;
+  color: #d8d8d8 !important;
   /*background: linear-gradient(to right, #bfbfbf, #f1f1f1, #bfbfbf) !important;*/
 }
 
 .or {
   background: #ffd700 !important;
   border-color: #ffd700 !important;
+  color: #ffd700 !important;
   /*background: linear-gradient(to right, #ccac00, #ffdf33, #ccac00) !important;*/
 }
 
 .white {
   background: #fff !important;
   border-color: #fff !important;
+  color: #fff !important;
 }
 
 .copper {
   background: #E2A798 !important;
   border-color: #E2A798 !important;
+  color: #E2A798 !important;
 }
-.RESET:after {
+/*.RESET-button:after, .RESET-button-gules:after {
   display: block;
   content: "RESET";
-}
+}*/
 
 
 
@@ -988,7 +1009,7 @@ li {
 
 .scroll {
   background-size: contain;
-  background-position-x: 48%;
+  background-position-x: 44%;
   background-image: url("./images/backgrounds/scroll.png") !important;
 }
 
@@ -1004,7 +1025,55 @@ li {
   display: none !important;
 }
 
-.button {
+.motto {
+  position: absolute;
+  height: 48% !important;
+  width: 90% !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  bottom: -38%;
+  left: 5%;
+  background-repeat: no-repeat !important;
 
 
+}
+
+.motto-one {
+  background-image: url("./images/mottoes/goldribbon.png") !important;
+}
+
+.motto-two {
+  background-image: url("./images/mottoes/silver.png") !important;
+}
+
+.motto-two > p {
+  margin-top: 24% !important;
+}
+
+.motto-three {
+  background-image: url("./images/mottoes/goldborder.png") !important;
+}
+
+.motto-three > p {
+  margin-top: 22% !important;
+}
+.motto-four {
+  background-image: url("./images/mottoes/redplaque.png");
+}
+
+.motto-five {
+  background-image: url("./images/mottoes/plaque.png");
+}
+
+.motto-four, .motto-five {
+  bottom: -45% !important;
+}
+
+.motto-five > p {
+  margin-top: 13% !important;
+}
+.motto > p {
+  margin: 15% 0%;
+  text-align: center;
+  padding: 2px;
 }

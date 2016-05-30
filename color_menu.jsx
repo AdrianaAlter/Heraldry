@@ -11,11 +11,12 @@ PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "qu
 ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "tierce", "RESET"];
 CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
-TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu"];
+MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "RESET"];
+TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
 
 var ColorMenu = React.createClass({
   getInitialState: function () {
-    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "" };
+    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "", motto: "", mottoColor: "", mottoBackground: "" };
   },
 
   toggleShow: function () {
@@ -68,6 +69,19 @@ var ColorMenu = React.createClass({
   setBackground: function (e) {
     var background = e.currentTarget.className;
     this.setState({ background: background });
+  },
+
+  setMotto: function (e) {
+    var motto = e.currentTarget.value;
+    this.setState({ motto: motto });
+  },
+  setMottoColor: function (e) {
+    var color = e.currentTarget.className;
+    this.setState({ mottoColor: color });
+  },
+  setMottoBackground: function (e) {
+    var mottoBackground = e.currentTarget.className;
+    this.setState({ mottoBackground: mottoBackground });
   },
 
   setTab: function (e) {
@@ -123,7 +137,8 @@ var ColorMenu = React.createClass({
       "partition": this.setPartitionColor,
       "ordinaries": this.setOrdinaryColor,
       "charge": this.setChargeColor,
-      "background": this.setBackground
+      "background": this.setBackground,
+      "motto": this.setMottoColor
     };
 
     var brokenMenu = this.state.menu.split("-");
@@ -150,6 +165,10 @@ var ColorMenu = React.createClass({
       return <BackgroundItem background={background} key={BACKGROUNDS.indexOf(background)} setBackground={self.setBackground} />
     });
 
+    var mottoLis = MOTTOES.map(function(motto) {
+      return <li className={motto} key={MOTTOES.indexOf(motto)} onClick={self.setMottoBackground} />
+    });
+
     var mainColor = this.state.color.length > 0 ? this.state.color : "";
     var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
     var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
@@ -160,6 +179,8 @@ var ColorMenu = React.createClass({
     var ordinariesMenu = <ul className="ordinaries-menu group">{ordinaryLis}</ul>
     var chargeMenu = <ul className="charge-menu group" onClick={this.setMenu}>{chargeLis}</ul>
     var backgroundMenu =  <ul className="background-menu group">{backgroundLis}</ul>;
+    var mottoInput = <li><input type="text" value={this.state.motto} onChange={this.setMotto}></input></li>;
+    var mottoMenu = <ul className="motto-menu group">{mottoInput}{mottoLis}</ul>
     var menu = this.state.menu;
 
     var tabOptions = {
@@ -167,7 +188,8 @@ var ColorMenu = React.createClass({
       "partition-menu": partitionMenu,
       "ordinaries-menu": ordinariesMenu,
       "charge-menu": chargeMenu,
-      "background-menu": backgroundMenu
+      "background-menu": backgroundMenu,
+      "motto-menu": mottoMenu
     };
 
     var selected = tabOptions[this.state.selected];
@@ -188,6 +210,8 @@ var ColorMenu = React.createClass({
                   <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
                   <section className={"icon " + chargeWithColor}></section>
                 </section>
+                <section className={"motto " + this.state.mottoBackground + " " + this.state.mottoColor}><p>{this.state.motto}</p></section>
+
               </div>
           </div>
 

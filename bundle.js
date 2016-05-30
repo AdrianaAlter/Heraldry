@@ -20214,13 +20214,14 @@
 	ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "tierce", "RESET"];
 	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
-	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu"];
+	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "RESET"];
+	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
 	
 	var ColorMenu = React.createClass({
 	  displayName: 'ColorMenu',
 	
 	  getInitialState: function () {
-	    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "" };
+	    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "", motto: "", mottoColor: "", mottoBackground: "" };
 	  },
 	
 	  toggleShow: function () {
@@ -20273,6 +20274,19 @@
 	  setBackground: function (e) {
 	    var background = e.currentTarget.className;
 	    this.setState({ background: background });
+	  },
+	
+	  setMotto: function (e) {
+	    var motto = e.currentTarget.value;
+	    this.setState({ motto: motto });
+	  },
+	  setMottoColor: function (e) {
+	    var color = e.currentTarget.className;
+	    this.setState({ mottoColor: color });
+	  },
+	  setMottoBackground: function (e) {
+	    var mottoBackground = e.currentTarget.className;
+	    this.setState({ mottoBackground: mottoBackground });
 	  },
 	
 	  setTab: function (e) {
@@ -20330,7 +20344,8 @@
 	      "partition": this.setPartitionColor,
 	      "ordinaries": this.setOrdinaryColor,
 	      "charge": this.setChargeColor,
-	      "background": this.setBackground
+	      "background": this.setBackground,
+	      "motto": this.setMottoColor
 	    };
 	
 	    var brokenMenu = this.state.menu.split("-");
@@ -20355,6 +20370,10 @@
 	
 	    var backgroundLis = BACKGROUNDS.map(function (background) {
 	      return React.createElement(BackgroundItem, { background: background, key: BACKGROUNDS.indexOf(background), setBackground: self.setBackground });
+	    });
+	
+	    var mottoLis = MOTTOES.map(function (motto) {
+	      return React.createElement('li', { className: motto, key: MOTTOES.indexOf(motto), onClick: self.setMottoBackground });
 	    });
 	
 	    var mainColor = this.state.color.length > 0 ? this.state.color : "";
@@ -20396,6 +20415,17 @@
 	      { className: 'background-menu group' },
 	      backgroundLis
 	    );
+	    var mottoInput = React.createElement(
+	      'li',
+	      null,
+	      React.createElement('input', { type: 'text', value: this.state.motto, onChange: this.setMotto })
+	    );
+	    var mottoMenu = React.createElement(
+	      'ul',
+	      { className: 'motto-menu group' },
+	      mottoInput,
+	      mottoLis
+	    );
 	    var menu = this.state.menu;
 	
 	    var tabOptions = {
@@ -20403,7 +20433,8 @@
 	      "partition-menu": partitionMenu,
 	      "ordinaries-menu": ordinariesMenu,
 	      "charge-menu": chargeMenu,
-	      "background-menu": backgroundMenu
+	      "background-menu": backgroundMenu,
+	      "motto-menu": mottoMenu
 	    };
 	
 	    var selected = tabOptions[this.state.selected];
@@ -20445,6 +20476,15 @@
 	            React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
 	            React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
 	            React.createElement('section', { className: "icon " + chargeWithColor })
+	          ),
+	          React.createElement(
+	            'section',
+	            { className: "motto " + this.state.mottoBackground + " " + this.state.mottoColor },
+	            React.createElement(
+	              'p',
+	              null,
+	              this.state.motto
+	            )
 	          )
 	        )
 	      )
