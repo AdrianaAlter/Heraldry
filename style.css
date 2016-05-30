@@ -202,7 +202,12 @@ li {
   border-color: #fff !important;
 }
 
-.reset:after {
+.copper {
+  background: #E2A798 !important;
+  border-color: #E2A798 !important;
+}
+.RESET:after {
+  display: block;
   content: "RESET";
 }
 
@@ -283,15 +288,22 @@ li {
   top: 50%;
   left: 4.5%;
 }
+.per-chevron-reversed {
+  height: 100%;
+  width: 102%;
+  transform: rotate(45deg);
+  top: -71%;
+  left: -4%;
+}
 
-.per-quarter {
+.quarterly {
   height: 52%;
   width: 52%;
   left: -2%;
   top: -5%;
 }
 
-.per-quarter:after {
+.quarterly:after {
   background: inherit;
   border-color: inherit !important;
   display: block;
@@ -306,18 +318,27 @@ li {
 
 .per-bend {
   height: 145%;
+  width: 170%;
+  transform: rotate(45deg);
+  top: 4.5%;
+  left: -109%;
+  position: absolute;
+}
+
+.per-bend-sinister {
+  height: 145%;
   width: 108%;
   transform: rotate(45deg);
   top: 4.5%;
   left: 50%;
 }
 
-.per-chaussé {
+.chaussé {
   width: 0;
   height: 0;
   border-left: 169px solid transparent;
   border-right: 169px solid transparent;
-  border-top: 313px solid #f00;
+  border-top: 313px solid #000;
   border-top-color: inherit !important;
 }
 
@@ -342,13 +363,13 @@ li {
 }
 
 
-.per-flaunches {
+.flaunches {
   height: 100%;
   width: 100%;
   border-radius: 40%;
   left: -67%;
 }
-.per-flaunches:after {
+.flaunches:after {
   content: "";
   background: inherit !important;
   border-color: inherit !important;
@@ -360,7 +381,23 @@ li {
   position: absolute;
 }
 
+.tierced {
+  height: 102%;
+  width: 30%;
+  left: -2%;
+  top: -2%;
+}
 
+.tierced:after {
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 240%;
+}
 
 
 
@@ -418,25 +455,6 @@ li {
   top: -45%;
   transform: rotate(47deg);
 }
-
-/*.bend {
-  height: 420px;
-  width: 40px;
-  left: 18px;
-  top: -92px;
-  transform: rotate(47deg);
-}
-
-.bend:after {
-  content: "";
-  position: absolute;
-  border: 1px solid black;
-  height: 420px;
-  width: 40px;
-  left: 18px;
-  top: -92px;
-  transform: rotate(90deg);
-}*/
 
 .canton {
   height: 26%;
@@ -500,6 +518,33 @@ li {
   position: absolute;
 }
 
+.chevron-reversed {
+  width: 30px;
+  height: 350px;
+  transform: rotate(45deg);
+  top: 21%;
+  left: 10.5%;
+  position: absolute;
+}
+.chevron-reversed:before {
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+  content: "";
+  width: 30px;
+  height: 302px;
+  transform: rotate(88deg);
+  top: -40.5%;
+  right: -464%;
+  position: absolute;
+}
+
+.tierce {
+  height: 102%;
+  width: 30%;
+  left: -2%;
+  top: -2%;
+}
 
 
 
@@ -519,9 +564,8 @@ li {
   position: absolute;
   z-index: 3;
   display: block;
-  height: 300px;
-  width: 300px;
-  left: 4%;
+  height: 100%;
+  width: 100%;
   transition: background-image 2s;
   background-repeat: no-repeat;
   background-position: center;
@@ -559,6 +603,9 @@ li {
 .fleur-white {
   background-image: url("./images/fleur/fleur-white.png") !important;
 }
+.fleur-copper {
+  background-image: url("./images/fleur/fleur-copper.png") !important;
+}
 
 .lion {
   background-image: url("./images/lion/lion-sable.png") !important;
@@ -592,6 +639,9 @@ li {
 }
 .lion-white {
   background-image: url("./images/lion/lion-white.png") !important;
+}
+.lion-copper {
+  background-image: url("./images/lion/lion-copper.png") !important;
 }
 
 .eagle {
@@ -627,6 +677,9 @@ li {
 .eagle-white {
   background-image: url("./images/eagle/eagle-white.png") !important;
 }
+.eagle-copper {
+  background-image: url("./images/eagle/eagle-copper.png") !important;
+}
 
 .rose {
   background-image: url("./images/rose/rose-sable.png") !important;
@@ -660,6 +713,9 @@ li {
 }
 .rose-white {
   background-image: url("./images/rose/rose-white.png") !important;
+}
+.rose-copper {
+  background-image: url("./images/rose/rose-copper.png") !important;
 }
 
 .unicorn {
@@ -695,6 +751,9 @@ li {
 .unicorn-white {
   background-image: url("./images/unicorn/unicorn-white.png") !important;
 }
+.unicorn-copper {
+  background-image: url("./images/unicorn/unicorn-copper.png") !important;
+}
 
 .bow {
   background-image: url("./images/bow/bow-sable.png") !important;
@@ -729,6 +788,9 @@ li {
 .bow-white {
   background-image: url("./images/bow/bow-white.png") !important;
 }
+.bow-copper {
+  background-image: url("./images/bow/bow-copper.png") !important;
+}
 
 .gate {
   background-image: url("./images/gate/gate-sable.png") !important;
@@ -762,6 +824,9 @@ li {
 }
 .gate-white {
   background-image: url("./images/gate/gate-white.png") !important;
+}
+.gate-copper {
+  background-image: url("./images/gate/gate-copper.png") !important;
 }
 
 .serpent {
@@ -798,6 +863,9 @@ li {
 .serpent-white {
   background-image: url("./images/serpent/serpent-white.png") !important;
 }
+.serpent-copper {
+  background-image: url("./images/serpent/serpent-copper.png") !important;
+}
 
 .bear {
   background-image: url("./images/bear/bear.png");
@@ -830,7 +898,44 @@ li {
 .bear-white {
   background-image: url("./images/bear/bear-white.png") !important;
 }
+.bear-copper {
+  background-image: url("./images/bear/bear-copper.png") !important;
+}
 
+.key {
+  background-image: url("./images/key/key.png");
+}
+
+.key-gules {
+  background-image: url("./images/key/key-gules.png") !important;
+}
+.key-azure {
+  background-image: url("./images/key/key-azure.png") !important;
+}
+.key-vert {
+  background-image: url("./images/key/key-vert.png") !important;
+}
+.key-purpure {
+  background-image: url("./images/key/key-purpure.png") !important;
+}
+.key-murrey {
+  background-image: url("./images/key/key-murrey.png") !important;
+}
+.key-sable {
+  background-image: url("./images/key/key-sable.png") !important;
+}
+.key-argent {
+  background-image: url("./images/key/key-argent.png") !important;
+}
+.key-or {
+  background-image: url("./images/key/key-or.png") !important;
+}
+.key-white {
+  background-image: url("./images/key/key-white.png") !important;
+}
+.key-copper {
+  background-image: url("./images/key/key-copper.png") !important;
+}
 
 /*BACKGROUNDS*/
 .black {
@@ -883,6 +988,7 @@ li {
 
 .scroll {
   background-size: contain;
+  background-position-x: 48%;
   background-image: url("./images/backgrounds/scroll.png") !important;
 }
 

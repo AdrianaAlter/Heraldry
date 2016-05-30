@@ -20209,10 +20209,10 @@
 	var ChargeItem = __webpack_require__(174);
 	var BackgroundItem = __webpack_require__(175);
 	
-	COLORS = ["gules", "azure", "vert", "sable", "purpure", "murrey", "argent", "or", "white", "RESET"];
-	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-quarter", "per-bend", "per-chaussé", "per-flaunches", "RESET"];
-	ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "RESET"];
-	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "RESET"];
+	COLORS = ["gules", "azure", "vert", "sable", "white", "purpure", "murrey", "argent", "or", "copper", "RESET"];
+	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "chaussé", "flaunches", "tierced", "RESET"];
+	ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "tierce", "RESET"];
+	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
 	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu"];
 	
@@ -20239,7 +20239,8 @@
 	
 	  setPartition: function (e) {
 	    var broken = e.currentTarget.className.split("-");
-	    var partition = broken[0] + "-" + broken[1];
+	    var partition = broken[broken.length - 1] == "opt" ? broken.slice(0, broken.length - 1).join("-") : broken[0] + "-" + broken[1] + "-" + broken[2];
+	
 	    this.setState({ partition: partition });
 	  },
 	
