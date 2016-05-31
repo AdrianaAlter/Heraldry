@@ -1131,19 +1131,15 @@ input {
 
 .motto-six {
   background-image: url("./images/mottoes/graybanner.png") !important;
-  background-position-y: 43%;
+  background-position-y: 43% !important;
 }
 .motto-seven {
   background-image: url("./images/mottoes/redribbon.png") !important;
-  background-position-y: 18%;
+  background-position-y: 18% !important;
 }
 .motto-eight {
   background-image: url("./images/mottoes/woodenplaque.png") !important;
-  background-position-y: 315%;
-}
-.motto-nine {
-  background-image: url("http://cache2.asset-cache.net/xt/157439938.jpg?v=1&g=fs1%7C0%7CEPL%7C39%7C938&s=1") !important;
-  /*background-position-y: 315%;*/
+  background-position-y: 315% !important;
 }
 
 .motto-four, .motto-five {
