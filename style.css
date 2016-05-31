@@ -440,7 +440,13 @@ input {
   left: 240%;
 }
 
-
+.bordure {
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  border-radius: 0 0 250px 250px;
+}
 
 
 

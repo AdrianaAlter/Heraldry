@@ -7,7 +7,7 @@ var ChargeItem = require('./charge_item.jsx');
 var BackgroundItem = require('./background_item.jsx');
 
 COLORS = ["gules", "azure", "vert", "sable", "white", "purpure", "murrey", "argent", "or", "copper", "RESET"];
-PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "chaussé", "flaunches", "tierced", "RESET"]
+PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "chaussé", "flaunches", "tierced", "bordure", "RESET"]
 ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "tierce", "RESET"];
 CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
