@@ -7,11 +7,11 @@ var ChargeItem = require('./charge_item.jsx');
 var BackgroundItem = require('./background_item.jsx');
 
 COLORS = ["gules", "azure", "vert", "sable", "white", "purpure", "murrey", "argent", "or", "copper", "RESET"];
-PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "chaussé", "flaunches", "tierced", "bordure", "RESET"]
-ORDINARIES = ["fess", "pale", "chief", "bend", "canton", "lozenge", "base", "cross", "chevron", "tierce", "RESET"];
+PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "flaunches", "tierced", "tierced-in-mantle", "bordure", "RESET"]
+ORDINARIES = ["fess", "pale", "chief", "bend", "bend-sinister", "canton", "lozenge", "base", "cross", "saltire", "chevron", "tierce", "RESET"];
 CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
-MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "RESET"];
+MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight", "RESET"];
 TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
 SAMPLE_MOTTOES = [
   "Saunz departir",
@@ -63,7 +63,7 @@ var ColorMenu = React.createClass({
 
   setOrdinary: function (e) {
     var broken = e.currentTarget.className.split("-");
-    var ordinary = broken[0];
+    var ordinary = broken[broken.length - 1] == "opt" ? broken.slice(0, broken.length - 1).join("-") : broken[0] + "-" + broken[1] + "-" + broken[2];
     this.setState({ ordinaries: ordinary });
   },
 

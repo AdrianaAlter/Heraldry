@@ -9,20 +9,6 @@ html, body, ul {
   list-style: none;
 }
 
-
-@media only screen
-  and (min-device-width: 414px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-    .menu-div, .shield-div {
-      height: 100vh;
-      width: 100vw;
-    }
-
-
-}
-
 .group:after {
   display: block;
   content: "";
@@ -384,22 +370,27 @@ input {
 }
 
 .per-saltire {
-  height: 145%;
-  width: 108%;
+  width: 286px;
+  height: 236px;
   transform: rotate(45deg);
-  top: 66%;
-  left: -13%;
+  top: -45%;
+  left: 1%;
+
+
 }
 
 .per-saltire:after {
   background: inherit;
-  display: block;
+  border-color: inherit;
+
   content: "";
   position: absolute;
-  height: 145%;
-  width: 108%;
-  bottom: 65%;
-  left: 4.5%;
+  height: 79%;
+  width: 63%;
+
+  top: 100%;
+  left: 100%;
+
   border: 1px solid black;
 }
 
@@ -438,6 +429,26 @@ input {
   width: 100%;
   position: absolute;
   left: 240%;
+}
+
+.tierced-in-mantle {
+  height: 101%;
+  width: 101%;
+  left: -51%;
+  top: -55%;
+  border-radius: 50%;
+}
+
+.tierced-in-mantle:after {
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  border-radius: 50%;
 }
 
 .bordure {
@@ -499,8 +510,37 @@ input {
   height: 709px;
   width: 40px;
   left: 23%;
+  top: -84.5%;
+  transform: rotate(-45deg);
+}
+
+.bend-sinister {
+  height: 709px;
+  width: 40px;
+  left: 23%;
   top: -45%;
   transform: rotate(47deg);
+}
+
+.saltire {
+  height: 709px;
+  width: 40px;
+  left: 23%;
+  top: -84.5%;
+  transform: rotate(-45deg);
+}
+
+.saltire:after {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  background: inherit;
+  border-color: inherit;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 14%;
+  transform: rotate(90deg);
 }
 
 .canton {
@@ -1089,6 +1129,23 @@ input {
   background-image: url("./images/mottoes/plaque.png") !important;
 }
 
+.motto-six {
+  background-image: url("./images/mottoes/graybanner.png") !important;
+  background-position-y: 43%;
+}
+.motto-seven {
+  background-image: url("./images/mottoes/redribbon.png") !important;
+  background-position-y: 18%;
+}
+.motto-eight {
+  background-image: url("./images/mottoes/woodenplaque.png") !important;
+  background-position-y: 315%;
+}
+.motto-nine {
+  background-image: url("http://cache2.asset-cache.net/xt/157439938.jpg?v=1&g=fs1%7C0%7CEPL%7C39%7C938&s=1") !important;
+  /*background-position-y: 315%;*/
+}
+
 .motto-four, .motto-five {
   bottom: -45% !important;
 }
@@ -1096,6 +1153,11 @@ input {
 .motto-five > p {
   margin-top: 13% !important;
 }
+
+.motto-eight > p {
+    margin-top: 29% !important;
+}
+
 .motto > p {
   margin: 15% 0%;
   text-align: center;
