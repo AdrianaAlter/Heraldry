@@ -201,8 +201,8 @@ var ColorMenu = React.createClass({
     var ordinariesMenu = <ul className="ordinaries-menu group">{ordinaryLis}</ul>
     var chargeMenu = <ul className="charge-menu group" onClick={this.setMenu}>{chargeLis}</ul>
     var backgroundMenu =  <ul className="background-menu group">{backgroundLis}</ul>;
-    var mottoInput = <li><input type="text" value={this.state.motto} onChange={this.setMotto}></input></li>;
-    var mottoMenu = <ul className="motto-menu group">{mottoInput}{mottoLis}</ul>
+    var mottoInput = <input type="text" value={this.state.motto} onChange={this.setMotto}></input>;
+    var mottoMenu = <ul className="motto-menu group">{mottoLis}{mottoInput}</ul>
     var menu = this.state.menu;
 
     var tabOptions = {

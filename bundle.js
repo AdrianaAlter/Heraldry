@@ -20422,16 +20422,12 @@
 	      { className: 'background-menu group' },
 	      backgroundLis
 	    );
-	    var mottoInput = React.createElement(
-	      'li',
-	      null,
-	      React.createElement('input', { type: 'text', value: this.state.motto, onChange: this.setMotto })
-	    );
+	    var mottoInput = React.createElement('input', { type: 'text', value: this.state.motto, onChange: this.setMotto });
 	    var mottoMenu = React.createElement(
 	      'ul',
 	      { className: 'motto-menu group' },
-	      mottoInput,
-	      mottoLis
+	      mottoLis,
+	      mottoInput
 	    );
 	    var menu = this.state.menu;
 	
