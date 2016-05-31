@@ -10,6 +10,17 @@ html, body, ul {
 }
 
 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    html, body, ul {
+      height: 100vh;
+    }
+
+}
+
 .group:after {
   display: block;
   content: "";
@@ -84,22 +95,28 @@ li {
   padding-top: 0;
 }
 
-.tabs > li, .main-menu > li, .color-menu > li, .partitions-menu > li, .ordinaries-menu > li, .charge-menu > li, .background-menu > li, .motto-menu > .li {
+li {
   border-bottom: 1px solid oldlace;
-  margin-top: 5%;
+  background-position: center;
   padding: 1%;
   width: 100%;
   background-position: center;
   background-size: contain;
+  margin-top: 5%;
 }
 
-.color-menu > li, .charge-menu > li, .background-menu > li, .motto-menu > li {
-  margin: 0;
-  height: 29px;
+.charge-menu > li, .motto-menu > li {
+  height: 20px;
 }
 
 .color-menu > li, .background-menu > li {
   height: 26px;
+  margin: 0;
+}
+
+.color-menu > li:last-child:after, .background-menu > li:last-child:after, .motto-menu > li:last-child:after {
+  content: "RESET";
+  margin-top: 5%;
 }
 
 .background-menu > li {
@@ -1034,8 +1051,6 @@ input {
   bottom: -38%;
   left: 5%;
   background-repeat: no-repeat !important;
-
-
 }
 
 .motto-one {
@@ -1058,11 +1073,11 @@ input {
   margin-top: 22% !important;
 }
 .motto-four {
-  background-image: url("./images/mottoes/redplaque.png");
+  background-image: url("./images/mottoes/redplaque.png") !important;
 }
 
 .motto-five {
-  background-image: url("./images/mottoes/plaque.png");
+  background-image: url("./images/mottoes/plaque.png") !important;
 }
 
 .motto-four, .motto-five {

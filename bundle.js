@@ -20216,6 +20216,7 @@
 	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
 	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "RESET"];
 	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
+	SAMPLE_MOTTOES = ["Saunz departir", "Loyaulté me lie", "Souvente me souvene", "Lux tua vita mihi", "Piu por dulzura que por fuerza", "Me pompae provexit apex", "Quod me alit, me extinguit", "Sic spectanda fides", "In hac spe vivo", "Aeque tandem", "Undique mors est", "Ainsi sera groigne qui groigne", "Semper eadem", "En ma fin gît mon commencement"];
 	
 	var ColorMenu = React.createClass({
 	  displayName: 'ColorMenu',
@@ -20311,6 +20312,9 @@
 	    this.setState({ charge: this.randomize(CHARGES) });
 	    this.setState({ chargeColor: this.randomize(COLORS) });
 	    this.setState({ background: this.randomize(BACKGROUNDS) });
+	    this.setState({ mottoBackground: this.randomize(MOTTOES) });
+	    this.setState({ mottoColor: this.randomize(COLORS) });
+	    this.setState({ motto: this.randomize(SAMPLE_MOTTOES) });
 	  },
 	
 	  resetAll: function () {
@@ -20324,6 +20328,9 @@
 	    this.setState({ menu: "main-tab" });
 	    this.setState({ selected: "main-tab" });
 	    this.setState({ background: "" });
+	    this.setState({ mottoBackground: "" });
+	    this.setState({ motto: "" });
+	    this.setState({ mottoColor: "" });
 	  },
 	
 	  render: function () {
