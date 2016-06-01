@@ -58,6 +58,11 @@ li {
   height: 400px;
 }
 
+.partitions-menu, .ordinaries-menu {
+  height: 573px;
+  overflow-y: scroll;
+}
+
 .tabs, .color-menu, .partitions-menu {
   border-right: 1px solid oldlace;
   width: 48%;
@@ -131,7 +136,7 @@ input {
 
 .shield-div {
   display: block;
-  height: 501px;
+  height: 580px;
   width: 78.5%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -218,7 +223,7 @@ input {
   color: #800040 !important;
 }
 
-.rose {
+.rose-pink {
   background: #FF006E !important;
   border-color: #FF006E !important;
   color: #FF006E !important;
@@ -346,12 +351,167 @@ input {
 
 .per-fess {
   width: 101%;
-  height: 50%;
+  left: -1%;
+  height: 51%;
 }
 
 .per-pale {
-  width: 50%;
+  width: 51%;
   height: 101%;
+  top: -1%;
+}
+
+.paly {
+  height: 101%;
+  width: 17%;
+  left: -1%;
+  top: -1%;
+}
+
+.paly:before {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 200%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.paly:after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 400%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+.barry {
+  height: 17%;
+  width: 101%;
+  left: -1%;
+  top: -1%;
+}
+
+.barry:before {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 200%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.barry:after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 400%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.bendy {
+  height: 235%;
+  width: 17%;
+  left: 23%;
+  top: -84.5%;
+  transform: rotate(-45deg);
+}
+.bendy:before {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 222%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.bendy:after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 30%;
+  left: -222%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+.bendy-sinister {
+  height: 235%;
+  width: 17%;
+  left: 23%;
+  top: -49.5%;
+  transform: rotate(47deg);
+}
+.bendy-sinister:before {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 104%;
+  content: "";
+  left: 222%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.bendy-sinister:after {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  top: 16%;
+  left: -222%;
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+}
+
+.enarched {
+  height: 80%;
+  width: 101%;
+  border-radius: 50%;
+  top: 36%;
+  left: -1%;
+}
+
+.angled {
+  height: 65%;
+  width: 51%;
+  left: -1%;
+  top: 44%;
+}
+
+.angled:after {
+  border: 1px solid black;
+  border-left: transparent;
+  display: block;
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  height: 100%;
+  width: 100%;
+  top: 20%;
+  left: 100%;
+  position: absolute;
 }
 
 .per-chevron {
@@ -370,10 +530,10 @@ input {
 }
 
 .quarterly {
-  height: 52%;
-  width: 52%;
-  left: -2%;
-  top: -5%;
+  height: 51%;
+  width: 51%;
+  left: -1%;
+  top: -1%;
 }
 
 .quarterly:after {
@@ -382,8 +542,8 @@ input {
   display: block;
   content: "";
   position: absolute;
-  height: 164px;
-  width: 164px;
+  height: 100%;
+  width: 100%;
   top: 100%;
   left: 100%;
   border: 1px solid black;
@@ -421,13 +581,11 @@ input {
   transform: rotate(45deg);
   top: -45%;
   left: 1%;
-
-
 }
 
 .per-saltire:after {
-  background: inherit;
-  border-color: inherit;
+  background: inherit !important;
+  border-color: inherit !important;
 
   content: "";
   position: absolute;
@@ -509,8 +667,6 @@ input {
 
 
 
-
-
 /*ORDINARIES*/
 
 .ordinary {
@@ -520,19 +676,57 @@ input {
   transition: background-color 2s;
 }
 
-.fess {
-  width: 340px;
-  height: 40px;
-  left: -2%;
-  top: 44%;
-}
-
 .pale {
   height: 101%;
-  width: 40px;
-  left: 44%;
+  width: 33%;
+  left: 33%;
   top: -1%;
 }
+
+.pallet {
+  height: 101%;
+  width: 16.5%;
+  left: 42.5%;
+  top: -1%;
+}
+
+.endorse {
+  height: 101%;
+  top: -1%;
+  width: 8.25%;
+  left: 45.5%;
+}
+
+.pale-endorsed {
+  height: 101%;
+  width: 33%;
+  left: 33%;
+  top: -1%;
+}
+
+.pale-endorsed:before {
+  background: inherit !important;
+  border-color: inherit !important;
+  display: block;
+  position: absolute;
+  content: "";
+  border: 1px solid black;
+  height: 100%;
+  width: 25%;
+  left: -35%;
+}
+.pale-endorsed:after {
+  background: inherit !important;
+  border-color: inherit !important;
+  display: block;
+  position: absolute;
+  content: "";
+  border: 1px solid black;
+  height: 100%;
+  width: 25%;
+  right: -35%;
+}
+
 
 .pile {
   width: 0;
@@ -550,6 +744,34 @@ input {
   left: -1%;
   top: -1%;
   height: 34%;
+}
+
+.comble {
+  width: 101%;
+  left: -1%;
+  top: -1%;
+  height: 17.5%;
+}
+
+.fess {
+  height: 33%;
+  width: 101%;
+  left: -1%;
+  top: 33%;
+}
+
+.bar {
+  width: 101%;
+  height: 16.5%;
+  left: -1%;
+  top: 40%;
+}
+
+.barrulet {
+  height: 8.25%;
+  width: 101%;
+  left: -1%;
+  top: 43.5%;
 }
 
 .bend {
@@ -588,6 +810,80 @@ input {
   top: 14%;
   transform: rotate(90deg);
 }
+.pairle {
+  height: 51%;
+  width: 40px;
+  left: 44%;
+  bottom: -1%;
+}
+
+.pairle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid black;
+  border-bottom: transparent;
+  background: inherit;
+  border-color: inherit;
+  height: 177%;
+  width: 100%;
+  left: -263%;
+  top: -148%;
+  transform: rotate(-45deg);
+}
+
+.pairle:after {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  border-bottom: transparent;
+  background: inherit;
+  border-color: inherit;
+  height: 177%;
+  width: 100%;
+  left: 260%;
+  top: -148%;
+  transform: rotate(45deg);
+}
+
+.pairle-reversed {
+  height: 51%;
+  width: 40px;
+  left: 44%;
+  top: -1%;
+}
+
+.pairle-reversed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid black;
+  border-top: transparent;
+  background: inherit;
+  border-color: inherit;
+  height: 177%;
+  width: 100%;
+  left: 259%;
+  bottom: -148%;
+  transform: rotate(-45deg);
+}
+
+.pairle-reversed:after {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  border-top: transparent;
+  background: inherit;
+  border-color: inherit;
+  height: 177%;
+  width: 100%;
+  left: -262%;
+  bottom: -148%;
+  transform: rotate(45deg);
+}
+
 
 .canton {
   height: 26%;
@@ -602,6 +898,20 @@ input {
   transform: rotate(45deg);
   left: 19.5%;
   top: 16%;
+}
+
+.delf {
+  height: 40%;
+  width: 40%;
+  left: 29.5%;
+  top: 29.5%;
+}
+
+.billet {
+  height: 60%;
+  width: 30%;
+  left: 35%;
+  top: 20%;
 }
 
 .base {
@@ -679,11 +989,60 @@ input {
   top: -2%;
 }
 
+.roundel {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  top: 25%;
+  left: 25%;
+}
 
+.annulet {
+  height: 40%;
+  width: 40%;
+  border-radius: 50%;
+  background: transparent !important;
+  border-width: 20px !important;
+  top: 26%;
+  left: 24%;
+}
 
+.quarter {
+  height: 51%;
+  width: 51%;
+  top: -1%;
+  left: -1%;
+}
 
+.orle {
+  height: 73%;
+  width: 73%;
+  left: 7.5%;
+  top: 7.5%;
+  background: transparent !important;
+  border-width: 20px;
+  border-radius: 0 0 250px 250px;
+}
 
+.pale-and-chief {
+  height: 101%;
+  width: 30%;
+  left: 35.5%;
+  border-top-color: transparent;
+}
 
+.pale-and-chief:before {
+  display: block;
+  position: absolute;
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  border: 1px solid black;
+  width: 334%;
+  left: -122%;
+  top: -1%;
+  height: 34%;
+}
 
 
 

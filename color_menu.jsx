@@ -6,9 +6,9 @@ var OrdinaryItem = require('./ordinary_item.jsx');
 var ChargeItem = require('./charge_item.jsx');
 var BackgroundItem = require('./background_item.jsx');
 
-COLORS = ["gules", "sanguine", "azure", "celeste", "vert", "cendree", "sable", "white", "purpure", "murrey", "tawny", "senois", "rose", "carnation", "argent", "or", "copper", "RESET"];
-PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "flaunches", "tierced", "tierced-in-mantle", "bordure", "RESET"]
-ORDINARIES = ["fess", "pale", "chief", "bend", "bend-sinister", "canton", "lozenge", "base", "cross", "saltire", "chevron", "tierce", "RESET"];
+COLORS = ["gules", "sanguine", "azure", "celeste", "vert", "cendree", "sable", "white", "purpure", "murrey", "tawny", "senois", "rose-pink", "carnation", "argent", "or", "copper", "RESET"];
+PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "flaunches", "tierced", "tierced-in-mantle", "bordure", "paly", "barry", "bendy", "bendy-sinister", "enarched", "angled", "RESET"]
+ORDINARIES = ["fess", "bar", "barrulet", "pale", "pallet", "endorse", "chief", "comble", "bend", "bend-sinister", "quarter", "canton", "lozenge", "billet", "delf", "base", "cross", "saltire", "pairle", "pairle-reversed", "chevron", "tierce", "roundel", "annulet", "orle", "pale-and-chief", "pale-endorsed", "RESET"];
 CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
 BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
 MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight", "RESET"];
