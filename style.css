@@ -53,6 +53,11 @@ li {
   color: #8b0000;
 }
 
+.color-menu {
+  overflow-y: scroll;
+  height: 400px;
+}
+
 .tabs, .color-menu, .partitions-menu {
   border-right: 1px solid oldlace;
   width: 48%;
@@ -181,6 +186,12 @@ input {
   /*background: linear-gradient(to right, #000066, #0000cc, #000066) !important;*/
 }
 
+.celeste {
+  background: #75AADB !important;
+  border-color: #75AADB !important;
+  color: #75AADB !important;
+}
+
 .vert {
   background: #008000 !important;
   border-color: #008000 !important;
@@ -189,16 +200,28 @@ input {
 }
 
 .purpure {
-  background: #4d004d !important;
-  border-color: #4d004d !important;
-  color: #4d004d !important;
+  background: #89395E !important;
+  border-color: #89395E !important;
+  color: #89395E !important;
   /*background: linear-gradient(to right, #4d004d, #b300b3, #4d004d) !important;*/
 }
 
-.murrey {
+.sanguine {
   background: #4d0000 !important;
   border-color: #4d0000 !important;
   color: #4d0000 !important;
+}
+
+.murrey {
+  background: #800040 !important;
+  border-color: #800040 !important;
+  color: #800040 !important;
+}
+
+.rose {
+  background: #FF006E !important;
+  border-color: #FF006E !important;
+  color: #FF006E !important;
 }
 
 .sable {
@@ -206,6 +229,29 @@ input {
   border-color: #000 !important;
   color: #000 !important;
   /*background: linear-gradient(to right, #000, #333333, #000) !important;*/
+}
+
+.cendree {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+  color: #808080 !important;
+}
+
+.carnation {
+  background-color: #E6B488 !important;
+  border-color: #E6B488 !important;
+  color: #E6B488 !important;
+}
+.tawny {
+  background-color: #A75502 !important;
+  border-color: #A75502 !important;
+  color: #A75502 !important;
+}
+
+.senois {
+  background-color: #8D4024 !important;
+  border-color: #8D4024 !important;
+  color: #8D4024 !important;
 }
 
 .argent {
@@ -229,9 +275,9 @@ input {
 }
 
 .copper {
-  background: #E2A798 !important;
-  border-color: #E2A798 !important;
-  color: #E2A798 !important;
+  background: #d06b47 !important;
+  border-color: #d06b47 !important;
+  color: #d06b47 !important;
 }
 /*.RESET-button:after, .RESET-button-gules:after {
   display: block;
