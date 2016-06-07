@@ -20212,8 +20212,8 @@
 	COLORS = ["gules", "sanguine", "azure", "celeste", "vert", "cendree", "sable", "white", "purpure", "murrey", "tawny", "senois", "rose-pink", "carnation", "argent", "or", "copper", "RESET"];
 	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "flaunches", "tierced", "tierced-in-mantle", "bordure", "paly", "barry", "bendy", "bendy-sinister", "enarched", "angled", "RESET"];
 	ORDINARIES = ["fess", "bar", "barrulet", "pale", "pallet", "endorse", "chief", "comble", "bend", "bend-sinister", "quarter", "canton", "lozenge", "billet", "delf", "base", "cross", "saltire", "pairle", "pairle-reversed", "chevron", "tierce", "roundel", "annulet", "orle", "pale-and-chief", "pale-endorsed", "RESET"];
-	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "RESET"];
-	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "RESET"];
+	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "sun", "dragon", "horse", "RESET"];
+	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "wood-panels", "stone2", "versailles", "ceiling", "book-cover", "stained-glass", "window2", "white-fabric", "RESET"];
 	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight", "RESET"];
 	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
 	SAMPLE_MOTTOES = ["Saunz departir", "Loyaulté me lie", "Souvente me souvene", "Lux tua vita mihi", "Piu por dulzura que por fuerza", "Me pompae provexit apex", "Quod me alit, me extinguit", "Sic spectanda fides", "In hac spe vivo", "Aeque tandem", "Undique mors est", "Ainsi sera groigne qui groigne", "Semper eadem", "En ma fin gît mon commencement"];
@@ -20338,7 +20338,8 @@
 	    var self = this;
 	
 	    var tabs = TABS.map(function (tab) {
-	      var active = tab == self.state.selected ? " active" : "";
+	      var active = tab == self.state.selected || tab + "-tab" == self.state.selected ? " active" : "";
+	
 	      return React.createElement(
 	        'li',
 	        { className: tab + "-tab" + active, key: TABS.indexOf(tab), onClick: self.setTab },
@@ -20364,15 +20365,18 @@
 	    });
 	
 	    var partitionLis = PARTITIONS.map(function (partition) {
-	      return React.createElement(PartitionItem, { partition: partition + "-opt", key: PARTITIONS.indexOf(partition), name: partition, setPartition: self.setPartition });
+	      var active = partition == self.state.partition ? " active" : "";
+	      return React.createElement(PartitionItem, { partition: partition + "-opt" + active, key: PARTITIONS.indexOf(partition), name: partition, setPartition: self.setPartition });
 	    });
 	
 	    var ordinaryLis = ORDINARIES.map(function (ordinary) {
-	      return React.createElement(OrdinaryItem, { ordinary: ordinary + "-opt", key: ORDINARIES.indexOf(ordinary), name: ordinary, setOrdinary: self.setOrdinary });
+	      var active = ordinary == self.state.ordinaries ? " active" : "";
+	      return React.createElement(OrdinaryItem, { ordinary: ordinary + "-opt" + active, key: ORDINARIES.indexOf(ordinary), name: ordinary, setOrdinary: self.setOrdinary });
 	    });
 	
 	    var chargeLis = CHARGES.map(function (charge) {
-	      return React.createElement(ChargeItem, { charge: charge, key: CHARGES.indexOf(charge), setCharge: self.setCharge });
+	      var activity = charge == self.state.charge ? "-gules" : "-white";
+	      return React.createElement(ChargeItem, { charge: charge, activity: activity, key: CHARGES.indexOf(charge), setCharge: self.setCharge });
 	    });
 	
 	    var backgroundLis = BACKGROUNDS.map(function (background) {
@@ -20574,7 +20578,7 @@
 	
 	
 	  render: function () {
-	    return React.createElement('li', { className: this.props.charge + "-gules", onClick: this.props.setCharge });
+	    return React.createElement('li', { className: this.props.charge + this.props.activity, onClick: this.props.setCharge });
 	  }
 	
 	});

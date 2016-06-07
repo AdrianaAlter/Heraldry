@@ -58,7 +58,7 @@ li {
   height: 400px;
 }
 
-.partitions-menu, .ordinaries-menu {
+.partitions-menu, .ordinaries-menu, .background-menu {
   height: 573px;
   overflow-y: scroll;
 }
@@ -283,7 +283,7 @@ input {
   background: #d06b47 !important;
   border-color: #d06b47 !important;
   color: #d06b47 !important;
-}
+}-
 /*.RESET-button:after, .RESET-button-gules:after {
   display: block;
   content: "RESET";
@@ -341,7 +341,7 @@ input {
 }*/
 
 .partition {
-  position: absolute;
+  position: absolute !important;
   background: #f9e2b7;
   border: 1px solid black;
   transition: background-color 2s;
@@ -353,12 +353,14 @@ input {
   width: 101%;
   left: -1%;
   height: 51%;
+  position: absolute !important;
 }
 
 .per-pale {
   width: 51%;
   height: 101%;
   top: -1%;
+  position: absolute !important;
 }
 
 .paly {
@@ -366,6 +368,7 @@ input {
   width: 17%;
   left: -1%;
   top: -1%;
+  position: absolute !important;
 }
 
 .paly:before {
@@ -396,6 +399,7 @@ input {
   width: 101%;
   left: -1%;
   top: -1%;
+  position: absolute !important;
 }
 
 .barry:before {
@@ -424,6 +428,7 @@ input {
 
 .bendy {
   height: 235%;
+  position: absolute !important;
   width: 17%;
   left: 23%;
   top: -84.5%;
@@ -454,6 +459,7 @@ input {
   border: 1px solid black;
 }
 .bendy-sinister {
+  position: absolute !important;
   height: 235%;
   width: 17%;
   left: 23%;
@@ -487,6 +493,7 @@ input {
 
 .enarched {
   height: 80%;
+  position: absolute !important;
   width: 101%;
   border-radius: 50%;
   top: 36%;
@@ -495,6 +502,7 @@ input {
 
 .angled {
   height: 65%;
+  position: absolute !important;
   width: 51%;
   left: -1%;
   top: 44%;
@@ -516,12 +524,14 @@ input {
 
 .per-chevron {
   height: 100%;
+  position: absolute !important;
   width: 80%;
   transform: rotate(45deg);
   top: 50%;
   left: 4.5%;
 }
 .per-chevron-reversed {
+  position: absolute !important;
   height: 100%;
   width: 102%;
   transform: rotate(45deg);
@@ -534,6 +544,7 @@ input {
   width: 51%;
   left: -1%;
   top: -1%;
+  position: absolute !important;
 }
 
 .quarterly:after {
@@ -563,6 +574,7 @@ input {
   width: 108%;
   transform: rotate(45deg);
   top: 4.5%;
+  position: absolute !important;
   left: 50%;
 }
 
@@ -573,6 +585,7 @@ input {
   border-right: 169px solid transparent;
   border-top: 313px solid #000;
   border-top-color: inherit !important;
+  position: absolute !important;
 }
 
 .per-saltire {
@@ -581,6 +594,7 @@ input {
   transform: rotate(45deg);
   top: -45%;
   left: 1%;
+  position: absolute !important;
 }
 
 .per-saltire:after {
@@ -604,6 +618,7 @@ input {
   width: 100%;
   border-radius: 40%;
   left: -67%;
+  position: absolute !important;
 }
 .flaunches:after {
   content: "";
@@ -622,6 +637,7 @@ input {
   width: 30%;
   left: -2%;
   top: -2%;
+  position: absolute !important;
 }
 
 .tierced:after {
@@ -641,6 +657,7 @@ input {
   left: -51%;
   top: -55%;
   border-radius: 50%;
+  position: absolute !important;
 }
 
 .tierced-in-mantle:after {
@@ -660,6 +677,7 @@ input {
   width: 80%;
   left: 10%;
   top: 10%;
+  position: absolute !important;
   border-radius: 0 0 250px 250px;
 }
 
@@ -1098,6 +1116,32 @@ input {
 .fleur-copper {
   background-image: url("./images/fleur/fleur-copper.png") !important;
 }
+.fleur-sanguine {
+  background-image: url("./images/fleur/fleur-sanguine.png") !important;
+}
+.fleur-celeste {
+  background-image: url("./images/fleur/fleur-celeste.png") !important;
+}
+.fleur-cendree {
+  background-image: url("./images/fleur/fleur-cendree.png") !important;
+}
+.fleur-tawny {
+  background-image: url("./images/fleur/fleur-tawny.png") !important;
+}
+.fleur-senois {
+  background-image: url("./images/fleur/fleur-senois.png") !important;
+}
+.fleur-rose-pink {
+  background-image: url("./images/fleur/fleur-rose-pink.png") !important;
+}
+.fleur-carnation {
+  background-image: url("./images/fleur/fleur-carnation.png") !important;
+}
+
+
+
+
+
 
 .lion {
   background-image: url("./images/lion/lion-sable.png") !important;
@@ -1134,6 +1178,27 @@ input {
 }
 .lion-copper {
   background-image: url("./images/lion/lion-copper.png") !important;
+}
+.lion-sanguine {
+  background-image: url("./images/lion/lion-sanguine.png") !important;
+}
+.lion-celeste {
+  background-image: url("./images/lion/lion-celeste.png") !important;
+}
+.lion-cendree {
+  background-image: url("./images/lion/lion-cendree.png") !important;
+}
+.lion-tawny {
+  background-image: url("./images/lion/lion-tawny.png") !important;
+}
+.lion-senois {
+  background-image: url("./images/lion/lion-senois.png") !important;
+}
+.lion-rose-pink {
+  background-image: url("./images/lion/lion-rose-pink.png") !important;
+}
+.lion-carnation {
+  background-image: url("./images/lion/lion-carnation.png") !important;
 }
 
 .eagle {
@@ -1172,6 +1237,27 @@ input {
 .eagle-copper {
   background-image: url("./images/eagle/eagle-copper.png") !important;
 }
+.eagle-sanguine {
+  background-image: url("./images/eagle/eagle-sanguine.png") !important;
+}
+.eagle-celeste {
+  background-image: url("./images/eagle/eagle-celeste.png") !important;
+}
+.eagle-cendree {
+  background-image: url("./images/eagle/eagle-cendree.png") !important;
+}
+.eagle-tawny {
+  background-image: url("./images/eagle/eagle-tawny.png") !important;
+}
+.eagle-senois {
+  background-image: url("./images/eagle/eagle-senois.png") !important;
+}
+.eagle-rose-pink {
+  background-image: url("./images/eagle/eagle-rose-pink.png") !important;
+}
+.eagle-carnation {
+  background-image: url("./images/eagle/eagle-carnation.png") !important;
+}
 
 .rose {
   background-image: url("./images/rose/rose-sable.png") !important;
@@ -1209,6 +1295,28 @@ input {
 .rose-copper {
   background-image: url("./images/rose/rose-copper.png") !important;
 }
+.rose-sanguine {
+  background-image: url("./images/rose/rose-sanguine.png") !important;
+}
+.rose-celeste {
+  background-image: url("./images/rose/rose-celeste.png") !important;
+}
+.rose-cendree {
+  background-image: url("./images/rose/rose-cendree.png") !important;
+}
+.rose-tawny {
+  background-image: url("./images/rose/rose-tawny.png") !important;
+}
+.rose-senois {
+  background-image: url("./images/rose/rose-senois.png") !important;
+}
+.rose-rose-pink {
+  background-image: url("./images/rose/rose-rose-pink.png") !important;
+}
+.rose-carnation {
+  background-image: url("./images/rose/rose-carnation.png") !important;
+}
+
 
 .unicorn {
   background-image: url("./images/unicorn/unicorn-sable.png") !important;
@@ -1246,6 +1354,28 @@ input {
 .unicorn-copper {
   background-image: url("./images/unicorn/unicorn-copper.png") !important;
 }
+.unicorn-sanguine {
+  background-image: url("./images/unicorn/unicorn-sanguine.png") !important;
+}
+.unicorn-celeste {
+  background-image: url("./images/unicorn/unicorn-celeste.png") !important;
+}
+.unicorn-cendree {
+  background-image: url("./images/unicorn/unicorn-cendree.png") !important;
+}
+.unicorn-tawny {
+  background-image: url("./images/unicorn/unicorn-tawny.png") !important;
+}
+.unicorn-senois {
+  background-image: url("./images/unicorn/unicorn-senois.png") !important;
+}
+.unicorn-rose-pink {
+  background-image: url("./images/unicorn/unicorn-rose-pink.png") !important;
+}
+.unicorn-carnation {
+  background-image: url("./images/unicorn/unicorn-carnation.png") !important;
+}
+
 
 .bow {
   background-image: url("./images/bow/bow-sable.png") !important;
@@ -1283,6 +1413,27 @@ input {
 .bow-copper {
   background-image: url("./images/bow/bow-copper.png") !important;
 }
+.bow-sanguine {
+  background-image: url("./images/bow/bow-sanguine.png") !important;
+}
+.bow-celeste {
+  background-image: url("./images/bow/bow-celeste.png") !important;
+}
+.bow-cendree {
+  background-image: url("./images/bow/bow-cendree.png") !important;
+}
+.bow-tawny {
+  background-image: url("./images/bow/bow-tawny.png") !important;
+}
+.bow-senois {
+  background-image: url("./images/bow/bow-senois.png") !important;
+}
+.bow-rose-pink {
+  background-image: url("./images/bow/bow-rose-pink.png") !important;
+}
+.bow-carnation {
+  background-image: url("./images/bow/bow-carnation.png") !important;
+}
 
 .gate {
   background-image: url("./images/gate/gate-sable.png") !important;
@@ -1319,6 +1470,27 @@ input {
 }
 .gate-copper {
   background-image: url("./images/gate/gate-copper.png") !important;
+}
+.gate-sanguine {
+  background-image: url("./images/gate/gate-sanguine.png") !important;
+}
+.gate-celeste {
+  background-image: url("./images/gate/gate-celeste.png") !important;
+}
+.gate-cendree {
+  background-image: url("./images/gate/gate-cendree.png") !important;
+}
+.gate-tawny {
+  background-image: url("./images/gate/gate-tawny.png") !important;
+}
+.gate-senois {
+  background-image: url("./images/gate/gate-senois.png") !important;
+}
+.gate-rose-pink {
+  background-image: url("./images/gate/gate-rose-pink.png") !important;
+}
+.gate-carnation {
+  background-image: url("./images/gate/gate-carnation.png") !important;
 }
 
 .serpent {
@@ -1358,6 +1530,27 @@ input {
 .serpent-copper {
   background-image: url("./images/serpent/serpent-copper.png") !important;
 }
+.serpent-sanguine {
+  background-image: url("./images/serpent/serpent-sanguine.png") !important;
+}
+.serpent-celeste {
+  background-image: url("./images/serpent/serpent-celeste.png") !important;
+}
+.serpent-cendree {
+  background-image: url("./images/serpent/serpent-cendree.png") !important;
+}
+.serpent-tawny {
+  background-image: url("./images/serpent/serpent-tawny.png") !important;
+}
+.serpent-senois {
+  background-image: url("./images/serpent/serpent-senois.png") !important;
+}
+.serpent-rose-pink {
+  background-image: url("./images/serpent/serpent-rose-pink.png") !important;
+}
+.serpent-carnation {
+  background-image: url("./images/serpent/serpent-carnation.png") !important;
+}
 
 .bear {
   background-image: url("./images/bear/bear.png");
@@ -1393,6 +1586,27 @@ input {
 .bear-copper {
   background-image: url("./images/bear/bear-copper.png") !important;
 }
+.bear-sanguine {
+  background-image: url("./images/bear/bear-sanguine.png") !important;
+}
+.bear-celeste {
+  background-image: url("./images/bear/bear-celeste.png") !important;
+}
+.bear-cendree {
+  background-image: url("./images/bear/bear-cendree.png") !important;
+}
+.bear-tawny {
+  background-image: url("./images/bear/bear-tawny.png") !important;
+}
+.bear-senois {
+  background-image: url("./images/bear/bear-senois.png") !important;
+}
+.bear-rose-pink {
+  background-image: url("./images/bear/bear-rose-pink.png") !important;
+}
+.bear-carnation {
+  background-image: url("./images/bear/bear-carnation.png") !important;
+}
 
 .key {
   background-image: url("./images/key/key.png");
@@ -1427,6 +1641,141 @@ input {
 }
 .key-copper {
   background-image: url("./images/key/key-copper.png") !important;
+}
+.key-sanguine {
+  background-image: url("./images/key/key-sanguine.png") !important;
+}
+.key-celeste {
+  background-image: url("./images/key/key-celeste.png") !important;
+}
+.key-cendree {
+  background-image: url("./images/key/key-cendree.png") !important;
+}
+.key-tawny {
+  background-image: url("./images/key/key-tawny.png") !important;
+}
+.key-senois {
+  background-image: url("./images/key/key-senois.png") !important;
+}
+.key-rose-pink {
+  background-image: url("./images/key/key-rose-pink.png") !important;
+}
+.key-carnation {
+  background-image: url("./images/key/key-carnation.png") !important;
+}
+
+.sun {
+  background-image: url("./images/sun/sun.png");
+}
+.sun-gules {
+  background-image: url("./images/sun/sun-gules.png") !important;
+}
+.sun-azure {
+  background-image: url("./images/sun/sun-azure.png") !important;
+}
+.sun-vert {
+  background-image: url("./images/sun/sun-vert.png") !important;
+}
+.sun-purpure {
+  background-image: url("./images/sun/sun-purpure.png") !important;
+}
+.sun-murrey {
+  background-image: url("./images/sun/sun-murrey.png") !important;
+}
+.sun-sable {
+  background-image: url("./images/sun/sun-sable.png") !important;
+}
+.sun-argent {
+  background-image: url("./images/sun/sun-argent.png") !important;
+}
+.sun-or {
+  background-image: url("./images/sun/sun-or.png") !important;
+}
+.sun-white {
+  background-image: url("./images/sun/sun-white.png") !important;
+}
+.sun-copper {
+  background-image: url("./images/sun/sun-copper.png") !important;
+}
+.sun-sanguine {
+  background-image: url("./images/sun/sun-sanguine.png") !important;
+}
+.sun-celeste {
+  background-image: url("./images/sun/sun-celeste.png") !important;
+}
+.sun-cendree {
+  background-image: url("./images/sun/sun-cendree.png") !important;
+}
+.sun-tawny {
+  background-image: url("./images/sun/sun-tawny.png") !important;
+}
+.sun-senois {
+  background-image: url("./images/sun/sun-senois.png") !important;
+}
+.sun-rose-pink {
+  background-image: url("./images/sun/sun-rose-pink.png") !important;
+}
+.sun-carnation {
+  background-image: url("./images/sun/sun-carnation.png") !important;
+}
+.dragon {
+  /*background-image: url("http://1.bp.blogspot.com/-f6HSKLWTn_s/TdVrvh5LeTI/AAAAAAAAAck/97NvczneE6c/s1600/HandrixSilhouette.png");*/
+  background-image: url("./images/dragon/dragon.png");
+}
+.dragon-gules {
+  background-image: url("./images/dragon/dragon-gules.png") !important;
+}
+.dragon-azure {
+  background-image: url("./images/dragon/dragon-azure.png") !important;
+}
+.dragon-vert {
+  background-image: url("./images/dragon/dragon-vert.png") !important;
+}
+.dragon-purpure {
+  background-image: url("./images/dragon/dragon-purpure.png") !important;
+}
+.dragon-murrey {
+  background-image: url("./images/dragon/dragon-murrey.png") !important;
+}
+.dragon-sable {
+  background-image: url("./images/dragon/dragon-sable.png") !important;
+}
+.dragon-argent {
+  background-image: url("./images/dragon/dragon-argent.png") !important;
+}
+.dragon-or {
+  background-image: url("./images/dragon/dragon-or.png") !important;
+}
+.dragon-white {
+  background-image: url("./images/dragon/dragon-white.png") !important;
+}
+.dragon-copper {
+  background-image: url("./images/dragon/dragon-copper.png") !important;
+}
+.dragon-sanguine {
+  background-image: url("./images/dragon/dragon-sanguine.png") !important;
+}
+.dragon-celeste {
+  background-image: url("./images/dragon/dragon-celeste.png") !important;
+}
+.dragon-cendree {
+  background-image: url("./images/dragon/dragon-cendree.png") !important;
+}
+.dragon-tawny {
+  background-image: url("./images/dragon/dragon-tawny.png") !important;
+}
+.dragon-senois {
+  background-image: url("./images/dragon/dragon-senois.png") !important;
+}
+.dragon-rose-pink {
+  background-image: url("./images/dragon/dragon-rose-pink.png") !important;
+}
+.dragon-carnation {
+  background-image: url("./images/dragon/dragon-carnation.png") !important;
+}
+
+.horse-sable, .horse-white {
+  background-image: url("./images/horse/horse.png");
 }
 
 /*BACKGROUNDS*/
@@ -1489,6 +1838,41 @@ input {
   background-image: url("./images/backgrounds/gold.jpg") !important;
 }
 
+.wood-panels {
+  background-size: cover;
+  background-image: url("./images/backgrounds/wood-panels.jpg") !important;
+}
+
+.stone2 {
+  background-size: cover;
+  background-image: url("./images/backgrounds/stone2.jpg");
+}
+.versailles {
+  background-size: cover;
+  background-image: url("./images/backgrounds/versailles.jpg");
+}
+.ceiling {
+  background-size: cover;
+  background-image: url("./images/backgrounds/ceiling.jpg");
+}
+.book-cover {
+  background-size: contain;
+  background-position-x: 45.5%;
+  background-image: url("./images/backgrounds/book-cover.jpg");
+}
+.stained-glass {
+  background-size: cover;
+  background-image: url("./images/backgrounds/stained-glass.jpg");
+}
+.window2 {
+  background-size: cover;
+  background-image: url("./images/backgrounds/window2.jpg");
+}
+
+.white-fabric {
+  background-size: cover;
+  background-image: url("./images/backgrounds/white-fabric.jpg");
+}
 
 
 
