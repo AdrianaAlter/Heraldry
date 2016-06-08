@@ -1774,10 +1774,60 @@ input {
   background-image: url("./images/dragon/dragon-carnation.png") !important;
 }
 
-.horse-sable, .horse-white {
+.horse {
   background-image: url("./images/horse/horse.png");
 }
-
+.horse-gules {
+  background-image: url("./images/horse/horse-gules.png") !important;
+}
+.horse-azure {
+  background-image: url("./images/horse/horse-azure.png") !important;
+}
+.horse-vert {
+  background-image: url("./images/horse/horse-vert.png") !important;
+}
+.horse-purpure {
+  background-image: url("./images/horse/horse-purpure.png") !important;
+}
+.horse-murrey {
+  background-image: url("./images/horse/horse-murrey.png") !important;
+}
+.horse-sable {
+  background-image: url("./images/horse/horse-sable.png") !important;
+}
+.horse-argent {
+  background-image: url("./images/horse/horse-argent.png") !important;
+}
+.horse-or {
+  background-image: url("./images/horse/horse-or.png") !important;
+}
+.horse-white {
+  background-image: url("./images/horse/horse-white.png") !important;
+}
+.horse-copper {
+  background-image: url("./images/horse/horse-copper.png") !important;
+}
+.horse-sanguine {
+  background-image: url("./images/horse/horse-sanguine.png") !important;
+}
+.horse-celeste {
+  background-image: url("./images/horse/horse-celeste.png") !important;
+}
+.horse-cendree {
+  background-image: url("./images/horse/horse-cendree.png") !important;
+}
+.horse-tawny {
+  background-image: url("./images/horse/horse-tawny.png") !important;
+}
+.horse-senois {
+  background-image: url("./images/horse/horse-senois.png") !important;
+}
+.horse-rose-pink {
+  background-image: url("./images/horse/horse-rose-pink.png") !important;
+}
+.horse-carnation {
+  background-image: url("./images/horse/horse-carnation.png") !important;
+}
 /*BACKGROUNDS*/
 .black {
   background: #000;
