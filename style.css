@@ -1828,6 +1828,177 @@ input {
 .horse-carnation {
   background-image: url("./images/horse/horse-carnation.png") !important;
 }
+
+.panther {
+  background-image: url("./images/panther/panther.png");
+}
+.panther-gules {
+  background-image: url("./images/panther/panther-gules.png") !important;
+}
+.panther-azure {
+  background-image: url("./images/panther/panther-azure.png") !important;
+}
+.panther-vert {
+  background-image: url("./images/panther/panther-vert.png") !important;
+}
+.panther-purpure {
+  background-image: url("./images/panther/panther-purpure.png") !important;
+}
+.panther-murrey {
+  background-image: url("./images/panther/panther-murrey.png") !important;
+}
+.panther-sable {
+  background-image: url("./images/panther/panther-sable.png") !important;
+}
+.panther-argent {
+  background-image: url("./images/panther/panther-argent.png") !important;
+}
+.panther-or {
+  background-image: url("./images/panther/panther-or.png") !important;
+}
+.panther-white {
+  background-image: url("./images/panther/panther-white.png") !important;
+}
+.panther-copper {
+  background-image: url("./images/panther/panther-copper.png") !important;
+}
+.panther-sanguine {
+  background-image: url("./images/panther/panther-sanguine.png") !important;
+}
+.panther-celeste {
+  background-image: url("./images/panther/panther-celeste.png") !important;
+}
+.panther-cendree {
+  background-image: url("./images/panther/panther-cendree.png") !important;
+}
+.panther-tawny {
+  background-image: url("./images/panther/panther-tawny.png") !important;
+}
+.panther-senois {
+  background-image: url("./images/panther/panther-senois.png") !important;
+}
+.panther-rose-pink {
+  background-image: url("./images/panther/panther-rose-pink.png") !important;
+}
+.panther-carnation {
+  background-image: url("./images/panther/panther-carnation.png") !important;
+}
+
+.wolf {
+  background-image: url("./images/wolf/wolf.png") !important;
+}
+.wolf-gules {
+  background-image: url("./images/wolf/wolf-gules.png") !important;
+}
+.wolf-azure {
+  background-image: url("./images/wolf/wolf-azure.png") !important;
+}
+.wolf-vert {
+  background-image: url("./images/wolf/wolf-vert.png") !important;
+}
+.wolf-purpure {
+  background-image: url("./images/wolf/wolf-purpure.png") !important;
+}
+.wolf-murrey {
+  background-image: url("./images/wolf/wolf-murrey.png") !important;
+}
+.wolf-sable {
+  background-image: url("./images/wolf/wolf-sable.png") !important;
+}
+.wolf-argent {
+  background-image: url("./images/wolf/wolf-argent.png") !important;
+}
+.wolf-or {
+  background-image: url("./images/wolf/wolf-or.png") !important;
+}
+.wolf-white {
+  background-image: url("./images/wolf/wolf-white.png") !important;
+}
+.wolf-copper {
+  background-image: url("./images/wolf/wolf-copper.png") !important;
+}
+.wolf-sanguine {
+  background-image: url("./images/wolf/wolf-sanguine.png") !important;
+}
+.wolf-celeste {
+  background-image: url("./images/wolf/wolf-celeste.png") !important;
+}
+.wolf-cendree {
+  background-image: url("./images/wolf/wolf-cendree.png") !important;
+}
+.wolf-tawny {
+  background-image: url("./images/wolf/wolf-tawny.png") !important;
+}
+.wolf-senois {
+  background-image: url("./images/wolf/wolf-senois.png") !important;
+}
+.wolf-rose-pink {
+  background-image: url("./images/wolf/wolf-rose-pink.png") !important;
+}
+.wolf-carnation {
+  background-image: url("./images/wolf/wolf-carnation.png") !important;
+}
+
+.octopus {
+  background-image: url("./images/octopus/octopus.png") !important;
+}
+.octopus-gules {
+  background-image: url("./images/octopus/octopus-gules.png") !important;
+}
+.octopus-azure {
+  background-image: url("./images/octopus/octopus-azure.png") !important;
+}
+.octopus-vert {
+  background-image: url("./images/octopus/octopus-vert.png") !important;
+}
+.octopus-purpure {
+  background-image: url("./images/octopus/octopus-purpure.png") !important;
+}
+.octopus-murrey {
+  background-image: url("./images/octopus/octopus-murrey.png") !important;
+}
+.octopus-sable {
+  background-image: url("./images/octopus/octopus-sable.png") !important;
+}
+.octopus-argent {
+  background-image: url("./images/octopus/octopus-argent.png") !important;
+}
+.octopus-or {
+  background-image: url("./images/octopus/octopus-or.png") !important;
+}
+.octopus-white {
+  background-image: url("./images/octopus/octopus-white.png") !important;
+}
+.octopus-copper {
+  background-image: url("./images/octopus/octopus-copper.png") !important;
+}
+.octopus-sanguine {
+  background-image: url("./images/octopus/octopus-sanguine.png") !important;
+}
+.octopus-celeste {
+  background-image: url("./images/octopus/octopus-celeste.png") !important;
+}
+.octopus-cendree {
+  background-image: url("./images/octopus/octopus-cendree.png") !important;
+}
+.octopus-tawny {
+  background-image: url("./images/octopus/octopus-tawny.png") !important;
+}
+.octopus-senois {
+  background-image: url("./images/octopus/octopus-senois.png") !important;
+}
+.octopus-rose-pink {
+  background-image: url("./images/octopus/octopus-rose-pink.png") !important;
+}
+.octopus-carnation {
+  background-image: url("./images/octopus/octopus-carnation.png") !important;
+}
+/*.octopus, .octopus-sable {
+
+  /*background-image: url("https://pixabay.com/static/uploads/photo/2015/10/04/16/40/silhouette-971335_960_720.png");*/
+  /*background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/56584-200.png");*/
+  /*background-image: url("http://worldartsme.com/images/clip-art-black-griffin-clipart-1.jpg");*/
+/*}*/
 /*BACKGROUNDS*/
 .black {
   background: #000;
