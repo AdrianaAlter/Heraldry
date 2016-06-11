@@ -1,14 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Shield = require('./shield.jsx');
 var Header = require('./header.jsx');
-var ColorMenu = require('./color_menu.jsx');
+var Menu = require('./menu_components/menu.jsx');
+
+// var Shield = require('./shield_components/shield.jsx');
 
 var App = React.createClass({
   render: function () {
     return(
       <div>
-        <ColorMenu />
+        <Menu />
       </div>
     );
   }

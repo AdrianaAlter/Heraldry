@@ -1,0 +1,424 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'carousel',
+1 verbose cli   '--save' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 verbose install initial load of /home/adriana/Desktop/Heraldry/package.json
+5 warn package.json Heraldry@1.0.0 No description
+6 warn package.json Heraldry@1.0.0 No repository field.
+7 warn package.json Heraldry@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/babel/package.json
+9 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/babel-core/package.json
+10 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/babel-loader/package.json
+11 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/babel-preset-react/package.json
+12 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/merry-go-round/package.json
+13 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/react/package.json
+14 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/react-3d-carousel/package.json
+15 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/react-dom/package.json
+16 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/react-slick/package.json
+17 verbose installManyTop reading scoped package data from /home/adriana/Desktop/Heraldry/node_modules/webpack/package.json
+18 verbose readDependencies loading dependencies from /home/adriana/Desktop/Heraldry/package.json
+19 silly cache add args [ 'carousel', null ]
+20 verbose cache add spec carousel
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'carousel',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'carousel',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: 'latest',
+21 silly cache add   type: 'tag' }
+22 silly addNamed carousel@latest
+23 verbose addNamed "latest" is being treated as a dist-tag for carousel
+24 info addNameTag [ 'carousel', 'latest' ]
+25 silly mapToRegistry name carousel
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: 'carousel',
+28 silly mapToRegistry   scope: null,
+28 silly mapToRegistry   name: 'carousel',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/carousel
+30 verbose addNameTag registry:https://registry.npmjs.org/carousel not in flight; fetching
+31 verbose request uri https://registry.npmjs.org/carousel
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 4:50:16 PM
+34 verbose request id 8a65a6e4f2b7ec91
+35 http request GET https://registry.npmjs.org/carousel
+36 http 200 https://registry.npmjs.org/carousel
+37 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+37 verbose headers   etag: '"29IF58VCZ1CPAM261MLFSY0S9"',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'content-encoding': 'gzip',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '1654',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 10 Jun 2016 20:50:32 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   age: '0',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-jfk1048-JFK',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1465591832.114390,VS0,VE104',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 silly get cb [ 200,
+38 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+38 silly get     etag: '"29IF58VCZ1CPAM261MLFSY0S9"',
+38 silly get     'content-type': 'application/json',
+38 silly get     'content-encoding': 'gzip',
+38 silly get     'cache-control': 'max-age=300',
+38 silly get     'content-length': '1654',
+38 silly get     'accept-ranges': 'bytes',
+38 silly get     date: 'Fri, 10 Jun 2016 20:50:32 GMT',
+38 silly get     via: '1.1 varnish',
+38 silly get     age: '0',
+38 silly get     connection: 'keep-alive',
+38 silly get     'x-served-by': 'cache-jfk1048-JFK',
+38 silly get     'x-cache': 'MISS',
+38 silly get     'x-cache-hits': '0',
+38 silly get     'x-timer': 'S1465591832.114390,VS0,VE104',
+38 silly get     vary: 'Accept-Encoding' } ]
+39 verbose get saving carousel to /home/adriana/.npm/registry.npmjs.org/carousel/.cache.json
+40 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+41 silly addNameTag next cb for carousel with tag latest
+42 silly addNamed carousel@0.0.3
+43 verbose addNamed "0.0.3" is a plain semver version for carousel
+44 silly mapToRegistry name carousel
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'carousel',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   name: 'carousel',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/carousel
+49 verbose addRemoteTarball https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz not in flight; adding
+50 verbose addRemoteTarball [ 'https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz',
+50 verbose addRemoteTarball   'f83ca5583165bb98f174c01e67a1b54b902cc97f' ]
+51 info retry fetch attempt 1 at 4:50:31 PM
+52 info attempt registry request try #1 at 4:50:31 PM
+53 http fetch GET https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz
+54 http fetch 200 https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz
+55 silly fetchAndShaCheck shasum f83ca5583165bb98f174c01e67a1b54b902cc97f
+56 verbose addTmpTarball /tmp/npm-23621-4be85671/registry.npmjs.org/carousel/-/carousel-0.0.3.tgz not in flight; adding
+57 verbose addTmpTarball already have metadata; skipping unpack for carousel@0.0.3
+58 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+59 silly cache afterAdd carousel@0.0.3
+60 verbose afterAdd /home/adriana/.npm/carousel/0.0.3/package/package.json not in flight; writing
+61 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+62 verbose afterAdd /home/adriana/.npm/carousel/0.0.3/package/package.json written
+63 silly install resolved [ { name: 'carousel',
+63 silly install resolved     version: '0.0.3',
+63 silly install resolved     description: 'Turn HTML pages into keyboard-navigable slideshows.',
+63 silly install resolved     main: 'index.js',
+63 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+63 silly install resolved     repository: { type: 'git', url: 'https://github.com/zeke/carousel.git' },
+63 silly install resolved     keywords: [ 'slideshow', 'browserify', 'carousel', 'deck' ],
+63 silly install resolved     author: { name: 'Zeke Sikelianos', email: 'zeke@sikelianos.com' },
+63 silly install resolved     license: 'MIT',
+63 silly install resolved     bugs: { url: 'https://github.com/zeke/carousel/issues' },
+63 silly install resolved     devDependencies:
+63 silly install resolved      { grunt: '~0.4.1',
+63 silly install resolved        'grunt-contrib-coffee': '~0.7.0',
+63 silly install resolved        'grunt-contrib-compass': '~0.3.0',
+63 silly install resolved        'grunt-contrib-watch': '~0.4.4',
+63 silly install resolved        'grunt-browserify': '~1.2.0' },
+63 silly install resolved     dependencies: { domready: '~0.2.12' },
+63 silly install resolved     readme: '# Carousel\n\nTurn HTML pages into keyboard-navigable slideshows. Designed to be used with [browserify](http://browserify.org/).\n\nIf jQuery is available, scroll transitions will be animated.\n\n## Installation\n\n```\nnpm install carousel --save\n```\n\n## Usage\n\nFirst, check out the demo directory.\n\nCreate a simple script to use Carousel:\n\n```js\n// pre-browserify.js\nvar Carousel = require(\'carousel\');\nnew Carousel(\'#slides\');\n```\n\nUse browserify to bundle it up for the browser:\n\n```sh\nnpm install browserify -g\nbrowserify pre-browserify.js -o post-browserify.js\n```\n\nThen drop the browserified script into your HTML page and you\'re good to go.\n\n```html\n<script src="post-browserify.js"></script>\n\n<ol id="slides">\n  <li>a slide</li>\n  <li>another slide</li>\n  <li>keep on slidin\'</li>\n<ol>\n```\n\n## Demo\n\nVisit [ba2.herokuapp.com](http://ba2.herokuapp.com) for a\nworking example of Carousel in action, then check out its [source on github](https://github.com/zeke/ba2#readme).\n\n## Hacking\n\n```\nnpm install grunt-cli -g\nnpm install\ngrunt\n```',
+63 silly install resolved     readmeFilename: 'README.md',
+63 silly install resolved     homepage: 'https://github.com/zeke/carousel',
+63 silly install resolved     _id: 'carousel@0.0.3',
+63 silly install resolved     dist:
+63 silly install resolved      { shasum: 'f83ca5583165bb98f174c01e67a1b54b902cc97f',
+63 silly install resolved        tarball: 'https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz' },
+63 silly install resolved     _from: 'carousel@latest',
+63 silly install resolved     _npmVersion: '1.3.21',
+63 silly install resolved     _npmUser: { name: 'zeke', email: 'zeke@sikelianos.com' },
+63 silly install resolved     maintainers: [ [Object] ],
+63 silly install resolved     directories: {},
+63 silly install resolved     _shasum: 'f83ca5583165bb98f174c01e67a1b54b902cc97f',
+63 silly install resolved     _resolved: 'https://registry.npmjs.org/carousel/-/carousel-0.0.3.tgz' } ]
+64 info install carousel@0.0.3 into /home/adriana/Desktop/Heraldry
+65 info installOne carousel@0.0.3
+66 verbose installOne of carousel to /home/adriana/Desktop/Heraldry not in flight; installing
+67 verbose correctMkdir /home/adriana/.npm/_locks correctMkdir not in flight; initializing
+68 verbose lock using /home/adriana/.npm/_locks/carousel-dbb3d8a17aa5e207.lock for /home/adriana/Desktop/Heraldry/node_modules/carousel
+69 silly install write writing carousel 0.0.3 to /home/adriana/Desktop/Heraldry/node_modules/carousel
+70 verbose unbuild node_modules/carousel
+71 silly gentlyRm /home/adriana/Desktop/Heraldry/node_modules/carousel is being purged from base /home/adriana/Desktop/Heraldry
+72 verbose gentlyRm don't care about contents; nuking /home/adriana/Desktop/Heraldry/node_modules/carousel
+73 verbose tar unpack /home/adriana/.npm/carousel/0.0.3/package.tgz
+74 verbose tar unpacking to /home/adriana/Desktop/Heraldry/node_modules/carousel
+75 silly gentlyRm /home/adriana/Desktop/Heraldry/node_modules/carousel is being purged
+76 verbose gentlyRm don't care about contents; nuking /home/adriana/Desktop/Heraldry/node_modules/carousel
+77 silly gunzTarPerm modes [ '775', '664' ]
+78 silly gunzTarPerm extractEntry package.json
+79 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+80 silly gunzTarPerm extractEntry .npmignore
+81 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+82 silly gunzTarPerm extractEntry README.md
+83 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+84 silly gunzTarPerm extractEntry index.js
+85 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+86 silly gunzTarPerm extractEntry Gruntfile.coffee
+87 silly gunzTarPerm modified mode [ 'Gruntfile.coffee', 420, 436 ]
+88 silly gunzTarPerm extractEntry demo/index-pre-browserify.js
+89 silly gunzTarPerm modified mode [ 'demo/index-pre-browserify.js', 420, 436 ]
+90 silly gunzTarPerm extractEntry demo/index.js
+91 silly gunzTarPerm modified mode [ 'demo/index.js', 420, 436 ]
+92 silly gunzTarPerm extractEntry demo/index.html
+93 silly gunzTarPerm modified mode [ 'demo/index.html', 420, 436 ]
+94 silly gunzTarPerm extractEntry index.coffee
+95 silly gunzTarPerm modified mode [ 'index.coffee', 420, 436 ]
+96 verbose write writing to /home/adriana/Desktop/Heraldry/node_modules/carousel/package.json
+97 info preinstall carousel@0.0.3
+98 verbose readDependencies loading dependencies from /home/adriana/Desktop/Heraldry/node_modules/carousel/package.json
+99 silly prepareForInstallMany adding domready@~0.2.12 from carousel dependencies
+100 verbose readDependencies loading dependencies from /home/adriana/Desktop/Heraldry/node_modules/carousel/package.json
+101 silly cache add args [ 'domready@~0.2.12', null ]
+102 verbose cache add spec domready@~0.2.12
+103 silly cache add parsed spec Result {
+103 silly cache add   raw: 'domready@~0.2.12',
+103 silly cache add   scope: null,
+103 silly cache add   name: 'domready',
+103 silly cache add   rawSpec: '~0.2.12',
+103 silly cache add   spec: '>=0.2.12 <0.3.0',
+103 silly cache add   type: 'range' }
+104 silly addNamed domready@>=0.2.12 <0.3.0
+105 verbose addNamed ">=0.2.12 <0.3.0" is a valid semver range for domready
+106 silly addNameRange { name: 'domready', range: '>=0.2.12 <0.3.0', hasData: false }
+107 silly mapToRegistry name domready
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry data Result {
+110 silly mapToRegistry   raw: 'domready',
+110 silly mapToRegistry   scope: null,
+110 silly mapToRegistry   name: 'domready',
+110 silly mapToRegistry   rawSpec: '',
+110 silly mapToRegistry   spec: 'latest',
+110 silly mapToRegistry   type: 'tag' }
+111 silly mapToRegistry uri https://registry.npmjs.org/domready
+112 verbose addNameRange registry:https://registry.npmjs.org/domready not in flight; fetching
+113 verbose request uri https://registry.npmjs.org/domready
+114 verbose request no auth needed
+115 info attempt registry request try #1 at 4:50:31 PM
+116 http request GET https://registry.npmjs.org/domready
+117 http 200 https://registry.npmjs.org/domready
+118 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+118 verbose headers   etag: '"80IP99W9XJXLNNV6PNYJ53TFX"',
+118 verbose headers   'content-type': 'application/json',
+118 verbose headers   'content-encoding': 'gzip',
+118 verbose headers   'cache-control': 'max-age=300',
+118 verbose headers   'content-length': '4187',
+118 verbose headers   'accept-ranges': 'bytes',
+118 verbose headers   date: 'Fri, 10 Jun 2016 20:50:32 GMT',
+118 verbose headers   via: '1.1 varnish',
+118 verbose headers   age: '10',
+118 verbose headers   connection: 'keep-alive',
+118 verbose headers   'x-served-by': 'cache-jfk1048-JFK',
+118 verbose headers   'x-cache': 'HIT',
+118 verbose headers   'x-cache-hits': '1',
+118 verbose headers   'x-timer': 'S1465591832.482885,VS0,VE0',
+118 verbose headers   vary: 'Accept-Encoding' }
+119 silly get cb [ 200,
+119 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+119 silly get     etag: '"80IP99W9XJXLNNV6PNYJ53TFX"',
+119 silly get     'content-type': 'application/json',
+119 silly get     'content-encoding': 'gzip',
+119 silly get     'cache-control': 'max-age=300',
+119 silly get     'content-length': '4187',
+119 silly get     'accept-ranges': 'bytes',
+119 silly get     date: 'Fri, 10 Jun 2016 20:50:32 GMT',
+119 silly get     via: '1.1 varnish',
+119 silly get     age: '10',
+119 silly get     connection: 'keep-alive',
+119 silly get     'x-served-by': 'cache-jfk1048-JFK',
+119 silly get     'x-cache': 'HIT',
+119 silly get     'x-cache-hits': '1',
+119 silly get     'x-timer': 'S1465591832.482885,VS0,VE0',
+119 silly get     vary: 'Accept-Encoding' } ]
+120 verbose get saving domready to /home/adriana/.npm/registry.npmjs.org/domready/.cache.json
+121 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+122 silly addNameRange number 2 { name: 'domready', range: '>=0.2.12 <0.3.0', hasData: true }
+123 silly addNameRange versions [ 'domready',
+123 silly addNameRange   [ '0.0.1',
+123 silly addNameRange     '0.0.2',
+123 silly addNameRange     '0.0.3',
+123 silly addNameRange     '0.0.4',
+123 silly addNameRange     '0.0.5',
+123 silly addNameRange     '0.0.6',
+123 silly addNameRange     '0.0.7',
+123 silly addNameRange     '0.0.8',
+123 silly addNameRange     '0.0.9',
+123 silly addNameRange     '0.1.0',
+123 silly addNameRange     '0.1.1',
+123 silly addNameRange     '0.2.0',
+123 silly addNameRange     '0.2.1',
+123 silly addNameRange     '0.2.2',
+123 silly addNameRange     '0.2.3',
+123 silly addNameRange     '0.2.4',
+123 silly addNameRange     '0.2.5',
+123 silly addNameRange     '0.2.6',
+123 silly addNameRange     '0.2.7',
+123 silly addNameRange     '0.2.8',
+123 silly addNameRange     '0.2.9',
+123 silly addNameRange     '0.2.10',
+123 silly addNameRange     '0.2.11',
+123 silly addNameRange     '0.2.12',
+123 silly addNameRange     '0.2.13',
+123 silly addNameRange     '0.3.0',
+123 silly addNameRange     '1.0.0',
+123 silly addNameRange     '1.0.1',
+123 silly addNameRange     '1.0.3',
+123 silly addNameRange     '1.0.4',
+123 silly addNameRange     '1.0.5',
+123 silly addNameRange     '1.0.6',
+123 silly addNameRange     '1.0.7',
+123 silly addNameRange     '1.0.8' ] ]
+124 silly addNamed domready@0.2.13
+125 verbose addNamed "0.2.13" is a plain semver version for domready
+126 silly mapToRegistry name domready
+127 silly mapToRegistry using default registry
+128 silly mapToRegistry registry https://registry.npmjs.org/
+129 silly mapToRegistry data Result {
+129 silly mapToRegistry   raw: 'domready',
+129 silly mapToRegistry   scope: null,
+129 silly mapToRegistry   name: 'domready',
+129 silly mapToRegistry   rawSpec: '',
+129 silly mapToRegistry   spec: 'latest',
+129 silly mapToRegistry   type: 'tag' }
+130 silly mapToRegistry uri https://registry.npmjs.org/domready
+131 verbose addRemoteTarball https://registry.npmjs.org/domready/-/domready-0.2.13.tgz not in flight; adding
+132 verbose addRemoteTarball [ 'https://registry.npmjs.org/domready/-/domready-0.2.13.tgz',
+132 verbose addRemoteTarball   '5ec8340b5ee5f76ad72fd32007cfb5d38a2cd361' ]
+133 info retry fetch attempt 1 at 4:50:32 PM
+134 info attempt registry request try #1 at 4:50:32 PM
+135 http fetch GET https://registry.npmjs.org/domready/-/domready-0.2.13.tgz
+136 http fetch 200 https://registry.npmjs.org/domready/-/domready-0.2.13.tgz
+137 silly fetchAndShaCheck shasum 5ec8340b5ee5f76ad72fd32007cfb5d38a2cd361
+138 verbose addTmpTarball /tmp/npm-23621-4be85671/registry.npmjs.org/domready/-/domready-0.2.13.tgz not in flight; adding
+139 verbose addTmpTarball already have metadata; skipping unpack for domready@0.2.13
+140 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+141 silly cache afterAdd domready@0.2.13
+142 verbose afterAdd /home/adriana/.npm/domready/0.2.13/package/package.json not in flight; writing
+143 verbose correctMkdir /home/adriana/.npm correctMkdir not in flight; initializing
+144 verbose afterAdd /home/adriana/.npm/domready/0.2.13/package/package.json written
+145 silly install resolved [ { name: 'domready',
+145 silly install resolved     description: 'bullet proof DOM ready method',
+145 silly install resolved     version: '0.2.13',
+145 silly install resolved     homepage: 'https://github.com/ded/domready',
+145 silly install resolved     author:
+145 silly install resolved      { name: 'Dustin Diaz',
+145 silly install resolved        email: 'dustin@dustindiaz.com',
+145 silly install resolved        url: 'http://dustindiaz.com' },
+145 silly install resolved     keywords: [ 'ender', 'domready', 'dom' ],
+145 silly install resolved     main: './ready.js',
+145 silly install resolved     ender: './src/ender.js',
+145 silly install resolved     repository: { type: 'git', url: 'https://github.com/ded/domready.git' },
+145 silly install resolved     devDependencies: { smoosh: '>=0.3.0' },
+145 silly install resolved     bugs: { url: 'https://github.com/ded/domready/issues' },
+145 silly install resolved     _id: 'domready@0.2.13',
+145 silly install resolved     dist:
+145 silly install resolved      { shasum: '5ec8340b5ee5f76ad72fd32007cfb5d38a2cd361',
+145 silly install resolved        tarball: 'https://registry.npmjs.org/domready/-/domready-0.2.13.tgz' },
+145 silly install resolved     _from: 'domready@>=0.2.12 <0.3.0',
+145 silly install resolved     _npmVersion: '1.3.8',
+145 silly install resolved     _npmUser: { name: 'ded', email: 'polvero@gmail.com' },
+145 silly install resolved     maintainers: [ [Object], [Object] ],
+145 silly install resolved     directories: {},
+145 silly install resolved     _shasum: '5ec8340b5ee5f76ad72fd32007cfb5d38a2cd361',
+145 silly install resolved     _resolved: 'https://registry.npmjs.org/domready/-/domready-0.2.13.tgz' } ]
+146 info install domready@0.2.13 into /home/adriana/Desktop/Heraldry/node_modules/carousel
+147 info installOne domready@0.2.13
+148 verbose installOne of domready to /home/adriana/Desktop/Heraldry/node_modules/carousel not in flight; installing
+149 verbose correctMkdir /home/adriana/.npm/_locks correctMkdir not in flight; initializing
+150 verbose lock using /home/adriana/.npm/_locks/domready-ddb7348ae19f1197.lock for /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+151 silly install write writing domready 0.2.13 to /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+152 verbose unbuild node_modules/carousel/node_modules/domready
+153 silly gentlyRm /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready is being purged from base /home/adriana/Desktop/Heraldry
+154 verbose gentlyRm don't care about contents; nuking /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+155 verbose tar unpack /home/adriana/.npm/domready/0.2.13/package.tgz
+156 verbose tar unpacking to /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+157 silly gentlyRm /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready is being purged
+158 verbose gentlyRm don't care about contents; nuking /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+159 silly gunzTarPerm modes [ '775', '664' ]
+160 silly gunzTarPerm extractEntry package.json
+161 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+162 silly gunzTarPerm extractEntry .npmignore
+163 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+164 silly gunzTarPerm extractEntry README.md
+165 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+166 silly gunzTarPerm extractEntry ready.js
+167 silly gunzTarPerm modified mode [ 'ready.js', 420, 436 ]
+168 silly gunzTarPerm extractEntry ready.min.js
+169 silly gunzTarPerm modified mode [ 'ready.min.js', 420, 436 ]
+170 silly gunzTarPerm extractEntry Makefile
+171 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+172 silly gunzTarPerm extractEntry component.json
+173 silly gunzTarPerm modified mode [ 'component.json', 420, 436 ]
+174 silly gunzTarPerm extractEntry make/build.js
+175 silly gunzTarPerm modified mode [ 'make/build.js', 420, 436 ]
+176 silly gunzTarPerm extractEntry src/ender.js
+177 silly gunzTarPerm modified mode [ 'src/ender.js', 420, 436 ]
+178 silly gunzTarPerm extractEntry src/ready.js
+179 silly gunzTarPerm modified mode [ 'src/ready.js', 420, 436 ]
+180 silly gunzTarPerm extractEntry tests/test.html
+181 silly gunzTarPerm modified mode [ 'tests/test.html', 420, 436 ]
+182 verbose write writing to /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready/package.json
+183 info preinstall domready@0.2.13
+184 verbose readDependencies loading dependencies from /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready/package.json
+185 verbose readDependencies loading dependencies from /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready/package.json
+186 silly install resolved []
+187 verbose about to build /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+188 info build /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+189 info linkStuff domready@0.2.13
+190 silly linkStuff domready@0.2.13 has /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules as its parent node_modules
+191 verbose linkBins domready@0.2.13
+192 verbose linkMans domready@0.2.13
+193 verbose rebuildBundles domready@0.2.13
+194 info install domready@0.2.13
+195 info postinstall domready@0.2.13
+196 verbose unlock done using /home/adriana/.npm/_locks/domready-ddb7348ae19f1197.lock for /home/adriana/Desktop/Heraldry/node_modules/carousel/node_modules/domready
+197 verbose about to build /home/adriana/Desktop/Heraldry/node_modules/carousel
+198 info build /home/adriana/Desktop/Heraldry/node_modules/carousel
+199 info linkStuff carousel@0.0.3
+200 silly linkStuff carousel@0.0.3 has /home/adriana/Desktop/Heraldry/node_modules as its parent node_modules
+201 verbose linkBins carousel@0.0.3
+202 verbose linkMans carousel@0.0.3
+203 verbose rebuildBundles carousel@0.0.3
+204 verbose rebuildBundles [ 'domready' ]
+205 info install carousel@0.0.3
+206 info postinstall carousel@0.0.3
+207 verbose unlock done using /home/adriana/.npm/_locks/carousel-dbb3d8a17aa5e207.lock for /home/adriana/Desktop/Heraldry/node_modules/carousel
+208 verbose validateInstall loading /home/adriana/Desktop/Heraldry/package.json for validation
+209 verbose stack Error: The package react@15.0.2 does not satisfy its siblings' peerDependencies requirements!
+209 verbose stack     at /usr/lib/node_modules/npm/lib/install.js:125:32
+209 verbose stack     at /usr/lib/node_modules/npm/lib/install.js:268:7
+209 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+209 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+209 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+209 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+209 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+209 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+209 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+209 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+210 verbose cwd /home/adriana/Desktop/Heraldry
+211 error Linux 4.2.0-27-generic
+212 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "carousel" "--save"
+213 error node v4.4.2
+214 error npm  v2.15.0
+215 error code EPEERINVALID
+216 error peerinvalid The package react@15.0.2 does not satisfy its siblings' peerDependencies requirements!
+216 error peerinvalid Peer merry-go-round@0.2.0 wants react@*
+216 error peerinvalid Peer react-dom@15.0.2 wants react@^15.0.2
+216 error peerinvalid Peer react-3d-carousel@0.0.6 wants react@>=0.13.x < 1.0.0
+216 error peerinvalid Peer react-slick@0.12.2 wants react@^0.14.0 || ^15.0.1
+217 verbose exit [ 1, true ]

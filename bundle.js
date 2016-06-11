@@ -46,9 +46,10 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	var Shield = __webpack_require__(168);
-	var Header = __webpack_require__(169);
-	var ColorMenu = __webpack_require__(170);
+	var Header = __webpack_require__(168);
+	var Menu = __webpack_require__(195);
+	
+	// var Shield = require('./shield_components/shield.jsx');
 	
 	var App = React.createClass({
 	  displayName: 'App',
@@ -57,7 +58,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(ColorMenu, null)
+	      React.createElement(Menu, null)
 	    );
 	  }
 	});
@@ -20164,25 +20165,6 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
 	
-	var Shield = React.createClass({
-	  displayName: 'Shield',
-	
-	
-	  render: function () {
-	
-	    return React.createElement('div', { className: 'shield' });
-	  }
-	});
-	
-	module.exports = Shield;
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(33);
-	
 	var Header = React.createClass({
 	  displayName: 'Header',
 	
@@ -20198,31 +20180,131 @@
 	module.exports = Header;
 
 /***/ },
+/* 169 */,
 /* 170 */
+/***/ function(module, exports) {
+
+	COLORS = ["gules", "sanguine", "azure", "celeste", "vert", "viridian", "cendree", "lead", "sable", "white", "purpure", "murrey", "tawny", "senois", "bisque", "rose-pink", "carnation", "amaranth", "argent", "or", "copper", "RESET"];
+	
+	module.exports = COLORS;
+
+/***/ },
+/* 171 */,
+/* 172 */,
+/* 173 */
+/***/ function(module, exports) {
+
+	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "motto-menu", "background-menu"];
+	
+	module.exports = TABS;
+
+/***/ },
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */
+/***/ function(module, exports) {
+
+	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "chapé", "flaunches", "tierced-in-pale", "tierced-in-fess", "tierced-in-mantle", "bordure", "paly", "barry", "bendy", "bendy-sinister", "enarched-per-fess", "enarched-per-pale", "angled-per-fess", "angled-per-pale", "RESET"];
+	
+	module.exports = PARTITIONS;
+
+/***/ },
+/* 180 */,
+/* 181 */,
+/* 182 */
+/***/ function(module, exports) {
+
+	ORDINARIES = ["fess", "bar", "barrulet", "fess-cotised", "fess-rompu", "pale", "pallet", "endorse", "pale-endorsed", "pale-rompu", "chief", "comble", "bend", "bend-cotised", "bend-sinister", "bend-sinister-cotised", "bend-enhanced", "bend-enhanced-cotised", "bend-sinister-enhanced", "bend-sinister-enhanced-cotised", "quarter", "canton", "lozenge", "billet", "delf", "base", "cross", "cross-nowy", "cross-quadrate", "saltire", "saltire-nowy", "saltire-quadrate", "pairle", "pairle-reversed", "chevron", "chevron-reversed", "gyron", "pile", "pile-reversed", "tierce", "roundel", "annulet", "orle", "pale-and-chief", "RESET"];
+	
+	module.exports = ORDINARIES;
+
+/***/ },
+/* 183 */,
+/* 184 */,
+/* 185 */
+/***/ function(module, exports) {
+
+	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "sun", "dragon", "horse", "panther", "octopus", "wolf", "RESET"];
+	
+	module.exports = CHARGES;
+
+/***/ },
+/* 186 */,
+/* 187 */,
+/* 188 */
+/***/ function(module, exports) {
+
+	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "wood-panels", "stone2", "versailles", "ceiling", "book-cover", "stained-glass", "window2", "white-fabric", "magic", "flower-frame", "canvas", "tile2", "rust", "parchment3", "writing", "metal-wall", "berries", "rug", "filigree", "flower-page", "checkers", "RESET"];
+	
+	module.exports = BACKGROUNDS;
+
+/***/ },
+/* 189 */,
+/* 190 */,
+/* 191 */
+/***/ function(module, exports) {
+
+	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight", "RESET"];
+	
+	module.exports = MOTTOES;
+
+/***/ },
+/* 192 */,
+/* 193 */
+/***/ function(module, exports) {
+
+	SAMPLE_MOTTOES = ["Saunz departir", "Loyaulté me lie", "Souvente me souvene", "Lux tua vita mihi", "Piu por dulzura que por fuerza", "Me pompae provexit apex", "Quod me alit, me extinguit", "Sic spectanda fides", "In hac spe vivo", "Aeque tandem", "Undique mors est", "Ainsi sera groigne qui groigne", "Semper eadem", "En ma fin gît mon commencement"];
+	
+	module.exports = SAMPLE_MOTTOES;
+
+/***/ },
+/* 194 */,
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	var ColorItem = __webpack_require__(171);
-	var PartitionItem = __webpack_require__(172);
-	var OrdinaryItem = __webpack_require__(173);
-	var ChargeItem = __webpack_require__(174);
-	var BackgroundItem = __webpack_require__(175);
 	
-	COLORS = ["gules", "sanguine", "azure", "celeste", "vert", "cendree", "sable", "white", "purpure", "murrey", "tawny", "senois", "rose-pink", "carnation", "argent", "or", "copper", "RESET"];
-	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "flaunches", "tierced", "tierced-in-mantle", "bordure", "paly", "barry", "bendy", "bendy-sinister", "enarched", "angled", "RESET"];
-	ORDINARIES = ["fess", "bar", "barrulet", "pale", "pallet", "endorse", "chief", "comble", "bend", "bend-sinister", "quarter", "canton", "lozenge", "billet", "delf", "base", "cross", "saltire", "pairle", "pairle-reversed", "chevron", "tierce", "roundel", "annulet", "orle", "pale-and-chief", "pale-endorsed", "RESET"];
-	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "sun", "dragon", "horse", "panther", "octopus", "wolf", "RESET"];
-	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "wood-panels", "stone2", "versailles", "ceiling", "book-cover", "stained-glass", "window2", "white-fabric", "RESET"];
-	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight", "RESET"];
-	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "background-menu", "motto-menu"];
-	SAMPLE_MOTTOES = ["Saunz departir", "Loyaulté me lie", "Souvente me souvene", "Lux tua vita mihi", "Piu por dulzura que por fuerza", "Me pompae provexit apex", "Quod me alit, me extinguit", "Sic spectanda fides", "In hac spe vivo", "Aeque tandem", "Undique mors est", "Ainsi sera groigne qui groigne", "Semper eadem", "En ma fin gît mon commencement"];
+	COLORS = __webpack_require__(170);
+	var ColorItem = __webpack_require__(196);
 	
-	var ColorMenu = React.createClass({
-	  displayName: 'ColorMenu',
+	var Tabs = __webpack_require__(197);
+	var Buttons = __webpack_require__(199);
+	var PartitionMenu = __webpack_require__(202);
+	var OrdinaryMenu = __webpack_require__(204);
+	var ChargeMenu = __webpack_require__(206);
+	var BackgroundMenu = __webpack_require__(208);
+	var MottoMenu = __webpack_require__(210);
+	
+	SAMPLE_MOTTOES = __webpack_require__(193);
+	// SUPPORTERS = ["goldlion", "whitelion", "redgryphon", "firebreather", "crownedbear"];
+	
+	var Shield = __webpack_require__(212);
+	
+	var Menu = React.createClass({
+	  displayName: 'Menu',
+	
 	
 	  getInitialState: function () {
-	    return { show: true, color: "", menu: "main-tab", selected: "main-tab", partition: "", partitionColor: "", ordinaries: "", ordinariesColor: "", charge: "", chargeColor: "sable", background: "", motto: "", mottoColor: "", mottoBackground: "" };
+	    return {
+	      show: true,
+	      color: "",
+	      menu: "main-tab",
+	      selected: "main-tab",
+	      partition: "",
+	      partitionColor: "gules",
+	      ordinaries: "",
+	      ordinariesColor: "azure",
+	      charge: "",
+	      chargeColor: "sable",
+	      background: "",
+	      motto: "",
+	      mottoColor: "",
+	      mottoBackground: ""
+	    };
 	  },
 	
 	  toggleShow: function () {
@@ -20242,7 +20324,6 @@
 	  setPartition: function (e) {
 	    var broken = e.currentTarget.className.split("-");
 	    var partition = broken[broken.length - 1] == "opt" ? broken.slice(0, broken.length - 1).join("-") : broken[0] + "-" + broken[1] + "-" + broken[2];
-	
 	    this.setState({ partition: partition });
 	  },
 	
@@ -20290,6 +20371,16 @@
 	    this.setState({ mottoBackground: mottoBackground });
 	  },
 	
+	  setSupporter: function (e) {
+	    var supporterLeft = e.currentTarget.className;
+	    this.setState({ supporterLeft: supporterLeft });
+	  },
+	
+	  setCompartment: function (e) {
+	    var compartment = e.currentTarget.className;
+	    this.setState({ compartment: compartment });
+	  },
+	
 	  setTab: function (e) {
 	    var broken = e.currentTarget.className.split("-");
 	    var tab = broken[0] + "-" + broken[1];
@@ -20304,48 +20395,59 @@
 	
 	  makeRandom: function () {
 	
-	    this.setState({ color: this.randomize(COLORS) });
-	    this.setState({ partition: this.randomize(PARTITIONS) });
-	    this.setState({ partitionColor: this.randomize(COLORS) });
-	    this.setState({ ordinaries: this.randomize(ORDINARIES) });
-	    this.setState({ ordinariesColor: this.randomize(COLORS) });
-	    this.setState({ charge: this.randomize(CHARGES) });
-	    this.setState({ chargeColor: this.randomize(COLORS) });
-	    this.setState({ background: this.randomize(BACKGROUNDS) });
-	    this.setState({ mottoBackground: this.randomize(MOTTOES) });
-	    this.setState({ mottoColor: this.randomize(COLORS) });
-	    this.setState({ motto: this.randomize(SAMPLE_MOTTOES) });
+	    var randomColors = [];
+	    for (var i = 0; i < 5; i++) {
+	      randomColors.push(this.randomize(COLORS));
+	    };
+	
+	    this.setState({ color: randomColors[0],
+	      partitionColor: randomColors[1],
+	      ordinaryColor: randomColors[2],
+	      chargeColor: randomColors[3],
+	      mottoColor: randomColors[4]
+	    });
+	
+	    this.setState({ partition: this.randomize(PARTITIONS),
+	      ordinaries: this.randomize(ORDINARIES),
+	      charge: this.randomize(CHARGES),
+	      background: this.randomize(BACKGROUNDS.concat(COLORS)),
+	      mottoBackground: this.randomize(MOTTOES),
+	      motto: this.randomize(SAMPLE_MOTTOES)
+	    });
+	
+	    // this.setState({ supporterLeft: this.randomize(SUPPORTERS)});
+	    // this.setState({ compartment: this.randomize(COLORS)});
 	  },
 	
 	  resetAll: function () {
-	    this.setState({ color: "" });
-	    this.setState({ partition: "" });
-	    this.setState({ partitionColor: "" });
-	    this.setState({ ordinaries: "" });
-	    this.setState({ ordinariesColor: "" });
-	    this.setState({ charge: "" });
-	    this.setState({ chargeColor: "" });
-	    this.setState({ menu: "main-tab" });
-	    this.setState({ selected: "main-tab" });
-	    this.setState({ background: "" });
-	    this.setState({ mottoBackground: "" });
-	    this.setState({ motto: "" });
-	    this.setState({ mottoColor: "" });
+	    this.setState({ color: "",
+	      partition: "",
+	      partitionColor: "",
+	      ordinaries: "",
+	      ordinariesColor: "",
+	      charge: "",
+	      chargeColor: "",
+	      menu: "main-tab",
+	      selected: "main-tab",
+	      background: "",
+	      mottoBackground: "",
+	      motto: "",
+	      mottoColor: "",
+	      supporterLeft: "",
+	      supporterRight: "",
+	      compartment: ""
+	    });
 	  },
 	
 	  render: function () {
 	    var menuClass = this.state.show ? "menu-div group" : "hidden";
 	    var self = this;
 	
-	    var tabs = TABS.map(function (tab) {
-	      var active = tab == self.state.selected || tab + "-tab" == self.state.selected ? " active" : "";
-	
-	      return React.createElement(
-	        'li',
-	        { className: tab + "-tab" + active, key: TABS.indexOf(tab), onClick: self.setTab },
-	        tab.split("-")[0]
-	      );
-	    });
+	    // var tabs = TABS.map(function(tab) {
+	    //   var active = tab == self.state.selected || (tab + "-tab") == self.state.selected ? " active" : ""
+	    //
+	    //   return <li className={tab + "-tab" + active} key={TABS.indexOf(tab)} onClick={self.setTab}>{tab.split("-")[0]}</li>
+	    // });
 	
 	    MENU_OPTIONS = {
 	      "main": this.setColor,
@@ -20353,7 +20455,8 @@
 	      "ordinaries": this.setOrdinaryColor,
 	      "charge": this.setChargeColor,
 	      "background": this.setBackground,
-	      "motto": this.setMottoColor
+	      "motto": this.setMottoColor,
+	      "supporter": this.setCompartment
 	    };
 	
 	    var brokenMenu = this.state.menu.split("-");
@@ -20364,76 +20467,26 @@
 	      return React.createElement(ColorItem, { color: color, key: COLORS.indexOf(color), setColor: clickToSet });
 	    });
 	
-	    var partitionLis = PARTITIONS.map(function (partition) {
-	      var active = partition == self.state.partition ? " active" : "";
-	      return React.createElement(PartitionItem, { partition: partition + "-opt" + active, key: PARTITIONS.indexOf(partition), name: partition, setPartition: self.setPartition });
-	    });
-	
-	    var ordinaryLis = ORDINARIES.map(function (ordinary) {
-	      var active = ordinary == self.state.ordinaries ? " active" : "";
-	      return React.createElement(OrdinaryItem, { ordinary: ordinary + "-opt" + active, key: ORDINARIES.indexOf(ordinary), name: ordinary, setOrdinary: self.setOrdinary });
-	    });
-	
-	    var chargeLis = CHARGES.map(function (charge) {
-	      var activity = charge == self.state.charge ? "-gules" : "-white";
-	      return React.createElement(ChargeItem, { charge: charge, activity: activity, key: CHARGES.indexOf(charge), setCharge: self.setCharge });
-	    });
-	
-	    var backgroundLis = BACKGROUNDS.map(function (background) {
-	      return React.createElement(BackgroundItem, { background: background, key: BACKGROUNDS.indexOf(background), setBackground: self.setBackground });
-	    });
-	
-	    var mottoLis = MOTTOES.map(function (motto) {
-	      return React.createElement('li', { className: motto, key: MOTTOES.indexOf(motto), onClick: self.setMottoBackground });
-	    });
+	    // var supporterLis = SUPPORTERS.map(function(supporter) {
+	    //   return <li className={supporter} key={SUPPORTERS.indexOf(supporter)} onClick={self.setSupporter} />
+	    // });
 	
 	    var mainColor = this.state.color.length > 0 ? this.state.color : "";
 	    var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
 	    var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
 	    var charge = this.state.charge.length > 0 ? ", " + this.state.charge : "";
 	    var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
-	    var mainMenu = React.createElement(
-	      'ul',
-	      { className: 'main-menu group' },
-	      React.createElement(
-	        'li',
-	        { onClick: this.makeRandom },
-	        'RANDOM'
-	      ),
-	      React.createElement(
-	        'li',
-	        { onClick: this.resetAll },
-	        'RESET ALL'
-	      )
-	    );
-	    var partitionMenu = React.createElement(
-	      'ul',
-	      { className: 'partitions-menu group' },
-	      partitionLis
-	    );
-	    var ordinariesMenu = React.createElement(
-	      'ul',
-	      { className: 'ordinaries-menu group' },
-	      ordinaryLis
-	    );
-	    var chargeMenu = React.createElement(
-	      'ul',
-	      { className: 'charge-menu group', onClick: this.setMenu },
-	      chargeLis
-	    );
-	    var backgroundMenu = React.createElement(
-	      'ul',
-	      { className: 'background-menu group' },
-	      backgroundLis
-	    );
-	    var mottoInput = React.createElement('input', { type: 'text', value: this.state.motto, onChange: this.setMotto });
-	    var mottoMenu = React.createElement(
-	      'ul',
-	      { className: 'motto-menu group' },
-	      mottoLis,
-	      mottoInput
-	    );
+	    var mainMenu = React.createElement(Buttons, { randomize: this.makeRandom, reset: this.resetAll });
+	
+	    var partitionMenu = React.createElement(PartitionMenu, { setPartition: this.setPartition, selected: this.state.partition });
+	    var ordinariesMenu = React.createElement(OrdinaryMenu, { setOrdinary: this.setOrdinary, selected: this.state.ordinaries });
+	    var chargeMenu = React.createElement(ChargeMenu, { setCharge: this.setCharge, selected: this.state.charge });
+	    var backgroundMenu = React.createElement(BackgroundMenu, { setBackground: this.setBackground });
+	    var mottoMenu = React.createElement(MottoMenu, { setMotto: this.setMotto, setMottoBackground: this.setMottoBackground, currentMotto: this.state.motto });
+	
 	    var menu = this.state.menu;
+	
+	    // var supporterMenu =  <ul className="supporter-menu group">{supporterLis}</ul>;
 	
 	    var tabOptions = {
 	      "main-tab": mainMenu,
@@ -20442,6 +20495,7 @@
 	      "charge-menu": chargeMenu,
 	      "background-menu": backgroundMenu,
 	      "motto-menu": mottoMenu
+	      // "supporter-menu": supporterMenu
 	    };
 	
 	    var selected = tabOptions[this.state.selected];
@@ -20459,11 +20513,7 @@
 	      React.createElement(
 	        'div',
 	        { className: menuClass },
-	        React.createElement(
-	          'ul',
-	          { className: 'tabs group' },
-	          tabs
-	        ),
+	        React.createElement(Tabs, { setTab: this.setTab, selected: this.state.selected }),
 	        selected,
 	        React.createElement(
 	          'ul',
@@ -20471,38 +20521,35 @@
 	          colorLis
 	        )
 	      ),
-	      React.createElement(
-	        'div',
-	        { className: "shield-div group " + this.state.background },
-	        React.createElement(
-	          'div',
-	          { className: 'inner group' },
-	          React.createElement(
-	            'section',
-	            { className: "shield " + this.state.color },
-	            React.createElement('section', { className: "partition " + this.state.partition + " " + this.state.partitionColor }),
-	            React.createElement('section', { className: "ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor }),
-	            React.createElement('section', { className: "icon " + chargeWithColor })
-	          ),
-	          React.createElement(
-	            'section',
-	            { className: "motto " + this.state.mottoBackground + " " + this.state.mottoColor },
-	            React.createElement(
-	              'p',
-	              null,
-	              this.state.motto
-	            )
-	          )
-	        )
-	      )
+	      React.createElement(Shield, { background: this.state.background,
+	        color: this.state.color,
+	        partition: this.state.partition + " " + this.state.partitionColor,
+	        ordinary: this.state.ordinaries + " " + this.state.ordinariesColor,
+	        charge: "icon " + chargeWithColor,
+	        mottoSpecs: this.state.mottoBackground + " " + this.state.mottoColor,
+	        motto: this.state.motto })
 	    );
 	  }
 	});
 	
-	module.exports = ColorMenu;
+	module.exports = Menu;
+	
+	// <div className={"shield-div group " + this.state.background}>
+	//     <section className={"left " + this.state.supporterLeft}></section>
+	//     <div className="inner group">
+	//       <div className={"compartment " + this.state.compartment}></div>
+	//         <section className={"shield " + this.state.color}>
+	//           <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
+	//           <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
+	//           <section className={"icon " + chargeWithColor}></section>
+	//         </section>
+	//         <section className={"motto " + this.state.mottoBackground + " " + this.state.mottoColor}><p>{this.state.motto}</p></section>
+	//       </div>
+	//       <section className="right"></section>
+	//   </div>
 
 /***/ },
-/* 171 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -20521,7 +20568,176 @@
 	module.exports = ColorItem;
 
 /***/ },
-/* 172 */
+/* 197 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	TABS = __webpack_require__(173);
+	var TabItem = __webpack_require__(198);
+	
+	var Tabs = React.createClass({
+	  displayName: 'Tabs',
+	
+	
+	  render: function () {
+	
+	    var self = this;
+	
+	    var tabLis = TABS.map(function (tab) {
+	      var active = tab == self.props.selected ? " active" : "";
+	      return React.createElement(TabItem, {
+	        tab: tab,
+	        active: active,
+	        key: TABS.indexOf(tab),
+	        setTab: self.props.setTab
+	      });
+	    });
+	
+	    return React.createElement(
+	      'ul',
+	      { className: 'tabs group' },
+	      tabLis
+	    );
+	  }
+	
+	});
+	
+	module.exports = Tabs;
+
+/***/ },
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var TabItem = React.createClass({
+	  displayName: 'TabItem',
+	
+	
+	  render: function () {
+	
+	    return React.createElement(
+	      'li',
+	      { className: this.props.tab + "-tab" + this.props.active,
+	        onClick: this.props.setTab },
+	      this.props.tab.split("-")[0]
+	    );
+	  }
+	
+	});
+	
+	module.exports = TabItem;
+
+/***/ },
+/* 199 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	var Randomizer = __webpack_require__(200);
+	var Resetter = __webpack_require__(201);
+	
+	var Buttons = React.createClass({
+	  displayName: 'Buttons',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'ul',
+	      { className: 'main-menu group' },
+	      React.createElement(Randomizer, { randomize: this.props.randomize }),
+	      React.createElement(Resetter, { reset: this.props.reset })
+	    );
+	  }
+	
+	});
+	
+	module.exports = Buttons;
+
+/***/ },
+/* 200 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Randomizer = React.createClass({
+	  displayName: 'Randomizer',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'li',
+	      { onClick: this.props.randomize },
+	      'RANDOM'
+	    );
+	  }
+	
+	});
+	
+	module.exports = Randomizer;
+
+/***/ },
+/* 201 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Resetter = React.createClass({
+	  displayName: 'Resetter',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'li',
+	      { onClick: this.props.reset },
+	      'RESET'
+	    );
+	  }
+	
+	});
+	
+	module.exports = Resetter;
+
+/***/ },
+/* 202 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	PARTITIONS = __webpack_require__(179);
+	var PartitionItem = __webpack_require__(203);
+	
+	var PartitionMenu = React.createClass({
+	  displayName: 'PartitionMenu',
+	
+	
+	  render: function () {
+	    var self = this;
+	    var partitionLis = PARTITIONS.map(function (partition) {
+	      var active = partition == self.props.selected ? " active" : "";
+	      return React.createElement(PartitionItem, { partition: partition + "-opt", active: active, key: PARTITIONS.indexOf(partition), name: partition, setPartition: self.props.setPartition });
+	    });
+	    return React.createElement(
+	      'ul',
+	      { className: 'partitions-menu group' },
+	      partitionLis
+	    );
+	  }
+	
+	});
+	
+	module.exports = PartitionMenu;
+	
+	// var active = partition == self.state.partition ? " active" : "";
+
+/***/ },
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -20534,7 +20750,7 @@
 	  render: function () {
 	    return React.createElement(
 	      'li',
-	      { className: this.props.partition, onClick: this.props.setPartition },
+	      { className: this.props.partition + this.props.active, onClick: this.props.setPartition },
 	      this.props.name
 	    );
 	  }
@@ -20544,7 +20760,37 @@
 	module.exports = PartitionItem;
 
 /***/ },
-/* 173 */
+/* 204 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	ORDINARIES = __webpack_require__(182);
+	var OrdinaryItem = __webpack_require__(205);
+	
+	var OrdinaryMenu = React.createClass({
+	  displayName: 'OrdinaryMenu',
+	
+	  render: function () {
+	    var self = this;
+	    var ordinaryLis = ORDINARIES.map(function (ordinary) {
+	      var active = ordinary == self.props.selected ? " active" : "";
+	      return React.createElement(OrdinaryItem, { ordinary: ordinary + "-opt", active: active, key: ORDINARIES.indexOf(ordinary), name: ordinary, setOrdinary: self.props.setOrdinary });
+	    });
+	    return React.createElement(
+	      'ul',
+	      { className: 'ordinaries-menu group' },
+	      ordinaryLis
+	    );
+	  }
+	
+	});
+	
+	module.exports = OrdinaryMenu;
+
+/***/ },
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -20557,7 +20803,7 @@
 	  render: function () {
 	    return React.createElement(
 	      'li',
-	      { className: this.props.ordinary, onClick: this.props.setOrdinary },
+	      { className: this.props.ordinary + this.props.active, onClick: this.props.setOrdinary },
 	      this.props.name
 	    );
 	  }
@@ -20567,7 +20813,41 @@
 	module.exports = OrdinaryItem;
 
 /***/ },
-/* 174 */
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	CHARGES = __webpack_require__(185);
+	var ChargeItem = __webpack_require__(207);
+	
+	var ChargeMenu = React.createClass({
+	  displayName: 'ChargeMenu',
+	
+	
+	  render: function () {
+	    var self = this;
+	
+	    var chargeLis = CHARGES.map(function (charge) {
+	      var active = charge == self.props.selected ? "-gules" : "-white";
+	      return React.createElement(ChargeItem, { charge: charge, active: active, key: CHARGES.indexOf(charge), name: charge, setCharge: self.props.setCharge });
+	    });
+	    return React.createElement(
+	      'ul',
+	      { className: 'charge-menu group' },
+	      chargeLis
+	    );
+	  }
+	
+	});
+	
+	module.exports = ChargeMenu;
+	
+	// var activity = charge == self.state.charge ? "-gules" : "-white";
+
+/***/ },
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -20578,7 +20858,7 @@
 	
 	
 	  render: function () {
-	    return React.createElement('li', { className: this.props.charge + this.props.activity, onClick: this.props.setCharge });
+	    return React.createElement('li', { className: this.props.charge + this.props.active, onClick: this.props.setCharge });
 	  }
 	
 	});
@@ -20586,7 +20866,37 @@
 	module.exports = ChargeItem;
 
 /***/ },
-/* 175 */
+/* 208 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	BACKGROUNDS = __webpack_require__(188);
+	var BackgroundItem = __webpack_require__(209);
+	
+	var BackgroundMenu = React.createClass({
+	  displayName: 'BackgroundMenu',
+	
+	
+	  render: function () {
+	    var self = this;
+	    var backgroundLis = BACKGROUNDS.map(function (background) {
+	      return React.createElement(BackgroundItem, { background: background, key: BACKGROUNDS.indexOf(background), name: background, setBackground: self.props.setBackground });
+	    });
+	    return React.createElement(
+	      'ul',
+	      { className: 'background-menu group' },
+	      backgroundLis
+	    );
+	  }
+	
+	});
+	
+	module.exports = BackgroundMenu;
+
+/***/ },
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -20603,6 +20913,179 @@
 	});
 	
 	module.exports = BackgroundItem;
+
+/***/ },
+/* 210 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	MOTTOES = __webpack_require__(191);
+	var MottoItem = __webpack_require__(211);
+	
+	var MottoMenu = React.createClass({
+	  displayName: 'MottoMenu',
+	
+	
+	  render: function () {
+	    var mottoInput = React.createElement('input', { type: 'text', value: this.props.currentMotto, onChange: this.props.setMotto });
+	    var self = this;
+	    var mottoLis = MOTTOES.map(function (motto) {
+	      return React.createElement(MottoItem, { motto: motto, key: MOTTOES.indexOf(motto), name: motto, setMottoBackground: self.props.setMottoBackground });
+	    });
+	    return React.createElement(
+	      'ul',
+	      { className: 'motto-menu group' },
+	      mottoLis,
+	      mottoInput
+	    );
+	  }
+	
+	});
+	
+	module.exports = MottoMenu;
+
+/***/ },
+/* 211 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(33);
+	
+	var MottoItem = React.createClass({
+	  displayName: 'MottoItem',
+	
+	
+	  render: function () {
+	    return React.createElement('li', { className: this.props.motto, onClick: this.props.setMottoBackground });
+	  }
+	
+	});
+	
+	module.exports = MottoItem;
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Partition = __webpack_require__(214);
+	var Ordinary = __webpack_require__(213);
+	var Charge = __webpack_require__(215);
+	var Motto = __webpack_require__(216);
+	
+	var Shield = React.createClass({
+	  displayName: 'Shield',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      { className: "shield-div group " + this.props.background },
+	      React.createElement(
+	        'div',
+	        { className: 'inner group' },
+	        React.createElement(
+	          'section',
+	          { className: "shield " + this.props.color },
+	          React.createElement(Partition, { partition: "partition " + this.props.partition }),
+	          React.createElement(Ordinary, { ordinary: "ordinary " + this.props.ordinary }),
+	          React.createElement(Charge, { charge: this.props.charge })
+	        ),
+	        React.createElement(Motto, { mottoSpecs: this.props.mottoSpecs, motto: this.props.motto })
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = Shield;
+
+/***/ },
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Ordinary = React.createClass({
+	  displayName: 'Ordinary',
+	
+	
+	  render: function () {
+	    return React.createElement('section', { className: "ordinary " + this.props.ordinary });
+	  }
+	
+	});
+	
+	module.exports = Ordinary;
+
+/***/ },
+/* 214 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Partition = React.createClass({
+	  displayName: 'Partition',
+	
+	
+	  render: function () {
+	    return React.createElement('section', { className: "partition " + this.props.partition });
+	  }
+	
+	});
+	
+	module.exports = Partition;
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Charge = React.createClass({
+	  displayName: 'Charge',
+	
+	
+	  render: function () {
+	    return React.createElement('section', { className: this.props.charge });
+	  }
+	
+	});
+	
+	module.exports = Charge;
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(33);
+	
+	var Motto = React.createClass({
+	  displayName: 'Motto',
+	
+	
+	  render: function () {
+	    return React.createElement(
+	      'section',
+	      { className: "motto " + this.props.mottoSpecs },
+	      React.createElement(
+	        'p',
+	        null,
+	        this.props.motto
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = Motto;
 
 /***/ }
 /******/ ]);

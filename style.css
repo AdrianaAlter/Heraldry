@@ -75,7 +75,7 @@ li {
   background: transparent;
 }
 
-.main-menu, .partitions-menu, .ordinaries-menu, .charge-menu, .background-menu, .motto-menu {
+.main-menu, .partitions-menu, .ordinaries-menu, .charge-menu, .background-menu, .motto-menu, .supporter-menu {
   border: none;
   background: none;
   color: oldlace;
@@ -103,7 +103,7 @@ li {
   margin-top: 5%;
 }
 
-.charge-menu > li, .motto-menu > li {
+.charge-menu > li, .motto-menu > li, .supporter-menu > li {
   height: 20px;
 }
 
@@ -153,6 +153,60 @@ input {
   left: 30%;
 }
 
+.compartment {
+  width: 200%;
+  height: 124px;
+  left: -50%;
+  z-index: 0;
+  display: block;
+  border-radius: 150px 150px 0 0;
+  margin: auto;
+  position: absolute;
+  bottom: -6%;
+}
+
+.left, .right {
+  height: 420px;
+  width: 28%;
+  top: 0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.left {
+  float: left;
+  left: 6%;
+}
+
+.right {
+  float: right;
+  right: 7.5%;
+  transform: rotateY(180deg);
+}
+
+.goldlion {
+  background-image: url("http://www.talkgraphics.com/attachment.php?attachmentid=95186&d=1363858800");
+}
+
+.whitelion {
+  background-image: url("http://www.heraldry-clipart.com/images/lion_crest6.gif");
+}
+
+.firebreather {
+  background-image: url("https://pixabay.com/static/uploads/photo/2014/04/03/10/32/dragon-310791_960_720.png");
+}
+
+.crownedbear {
+  background-image: url("http://www.pd4pic.com/images800_/black-open-mouth-bear-sword-crown-animal-tongue.png");
+  transform: rotateY(180deg);
+}
+
+.redgryphon {
+    background-image: url("https://pixabay.com/static/uploads/photo/2012/05/03/23/40/red-46772_960_720.png");
+}
 
 .shield {
   display: block;
@@ -164,7 +218,7 @@ input {
   border-radius: 0 0 250px 250px;
   display: block;
   overflow: hidden;
-  transition: background-color 2s;
+  transition: background-color 1.5s, border-color 1.5s;
   border: 1px solid black;
 }
 
@@ -174,9 +228,14 @@ input {
 }
 
 
-
+""
 /*COLORS*/
 
+.honeycomb {
+  height: 300px !important;
+  width: 300px !important;
+  background-image: url("http://shotgunshuffle.com/wp-content/uploads/2015/06/Honeycomb.png");
+}
 .gules {
   background: #be0000 !important;
   border-color: #be0000 !important;
@@ -202,6 +261,11 @@ input {
   border-color: #008000 !important;
   color: #008000 !important;
   /*background: linear-gradient(to right, #004d00, #00b300, #004d00) !important;*/
+}
+.viridian {
+  background: #004A00 !important;
+  border-color: #004A00 !important;
+  color: #004A00 !important;
 }
 
 .purpure {
@@ -246,6 +310,23 @@ input {
   background-color: #E6B488 !important;
   border-color: #E6B488 !important;
   color: #E6B488 !important;
+}
+
+.bisque {
+  background-color: #f1e2be !important;
+  border-color: #f1e2be !important;
+  color: #f1e2be !important;
+}
+
+.amaranth {
+  background-color: #B51973 !important;
+  border-color: #B51973 !important;
+  color: #B51973 !important;
+}
+.lead {
+  background-color: #67969C !important;
+  border-color: #67969C !important;
+  color: #67969C !important;
 }
 .tawny {
   background-color: #A75502 !important;
@@ -342,9 +423,10 @@ input {
 
 .partition {
   position: absolute !important;
-  background: #f9e2b7;
+  /*background: #f9e2b7;*/
+    background-image: url("http://shotgunshuffle.com/wp-content/uploads/2015/06/Honeycomb.png");
   border: 1px solid black;
-  transition: background-color 2s;
+  transition: background-color 1.5s, border-color 1.5s;
   top: -1%;
   left: -1%;
 }
@@ -354,7 +436,9 @@ input {
   left: -1%;
   height: 51%;
   position: absolute !important;
+    /*background-image: url("https://pixabay.com/static/uploads/photo/2012/04/15/19/14/honeycomb-34984_960_720.png");*/
 }
+
 
 .per-pale {
   width: 51%;
@@ -491,7 +575,7 @@ input {
   border: 1px solid black;
 }
 
-.enarched {
+.enarched-per-fess {
   height: 80%;
   position: absolute !important;
   width: 101%;
@@ -499,8 +583,16 @@ input {
   top: 36%;
   left: -1%;
 }
+.enarched-per-pale {
+  width: 100%;
+  position: absolute !important;
+  height: 100%;
+  border-radius: 50%;
+  left: 44%;
+  top: -1%;
+}
 
-.angled {
+.angled-per-fess {
   height: 65%;
   position: absolute !important;
   width: 51%;
@@ -508,7 +600,7 @@ input {
   top: 44%;
 }
 
-.angled:after {
+.angled-per-fess:after {
   border: 1px solid black;
   border-left: transparent;
   display: block;
@@ -522,6 +614,22 @@ input {
   position: absolute;
 }
 
+.angled-per-pale {
+  height: 50%;
+  width: 46%;
+}
+
+.angled-per-pale:after {
+  display: block;
+  content: "";
+  background: inherit !important;
+  border-color: inherit !important;
+  height: 100%;
+  width: 58%;
+  left: 0%;
+  top: 50%;
+  position: absolute;
+}
 .per-chevron {
   height: 100%;
   position: absolute !important;
@@ -582,12 +690,57 @@ input {
   width: 0;
   height: 0;
   border-left: 169px solid transparent;
-  border-right: 169px solid transparent;
+  border-right: 163px solid transparent;
   border-top: 313px solid #000;
   border-top-color: inherit !important;
   position: absolute !important;
 }
 
+.chapé {
+  height: 280px;
+  width: 280px;
+  transform: rotate(45deg);
+  left: 8.2%;
+  top: 19%;
+  position: absolute;
+}
+
+.gyronny {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-top: 169px solid black;
+  border-right: 110px solid transparent !important;
+  left: 16%;
+  position: absolute;
+  border-left: 110px solid transparent !important;
+}
+
+.gyronny:before {
+  content: "";
+  display: block;
+  position: absolute !important;
+  border-color: inherit !important;
+  width: 0;
+  height: 0;
+  border-left: 180px solid black;
+  border-top: 324px solid black;
+  border-right: 100px solid transparent !important;
+}
+.gyronny:before {
+  display: none;
+}
+.gyronny:after {
+  content: "";
+  display: block;
+  position: absolute !important;
+  border-color: inherit !important;
+  width: 0;
+  height: 0;
+  border-top: 324px solid black;
+  border-left: 100px solid transparent !important;
+  border-right: 100px solid transparent !important;
+}
 .per-saltire {
   width: 286px;
   height: 236px;
@@ -632,7 +785,7 @@ input {
   position: absolute;
 }
 
-.tierced {
+.tierced-in-pale {
   height: 102%;
   width: 30%;
   left: -2%;
@@ -640,7 +793,7 @@ input {
   position: absolute !important;
 }
 
-.tierced:after {
+.tierced-in-pale:after {
   content: "";
   background: inherit !important;
   border-color: inherit !important;
@@ -649,6 +802,22 @@ input {
   width: 100%;
   position: absolute;
   left: 240%;
+}
+
+.tierced-in-fess {
+  height: 33%;
+  width: 100%;
+}
+
+.tierced-in-fess:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: inherit !important;
+  border-color: inherit !important;
+  height: 100%;
+  width: 100%;
+  top: 66%;
 }
 
 .tierced-in-mantle {
@@ -685,13 +854,14 @@ input {
 
 
 
+
+
 /*ORDINARIES*/
 
 .ordinary {
   position: absolute;
   background: #f9e2b7;
-  border: 1px solid black;
-  transition: background-color 2s;
+  transition: background-color 1.5s, border-color 1.5s;
 }
 
 .pale {
@@ -746,15 +916,66 @@ input {
 }
 
 
+.pale-rompu {
+  height: 51%;
+  width: 33%;
+  left: 18%;
+}
+
+.pale-rompu:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: inherit;
+  width: 100%;
+  height: 125%;
+  top: 75%;
+  left: 100%;
+}
+
 .pile {
   width: 0;
   height: 0;
-  background: transparent;
-  border-left: 165px solid transparent;
-  border-right: 165px solid transparent;
-  left: 0%;
+  background: transparent !important;
+  border-left: 100px solid transparent !important;
+  border-right: 100px solid transparent !important;
+  left: 20.6%;
   position: absolute;
   border-top: 310px solid black;
+}
+
+.pile-reversed {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-left: 100px solid transparent !important;
+  border-right: 100px solid transparent !important;
+  left: 20.6%;
+  position: absolute;
+  border-bottom: 310px solid black;
+}
+
+.piles-in-point {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-left: 48px solid transparent !important;
+  border-right: 48px solid transparent !important;
+  left: 35.6%;
+  position: absolute;
+  border-top: 315px solid black;
+}
+
+.piles-in-point:before {
+  display: block;
+  content: "";
+  background: inherit;
+  border-left: 48px solid transparent !important;
+  border-right: 48px solid transparent !important;
+  border-top: 315px solid black;
+  border-color: inherit;
+  left: -150%;
+  transform: rotate(45deg);
 }
 
 .chief {
@@ -771,11 +992,42 @@ input {
   height: 17.5%;
 }
 
-.fess {
+.fess, .fess-cotised {
   height: 33%;
   width: 101%;
   left: -1%;
   top: 33%;
+}
+
+.fess-cotised:before, .fess-cotised:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: inherit;
+    width: 100%;
+    height: 12.5%;
+    top: -15%;
+}
+
+.fess-cotised:after {
+  top: 102%;
+}
+
+.fess-rompu {
+  height: 33%;
+  width: 50%;
+  top: 18%;
+}
+
+.fess-rompu:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  top: 75%;
+  left: 100%;
 }
 
 .bar {
@@ -792,7 +1044,7 @@ input {
   top: 43.5%;
 }
 
-.bend {
+.bend, .bend-cotised, .bend-enhanced, .bend-enhanced-cotised {
   height: 709px;
   width: 40px;
   left: 23%;
@@ -800,15 +1052,53 @@ input {
   transform: rotate(-45deg);
 }
 
-.bend-sinister {
+.bend-cotised:before, .bend-cotised:after, .bend-sinister-cotised:before, .bend-sinister-cotised:after, .bend-enhanced-cotised:before, .bend-enhanced-cotised:after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  height: 100%;
+  width: 25%;
+  top: 32%;
+  left: 106%;
+  background: inherit !important;
+}
+
+.bend-cotised:after, .bend-enhanced-cotised:after {
+  left: -34%;
+}
+
+.bend-sinister, .bend-sinister-cotised, .bend-sinister-enhanced {
   height: 709px;
   width: 40px;
-  left: 23%;
+  left: 24%;
   top: -45%;
   transform: rotate(47deg);
 }
 
-.saltire {
+.bend-sinister-cotised:before {
+  top: 8%;
+}
+.bend-sinister-cotised:after {
+  top: 0%;
+  left: -33%;
+}
+
+.bend-enhanced, .bend-sinister-enhanced, .bend-enhanced-cotised {
+  width: 60px;
+  left: 62%;
+}
+
+.bend-sinister-enhanced {
+  left: -23%;
+}
+
+.bend-enhanced-cotised:after {
+  left: -31%;
+  top: 0;
+}
+
+.saltire, .saltire-nowy, .saltire-quadrate {
   height: 709px;
   width: 40px;
   left: 23%;
@@ -816,7 +1106,7 @@ input {
   transform: rotate(-45deg);
 }
 
-.saltire:after {
+.saltire:after, .saltire-nowy:after, .saltire-quadrate:after {
   content: "";
   position: absolute;
   border: 1px solid black;
@@ -939,14 +1229,14 @@ input {
   left: -1%;
 }
 
-.cross {
+.cross, .cross-nowy, .cross-quadrate {
   width: 340px;
   height: 40px;
   left: -2%;
   top: 44%;
 }
 
-.cross:after {
+.cross:after, .cross-nowy:after, .cross-quadrate:after {
   height: 320px;
   width: 40px;
   left: 44%;
@@ -958,6 +1248,27 @@ input {
   border-color: inherit !important;
 }
 
+.cross-nowy:before, .cross-quadrate:before, .saltire-nowy:before, .saltire-quadrate:before {
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  top: -121%;
+  left: 28%;
+  background: inherit;
+}
+
+.cross-quadrate:before, .saltire-quadrate:before {
+  border-radius: 0;
+}
+
+.saltire-nowy:before, .saltire-quadrate:before {
+  top: 52%;
+  left: -104%;
+}
+
 .chevron {
   width: 30px;
   height: 350px;
@@ -966,10 +1277,10 @@ input {
   left: 10.5%;
   position: absolute;
 }
-.chevron:before {
+.chevron:before, .chevron-reversed:before {
   background: inherit !important;
   border-color: inherit !important;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   content: "";
   width: 30px;
   height: 302px;
@@ -982,22 +1293,43 @@ input {
 .chevron-reversed {
   width: 30px;
   height: 350px;
-  transform: rotate(45deg);
-  top: 21%;
-  left: 10.5%;
+  transform: rotate(225deg);
+  top: -41%;
+  left: 81%;
   position: absolute;
 }
-.chevron-reversed:before {
+
+
+.chevron-throughout {
+  width: 30px;
+  height: 372px;
+  transform: rotate(27deg);
+  top: -4%;
+  left: 24.5%;
+  position: absolute;
+}
+
+.chevron-throughout:before {
   background: inherit !important;
   border-color: inherit !important;
-  border: 1px solid black;
   content: "";
-  width: 30px;
-  height: 302px;
+  width: 100%;
+  height: 100%;
   transform: rotate(88deg);
   top: -40.5%;
   right: -464%;
   position: absolute;
+}
+
+.gyron {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-left: 169px solid black;
+  border-right: 165px solid transparent !important;
+  left: 0%;
+  position: absolute;
+  border-top: 159px solid transparent !important;
 }
 
 .tierce {
@@ -1076,66 +1408,66 @@ input {
   display: block;
   height: 100%;
   width: 100%;
-  transition: background-image 2s;
+  transition: background-image 1.5s;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
 .fleur {
-  background-image: url("./images/fleur/fleur.png") !important;
+  background-image: url("./images/charges/fleur/fleur.png") !important;
 }
 .fleur-gules {
-  background-image: url("./images/fleur/fleur-gules.png") !important;
+  background-image: url("./images/charges/fleur/fleur-gules.png") !important;
 }
 .fleur-azure {
-  background-image: url("./images/fleur/fleur-azure.png") !important;
+  background-image: url("./images/charges/fleur/fleur-azure.png") !important;
 }
 .fleur-vert {
-  background-image: url("./images/fleur/fleur-vert.png") !important;
+  background-image: url("./images/charges/fleur/fleur-vert.png") !important;
 }
 .fleur-purpure {
-  background-image: url("./images/fleur/fleur-purpure.png") !important;
+  background-image: url("./images/charges/fleur/fleur-purpure.png") !important;
 }
 
 .fleur-murrey {
-  background-image: url("./images/fleur/fleur-murrey.png") !important;
+  background-image: url("./images/charges/fleur/fleur-murrey.png") !important;
 }
 .fleur-sable {
-  background-image: url("./images/fleur/fleur-sable.png") !important;
+  background-image: url("./images/charges/fleur/fleur-sable.png") !important;
 }
 .fleur-argent {
-  background-image: url("./images/fleur/fleur-argent.png") !important;
+  background-image: url("./images/charges/fleur/fleur-argent.png") !important;
 }
 .fleur-or {
-  background-image: url("./images/fleur/fleur-or.png") !important;
+  background-image: url("./images/charges/fleur/fleur-or.png") !important;
 }
 .fleur-white {
-  background-image: url("./images/fleur/fleur-white.png") !important;
+  background-image: url("./images/charges/fleur/fleur-white.png") !important;
 }
 .fleur-copper {
-  background-image: url("./images/fleur/fleur-copper.png") !important;
+  background-image: url("./images/charges/fleur/fleur-copper.png") !important;
 }
 .fleur-sanguine {
-  background-image: url("./images/fleur/fleur-sanguine.png") !important;
+  background-image: url("./images/charges/fleur/fleur-sanguine.png") !important;
 }
 .fleur-celeste {
-  background-image: url("./images/fleur/fleur-celeste.png") !important;
+  background-image: url("./images/charges/fleur/fleur-celeste.png") !important;
 }
 .fleur-cendree {
-  background-image: url("./images/fleur/fleur-cendree.png") !important;
+  background-image: url("./images/charges/fleur/fleur-cendree.png") !important;
 }
 .fleur-tawny {
-  background-image: url("./images/fleur/fleur-tawny.png") !important;
+  background-image: url("./images/charges/fleur/fleur-tawny.png") !important;
 }
 .fleur-senois {
-  background-image: url("./images/fleur/fleur-senois.png") !important;
+  background-image: url("./images/charges/fleur/fleur-senois.png") !important;
 }
 .fleur-rose-pink {
-  background-image: url("./images/fleur/fleur-rose-pink.png") !important;
+  background-image: url("./images/charges/fleur/fleur-rose-pink.png") !important;
 }
 .fleur-carnation {
-  background-image: url("./images/fleur/fleur-carnation.png") !important;
+  background-image: url("./images/charges/fleur/fleur-carnation.png") !important;
 }
 
 
@@ -1144,854 +1476,854 @@ input {
 
 
 .lion {
-  background-image: url("./images/lion/lion-sable.png") !important;
+  background-image: url("./images/charges/lion/lion-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .lion-gules {
-  background-image: url("./images/lion/lion-gules.png") !important;
+  background-image: url("./images/charges/lion/lion-gules.png") !important;
 }
 .lion-azure {
-  background-image: url("./images/lion/lion-azure.png") !important;
+  background-image: url("./images/charges/lion/lion-azure.png") !important;
 }
 .lion-vert {
-  background-image: url("./images/lion/lion-vert.png") !important;
+  background-image: url("./images/charges/lion/lion-vert.png") !important;
 }
 .lion-purpure {
-  background-image: url("./images/lion/lion-purpure.png") !important;
+  background-image: url("./images/charges/lion/lion-purpure.png") !important;
 }
 .lion-murrey {
-  background-image: url("./images/lion/lion-murrey.png") !important;
+  background-image: url("./images/charges/lion/lion-murrey.png") !important;
 }
 .lion-sable {
-  background-image: url("./images/lion/lion-sable.png") !important;
+  background-image: url("./images/charges/lion/lion-sable.png") !important;
 }
 .lion-argent {
-  background-image: url("./images/lion/lion-argent.png") !important;
+  background-image: url("./images/charges/lion/lion-argent.png") !important;
 }
 .lion-or {
-  background-image: url("./images/lion/lion-or.png") !important;
+  background-image: url("./images/charges/lion/lion-or.png") !important;
 }
 .lion-white {
-  background-image: url("./images/lion/lion-white.png") !important;
+  background-image: url("./images/charges/lion/lion-white.png") !important;
 }
 .lion-copper {
-  background-image: url("./images/lion/lion-copper.png") !important;
+  background-image: url("./images/charges/lion/lion-copper.png") !important;
 }
 .lion-sanguine {
-  background-image: url("./images/lion/lion-sanguine.png") !important;
+  background-image: url("./images/charges/lion/lion-sanguine.png") !important;
 }
 .lion-celeste {
-  background-image: url("./images/lion/lion-celeste.png") !important;
+  background-image: url("./images/charges/lion/lion-celeste.png") !important;
 }
 .lion-cendree {
-  background-image: url("./images/lion/lion-cendree.png") !important;
+  background-image: url("./images/charges/lion/lion-cendree.png") !important;
 }
 .lion-tawny {
-  background-image: url("./images/lion/lion-tawny.png") !important;
+  background-image: url("./images/charges/lion/lion-tawny.png") !important;
 }
 .lion-senois {
-  background-image: url("./images/lion/lion-senois.png") !important;
+  background-image: url("./images/charges/lion/lion-senois.png") !important;
 }
 .lion-rose-pink {
-  background-image: url("./images/lion/lion-rose-pink.png") !important;
+  background-image: url("./images/charges/lion/lion-rose-pink.png") !important;
 }
 .lion-carnation {
-  background-image: url("./images/lion/lion-carnation.png") !important;
+  background-image: url("./images/charges/lion/lion-carnation.png") !important;
 }
 
 .eagle {
-  background-image: url("./images/eagle/eagle-sable.png") !important;
+  background-image: url("./images/charges/eagle/eagle-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .eagle-gules {
-  background-image: url("./images/eagle/eagle-gules.png") !important;
+  background-image: url("./images/charges/eagle/eagle-gules.png") !important;
 }
 .eagle-azure {
-  background-image: url("./images/eagle/eagle-azure.png") !important;
+  background-image: url("./images/charges/eagle/eagle-azure.png") !important;
 }
 .eagle-vert {
-  background-image: url("./images/eagle/eagle-vert.png") !important;
+  background-image: url("./images/charges/eagle/eagle-vert.png") !important;
 }
 .eagle-purpure {
-  background-image: url("./images/eagle/eagle-purpure.png") !important;
+  background-image: url("./images/charges/eagle/eagle-purpure.png") !important;
 }
 .eagle-murrey {
-  background-image: url("./images/eagle/eagle-murrey.png") !important;
+  background-image: url("./images/charges/eagle/eagle-murrey.png") !important;
 }
 .eagle-sable {
-  background-image: url("./images/eagle/eagle-sable.png") !important;
+  background-image: url("./images/charges/eagle/eagle-sable.png") !important;
 }
 .eagle-argent {
-  background-image: url("./images/eagle/eagle-argent.png") !important;
+  background-image: url("./images/charges/eagle/eagle-argent.png") !important;
 }
 .eagle-or {
-  background-image: url("./images/eagle/eagle-or.png") !important;
+  background-image: url("./images/charges/eagle/eagle-or.png") !important;
 }
 .eagle-white {
-  background-image: url("./images/eagle/eagle-white.png") !important;
+  background-image: url("./images/charges/eagle/eagle-white.png") !important;
 }
 .eagle-copper {
-  background-image: url("./images/eagle/eagle-copper.png") !important;
+  background-image: url("./images/charges/eagle/eagle-copper.png") !important;
 }
 .eagle-sanguine {
-  background-image: url("./images/eagle/eagle-sanguine.png") !important;
+  background-image: url("./images/charges/eagle/eagle-sanguine.png") !important;
 }
 .eagle-celeste {
-  background-image: url("./images/eagle/eagle-celeste.png") !important;
+  background-image: url("./images/charges/eagle/eagle-celeste.png") !important;
 }
 .eagle-cendree {
-  background-image: url("./images/eagle/eagle-cendree.png") !important;
+  background-image: url("./images/charges/eagle/eagle-cendree.png") !important;
 }
 .eagle-tawny {
-  background-image: url("./images/eagle/eagle-tawny.png") !important;
+  background-image: url("./images/charges/eagle/eagle-tawny.png") !important;
 }
 .eagle-senois {
-  background-image: url("./images/eagle/eagle-senois.png") !important;
+  background-image: url("./images/charges/eagle/eagle-senois.png") !important;
 }
 .eagle-rose-pink {
-  background-image: url("./images/eagle/eagle-rose-pink.png") !important;
+  background-image: url("./images/charges/eagle/eagle-rose-pink.png") !important;
 }
 .eagle-carnation {
-  background-image: url("./images/eagle/eagle-carnation.png") !important;
+  background-image: url("./images/charges/eagle/eagle-carnation.png") !important;
 }
 
 .rose {
-  background-image: url("./images/rose/rose-sable.png") !important;
+  background-image: url("./images/charges/rose/rose-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .rose-gules {
-  background-image: url("./images/rose/rose-gules.png") !important;
+  background-image: url("./images/charges/rose/rose-gules.png") !important;
 }
 .rose-azure {
-  background-image: url("./images/rose/rose-azure.png") !important;
+  background-image: url("./images/charges/rose/rose-azure.png") !important;
 }
 .rose-vert {
-  background-image: url("./images/rose/rose-vert.png") !important;
+  background-image: url("./images/charges/rose/rose-vert.png") !important;
 }
 .rose-purpure {
-  background-image: url("./images/rose/rose-purpure.png") !important;
+  background-image: url("./images/charges/rose/rose-purpure.png") !important;
 }
 .rose-murrey {
-  background-image: url("./images/rose/rose-murrey.png") !important;
+  background-image: url("./images/charges/rose/rose-murrey.png") !important;
 }
 .rose-sable {
-  background-image: url("./images/rose/rose-sable.png") !important;
+  background-image: url("./images/charges/rose/rose-sable.png") !important;
 }
 .rose-argent {
-  background-image: url("./images/rose/rose-argent.png") !important;
+  background-image: url("./images/charges/rose/rose-argent.png") !important;
 }
 .rose-or {
-  background-image: url("./images/rose/rose-or.png") !important;
+  background-image: url("./images/charges/rose/rose-or.png") !important;
 }
 .rose-white {
-  background-image: url("./images/rose/rose-white.png") !important;
+  background-image: url("./images/charges/rose/rose-white.png") !important;
 }
 .rose-copper {
-  background-image: url("./images/rose/rose-copper.png") !important;
+  background-image: url("./images/charges/rose/rose-copper.png") !important;
 }
 .rose-sanguine {
-  background-image: url("./images/rose/rose-sanguine.png") !important;
+  background-image: url("./images/charges/rose/rose-sanguine.png") !important;
 }
 .rose-celeste {
-  background-image: url("./images/rose/rose-celeste.png") !important;
+  background-image: url("./images/charges/rose/rose-celeste.png") !important;
 }
 .rose-cendree {
-  background-image: url("./images/rose/rose-cendree.png") !important;
+  background-image: url("./images/charges/rose/rose-cendree.png") !important;
 }
 .rose-tawny {
-  background-image: url("./images/rose/rose-tawny.png") !important;
+  background-image: url("./images/charges/rose/rose-tawny.png") !important;
 }
 .rose-senois {
-  background-image: url("./images/rose/rose-senois.png") !important;
+  background-image: url("./images/charges/rose/rose-senois.png") !important;
 }
 .rose-rose-pink {
-  background-image: url("./images/rose/rose-rose-pink.png") !important;
+  background-image: url("./images/charges/rose/rose-rose-pink.png") !important;
 }
 .rose-carnation {
-  background-image: url("./images/rose/rose-carnation.png") !important;
+  background-image: url("./images/charges/rose/rose-carnation.png") !important;
 }
 
 
 .unicorn {
-  background-image: url("./images/unicorn/unicorn-sable.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .unicorn-gules {
-  background-image: url("./images/unicorn/unicorn-gules.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-gules.png") !important;
 }
 .unicorn-azure {
-  background-image: url("./images/unicorn/unicorn-azure.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-azure.png") !important;
 }
 .unicorn-vert {
-  background-image: url("./images/unicorn/unicorn-vert.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-vert.png") !important;
 }
 .unicorn-purpure {
-  background-image: url("./images/unicorn/unicorn-purpure.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-purpure.png") !important;
 }
 .unicorn-murrey {
-  background-image: url("./images/unicorn/unicorn-murrey.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-murrey.png") !important;
 }
 .unicorn-sable {
-  background-image: url("./images/unicorn/unicorn-sable.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-sable.png") !important;
 }
 .unicorn-argent {
-  background-image: url("./images/unicorn/unicorn-argent.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-argent.png") !important;
 }
 .unicorn-or {
-  background-image: url("./images/unicorn/unicorn-or.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-or.png") !important;
 }
 .unicorn-white {
-  background-image: url("./images/unicorn/unicorn-white.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-white.png") !important;
 }
 .unicorn-copper {
-  background-image: url("./images/unicorn/unicorn-copper.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-copper.png") !important;
 }
 .unicorn-sanguine {
-  background-image: url("./images/unicorn/unicorn-sanguine.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-sanguine.png") !important;
 }
 .unicorn-celeste {
-  background-image: url("./images/unicorn/unicorn-celeste.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-celeste.png") !important;
 }
 .unicorn-cendree {
-  background-image: url("./images/unicorn/unicorn-cendree.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-cendree.png") !important;
 }
 .unicorn-tawny {
-  background-image: url("./images/unicorn/unicorn-tawny.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-tawny.png") !important;
 }
 .unicorn-senois {
-  background-image: url("./images/unicorn/unicorn-senois.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-senois.png") !important;
 }
 .unicorn-rose-pink {
-  background-image: url("./images/unicorn/unicorn-rose-pink.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-rose-pink.png") !important;
 }
 .unicorn-carnation {
-  background-image: url("./images/unicorn/unicorn-carnation.png") !important;
+  background-image: url("./images/charges/unicorn/unicorn-carnation.png") !important;
 }
 
 
 .bow {
-  background-image: url("./images/bow/bow-sable.png") !important;
+  background-image: url("./images/charges/bow/bow-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .bow-gules {
-  background-image: url("./images/bow/bow-gules.png") !important;
+  background-image: url("./images/charges/bow/bow-gules.png") !important;
 }
 .bow-azure {
-  background-image: url("./images/bow/bow-azure.png") !important;
+  background-image: url("./images/charges/bow/bow-azure.png") !important;
 }
 .bow-vert {
-  background-image: url("./images/bow/bow-vert.png") !important;
+  background-image: url("./images/charges/bow/bow-vert.png") !important;
 }
 .bow-purpure {
-  background-image: url("./images/bow/bow-purpure.png") !important;
+  background-image: url("./images/charges/bow/bow-purpure.png") !important;
 }
 .bow-murrey {
-  background-image: url("./images/bow/bow-murrey.png") !important;
+  background-image: url("./images/charges/bow/bow-murrey.png") !important;
 }
 .bow-sable {
-  background-image: url("./images/bow/bow-sable.png") !important;
+  background-image: url("./images/charges/bow/bow-sable.png") !important;
 }
 .bow-argent {
-  background-image: url("./images/bow/bow-argent.png") !important;
+  background-image: url("./images/charges/bow/bow-argent.png") !important;
 }
 .bow-or {
-  background-image: url("./images/bow/bow-or.png") !important;
+  background-image: url("./images/charges/bow/bow-or.png") !important;
 }
 .bow-white {
-  background-image: url("./images/bow/bow-white.png") !important;
+  background-image: url("./images/charges/bow/bow-white.png") !important;
 }
 .bow-copper {
-  background-image: url("./images/bow/bow-copper.png") !important;
+  background-image: url("./images/charges/bow/bow-copper.png") !important;
 }
 .bow-sanguine {
-  background-image: url("./images/bow/bow-sanguine.png") !important;
+  background-image: url("./images/charges/bow/bow-sanguine.png") !important;
 }
 .bow-celeste {
-  background-image: url("./images/bow/bow-celeste.png") !important;
+  background-image: url("./images/charges/bow/bow-celeste.png") !important;
 }
 .bow-cendree {
-  background-image: url("./images/bow/bow-cendree.png") !important;
+  background-image: url("./images/charges/bow/bow-cendree.png") !important;
 }
 .bow-tawny {
-  background-image: url("./images/bow/bow-tawny.png") !important;
+  background-image: url("./images/charges/bow/bow-tawny.png") !important;
 }
 .bow-senois {
-  background-image: url("./images/bow/bow-senois.png") !important;
+  background-image: url("./images/charges/bow/bow-senois.png") !important;
 }
 .bow-rose-pink {
-  background-image: url("./images/bow/bow-rose-pink.png") !important;
+  background-image: url("./images/charges/bow/bow-rose-pink.png") !important;
 }
 .bow-carnation {
-  background-image: url("./images/bow/bow-carnation.png") !important;
+  background-image: url("./images/charges/bow/bow-carnation.png") !important;
 }
 
 .gate {
-  background-image: url("./images/gate/gate-sable.png") !important;
+  background-image: url("./images/charges/gate/gate-sable.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .gate-gules {
-  background-image: url("./images/gate/gate-gules.png") !important;
+  background-image: url("./images/charges/gate/gate-gules.png") !important;
 }
 .gate-azure {
-  background-image: url("./images/gate/gate-azure.png") !important;
+  background-image: url("./images/charges/gate/gate-azure.png") !important;
 }
 .gate-vert {
-  background-image: url("./images/gate/gate-vert.png") !important;
+  background-image: url("./images/charges/gate/gate-vert.png") !important;
 }
 .gate-purpure {
-  background-image: url("./images/gate/gate-purpure.png") !important;
+  background-image: url("./images/charges/gate/gate-purpure.png") !important;
 }
 .gate-murrey {
-  background-image: url("./images/gate/gate-murrey.png") !important;
+  background-image: url("./images/charges/gate/gate-murrey.png") !important;
 }
 .gate-sable {
-  background-image: url("./images/gate/gate-sable.png") !important;
+  background-image: url("./images/charges/gate/gate-sable.png") !important;
 }
 .gate-argent {
-  background-image: url("./images/gate/gate-argent.png") !important;
+  background-image: url("./images/charges/gate/gate-argent.png") !important;
 }
 .gate-or {
-  background-image: url("./images/gate/gate-or.png") !important;
+  background-image: url("./images/charges/gate/gate-or.png") !important;
 }
 .gate-white {
-  background-image: url("./images/gate/gate-white.png") !important;
+  background-image: url("./images/charges/gate/gate-white.png") !important;
 }
 .gate-copper {
-  background-image: url("./images/gate/gate-copper.png") !important;
+  background-image: url("./images/charges/gate/gate-copper.png") !important;
 }
 .gate-sanguine {
-  background-image: url("./images/gate/gate-sanguine.png") !important;
+  background-image: url("./images/charges/gate/gate-sanguine.png") !important;
 }
 .gate-celeste {
-  background-image: url("./images/gate/gate-celeste.png") !important;
+  background-image: url("./images/charges/gate/gate-celeste.png") !important;
 }
 .gate-cendree {
-  background-image: url("./images/gate/gate-cendree.png") !important;
+  background-image: url("./images/charges/gate/gate-cendree.png") !important;
 }
 .gate-tawny {
-  background-image: url("./images/gate/gate-tawny.png") !important;
+  background-image: url("./images/charges/gate/gate-tawny.png") !important;
 }
 .gate-senois {
-  background-image: url("./images/gate/gate-senois.png") !important;
+  background-image: url("./images/charges/gate/gate-senois.png") !important;
 }
 .gate-rose-pink {
-  background-image: url("./images/gate/gate-rose-pink.png") !important;
+  background-image: url("./images/charges/gate/gate-rose-pink.png") !important;
 }
 .gate-carnation {
-  background-image: url("./images/gate/gate-carnation.png") !important;
+  background-image: url("./images/charges/gate/gate-carnation.png") !important;
 }
 
 .serpent {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url('./images/serpent/serpent.png');
+  background-image: url('./images/charges/serpent/serpent.png');
 }
 
 .serpent-gules {
-  background-image: url("./images/serpent/serpent-gules.png") !important;
+  background-image: url("./images/charges/serpent/serpent-gules.png") !important;
 }
 .serpent-azure {
-  background-image: url("./images/serpent/serpent-azure.png") !important;
+  background-image: url("./images/charges/serpent/serpent-azure.png") !important;
 }
 .serpent-vert {
-  background-image: url("./images/serpent/serpent-vert.png") !important;
+  background-image: url("./images/charges/serpent/serpent-vert.png") !important;
 }
 .serpent-purpure {
-  background-image: url("./images/serpent/serpent-purpure.png") !important;
+  background-image: url("./images/charges/serpent/serpent-purpure.png") !important;
 }
 .serpent-murrey {
-  background-image: url("./images/serpent/serpent-murrey.png") !important;
+  background-image: url("./images/charges/serpent/serpent-murrey.png") !important;
 }
 .serpent-sable {
-  background-image: url("./images/serpent/serpent-sable.png") !important;
+  background-image: url("./images/charges/serpent/serpent-sable.png") !important;
 }
 .serpent-argent {
-  background-image: url("./images/serpent/serpent-argent.png") !important;
+  background-image: url("./images/charges/serpent/serpent-argent.png") !important;
 }
 .serpent-or {
-  background-image: url("./images/serpent/serpent-or.png") !important;
+  background-image: url("./images/charges/serpent/serpent-or.png") !important;
 }
 .serpent-white {
-  background-image: url("./images/serpent/serpent-white.png") !important;
+  background-image: url("./images/charges/serpent/serpent-white.png") !important;
 }
 .serpent-copper {
-  background-image: url("./images/serpent/serpent-copper.png") !important;
+  background-image: url("./images/charges/serpent/serpent-copper.png") !important;
 }
 .serpent-sanguine {
-  background-image: url("./images/serpent/serpent-sanguine.png") !important;
+  background-image: url("./images/charges/serpent/serpent-sanguine.png") !important;
 }
 .serpent-celeste {
-  background-image: url("./images/serpent/serpent-celeste.png") !important;
+  background-image: url("./images/charges/serpent/serpent-celeste.png") !important;
 }
 .serpent-cendree {
-  background-image: url("./images/serpent/serpent-cendree.png") !important;
+  background-image: url("./images/charges/serpent/serpent-cendree.png") !important;
 }
 .serpent-tawny {
-  background-image: url("./images/serpent/serpent-tawny.png") !important;
+  background-image: url("./images/charges/serpent/serpent-tawny.png") !important;
 }
 .serpent-senois {
-  background-image: url("./images/serpent/serpent-senois.png") !important;
+  background-image: url("./images/charges/serpent/serpent-senois.png") !important;
 }
 .serpent-rose-pink {
-  background-image: url("./images/serpent/serpent-rose-pink.png") !important;
+  background-image: url("./images/charges/serpent/serpent-rose-pink.png") !important;
 }
 .serpent-carnation {
-  background-image: url("./images/serpent/serpent-carnation.png") !important;
+  background-image: url("./images/charges/serpent/serpent-carnation.png") !important;
 }
 
 .bear {
-  background-image: url("./images/bear/bear.png");
+  background-image: url("./images/charges/bear/bear.png");
 }
 
 .bear-gules {
-  background-image: url("./images/bear/bear-gules.png") !important;
+  background-image: url("./images/charges/bear/bear-gules.png") !important;
 }
 .bear-azure {
-  background-image: url("./images/bear/bear-azure.png") !important;
+  background-image: url("./images/charges/bear/bear-azure.png") !important;
 }
 .bear-vert {
-  background-image: url("./images/bear/bear-vert.png") !important;
+  background-image: url("./images/charges/bear/bear-vert.png") !important;
 }
 .bear-purpure {
-  background-image: url("./images/bear/bear-purpure.png") !important;
+  background-image: url("./images/charges/bear/bear-purpure.png") !important;
 }
 .bear-murrey {
-  background-image: url("./images/bear/bear-murrey.png") !important;
+  background-image: url("./images/charges/bear/bear-murrey.png") !important;
 }
 .bear-sable {
-  background-image: url("./images/bear/bear-sable.png") !important;
+  background-image: url("./images/charges/bear/bear-sable.png") !important;
 }
 .bear-argent {
-  background-image: url("./images/bear/bear-argent.png") !important;
+  background-image: url("./images/charges/bear/bear-argent.png") !important;
 }
 .bear-or {
-  background-image: url("./images/bear/bear-or.png") !important;
+  background-image: url("./images/charges/bear/bear-or.png") !important;
 }
 .bear-white {
-  background-image: url("./images/bear/bear-white.png") !important;
+  background-image: url("./images/charges/bear/bear-white.png") !important;
 }
 .bear-copper {
-  background-image: url("./images/bear/bear-copper.png") !important;
+  background-image: url("./images/charges/bear/bear-copper.png") !important;
 }
 .bear-sanguine {
-  background-image: url("./images/bear/bear-sanguine.png") !important;
+  background-image: url("./images/charges/bear/bear-sanguine.png") !important;
 }
 .bear-celeste {
-  background-image: url("./images/bear/bear-celeste.png") !important;
+  background-image: url("./images/charges/bear/bear-celeste.png") !important;
 }
 .bear-cendree {
-  background-image: url("./images/bear/bear-cendree.png") !important;
+  background-image: url("./images/charges/bear/bear-cendree.png") !important;
 }
 .bear-tawny {
-  background-image: url("./images/bear/bear-tawny.png") !important;
+  background-image: url("./images/charges/bear/bear-tawny.png") !important;
 }
 .bear-senois {
-  background-image: url("./images/bear/bear-senois.png") !important;
+  background-image: url("./images/charges/bear/bear-senois.png") !important;
 }
 .bear-rose-pink {
-  background-image: url("./images/bear/bear-rose-pink.png") !important;
+  background-image: url("./images/charges/bear/bear-rose-pink.png") !important;
 }
 .bear-carnation {
-  background-image: url("./images/bear/bear-carnation.png") !important;
+  background-image: url("./images/charges/bear/bear-carnation.png") !important;
 }
 
 .key {
-  background-image: url("./images/key/key.png");
+  background-image: url("./images/charges/key/key.png");
 }
 
 .key-gules {
-  background-image: url("./images/key/key-gules.png") !important;
+  background-image: url("./images/charges/key/key-gules.png") !important;
 }
 .key-azure {
-  background-image: url("./images/key/key-azure.png") !important;
+  background-image: url("./images/charges/key/key-azure.png") !important;
 }
 .key-vert {
-  background-image: url("./images/key/key-vert.png") !important;
+  background-image: url("./images/charges/key/key-vert.png") !important;
 }
 .key-purpure {
-  background-image: url("./images/key/key-purpure.png") !important;
+  background-image: url("./images/charges/key/key-purpure.png") !important;
 }
 .key-murrey {
-  background-image: url("./images/key/key-murrey.png") !important;
+  background-image: url("./images/charges/key/key-murrey.png") !important;
 }
 .key-sable {
-  background-image: url("./images/key/key-sable.png") !important;
+  background-image: url("./images/charges/key/key-sable.png") !important;
 }
 .key-argent {
-  background-image: url("./images/key/key-argent.png") !important;
+  background-image: url("./images/charges/key/key-argent.png") !important;
 }
 .key-or {
-  background-image: url("./images/key/key-or.png") !important;
+  background-image: url("./images/charges/key/key-or.png") !important;
 }
 .key-white {
-  background-image: url("./images/key/key-white.png") !important;
+  background-image: url("./images/charges/key/key-white.png") !important;
 }
 .key-copper {
-  background-image: url("./images/key/key-copper.png") !important;
+  background-image: url("./images/charges/key/key-copper.png") !important;
 }
 .key-sanguine {
-  background-image: url("./images/key/key-sanguine.png") !important;
+  background-image: url("./images/charges/key/key-sanguine.png") !important;
 }
 .key-celeste {
-  background-image: url("./images/key/key-celeste.png") !important;
+  background-image: url("./images/charges/key/key-celeste.png") !important;
 }
 .key-cendree {
-  background-image: url("./images/key/key-cendree.png") !important;
+  background-image: url("./images/charges/key/key-cendree.png") !important;
 }
 .key-tawny {
-  background-image: url("./images/key/key-tawny.png") !important;
+  background-image: url("./images/charges/key/key-tawny.png") !important;
 }
 .key-senois {
-  background-image: url("./images/key/key-senois.png") !important;
+  background-image: url("./images/charges/key/key-senois.png") !important;
 }
 .key-rose-pink {
-  background-image: url("./images/key/key-rose-pink.png") !important;
+  background-image: url("./images/charges/key/key-rose-pink.png") !important;
 }
 .key-carnation {
-  background-image: url("./images/key/key-carnation.png") !important;
+  background-image: url("./images/charges/key/key-carnation.png") !important;
 }
 
 .sun {
-  background-image: url("./images/sun/sun.png");
+  background-image: url("./images/charges/sun/sun.png");
 }
 .sun-gules {
-  background-image: url("./images/sun/sun-gules.png") !important;
+  background-image: url("./images/charges/sun/sun-gules.png") !important;
 }
 .sun-azure {
-  background-image: url("./images/sun/sun-azure.png") !important;
+  background-image: url("./images/charges/sun/sun-azure.png") !important;
 }
 .sun-vert {
-  background-image: url("./images/sun/sun-vert.png") !important;
+  background-image: url("./images/charges/sun/sun-vert.png") !important;
 }
 .sun-purpure {
-  background-image: url("./images/sun/sun-purpure.png") !important;
+  background-image: url("./images/charges/sun/sun-purpure.png") !important;
 }
 .sun-murrey {
-  background-image: url("./images/sun/sun-murrey.png") !important;
+  background-image: url("./images/charges/sun/sun-murrey.png") !important;
 }
 .sun-sable {
-  background-image: url("./images/sun/sun-sable.png") !important;
+  background-image: url("./images/charges/sun/sun-sable.png") !important;
 }
 .sun-argent {
-  background-image: url("./images/sun/sun-argent.png") !important;
+  background-image: url("./images/charges/sun/sun-argent.png") !important;
 }
 .sun-or {
-  background-image: url("./images/sun/sun-or.png") !important;
+  background-image: url("./images/charges/sun/sun-or.png") !important;
 }
 .sun-white {
-  background-image: url("./images/sun/sun-white.png") !important;
+  background-image: url("./images/charges/sun/sun-white.png") !important;
 }
 .sun-copper {
-  background-image: url("./images/sun/sun-copper.png") !important;
+  background-image: url("./images/charges/sun/sun-copper.png") !important;
 }
 .sun-sanguine {
-  background-image: url("./images/sun/sun-sanguine.png") !important;
+  background-image: url("./images/charges/sun/sun-sanguine.png") !important;
 }
 .sun-celeste {
-  background-image: url("./images/sun/sun-celeste.png") !important;
+  background-image: url("./images/charges/sun/sun-celeste.png") !important;
 }
 .sun-cendree {
-  background-image: url("./images/sun/sun-cendree.png") !important;
+  background-image: url("./images/charges/sun/sun-cendree.png") !important;
 }
 .sun-tawny {
-  background-image: url("./images/sun/sun-tawny.png") !important;
+  background-image: url("./images/charges/sun/sun-tawny.png") !important;
 }
 .sun-senois {
-  background-image: url("./images/sun/sun-senois.png") !important;
+  background-image: url("./images/charges/sun/sun-senois.png") !important;
 }
 .sun-rose-pink {
-  background-image: url("./images/sun/sun-rose-pink.png") !important;
+  background-image: url("./images/charges/sun/sun-rose-pink.png") !important;
 }
 .sun-carnation {
-  background-image: url("./images/sun/sun-carnation.png") !important;
+  background-image: url("./images/charges/sun/sun-carnation.png") !important;
 }
 .dragon {
   /*background-image: url("http://1.bp.blogspot.com/-f6HSKLWTn_s/TdVrvh5LeTI/AAAAAAAAAck/97NvczneE6c/s1600/HandrixSilhouette.png");*/
-  background-image: url("./images/dragon/dragon.png");
+  background-image: url("./images/charges/dragon/dragon.png");
 }
 .dragon-gules {
-  background-image: url("./images/dragon/dragon-gules.png") !important;
+  background-image: url("./images/charges/dragon/dragon-gules.png") !important;
 }
 .dragon-azure {
-  background-image: url("./images/dragon/dragon-azure.png") !important;
+  background-image: url("./images/charges/dragon/dragon-azure.png") !important;
 }
 .dragon-vert {
-  background-image: url("./images/dragon/dragon-vert.png") !important;
+  background-image: url("./images/charges/dragon/dragon-vert.png") !important;
 }
 .dragon-purpure {
-  background-image: url("./images/dragon/dragon-purpure.png") !important;
+  background-image: url("./images/charges/dragon/dragon-purpure.png") !important;
 }
 .dragon-murrey {
-  background-image: url("./images/dragon/dragon-murrey.png") !important;
+  background-image: url("./images/charges/dragon/dragon-murrey.png") !important;
 }
 .dragon-sable {
-  background-image: url("./images/dragon/dragon-sable.png") !important;
+  background-image: url("./images/charges/dragon/dragon-sable.png") !important;
 }
 .dragon-argent {
-  background-image: url("./images/dragon/dragon-argent.png") !important;
+  background-image: url("./images/charges/dragon/dragon-argent.png") !important;
 }
 .dragon-or {
-  background-image: url("./images/dragon/dragon-or.png") !important;
+  background-image: url("./images/charges/dragon/dragon-or.png") !important;
 }
 .dragon-white {
-  background-image: url("./images/dragon/dragon-white.png") !important;
+  background-image: url("./images/charges/dragon/dragon-white.png") !important;
 }
 .dragon-copper {
-  background-image: url("./images/dragon/dragon-copper.png") !important;
+  background-image: url("./images/charges/dragon/dragon-copper.png") !important;
 }
 .dragon-sanguine {
-  background-image: url("./images/dragon/dragon-sanguine.png") !important;
+  background-image: url("./images/charges/dragon/dragon-sanguine.png") !important;
 }
 .dragon-celeste {
-  background-image: url("./images/dragon/dragon-celeste.png") !important;
+  background-image: url("./images/charges/dragon/dragon-celeste.png") !important;
 }
 .dragon-cendree {
-  background-image: url("./images/dragon/dragon-cendree.png") !important;
+  background-image: url("./images/charges/dragon/dragon-cendree.png") !important;
 }
 .dragon-tawny {
-  background-image: url("./images/dragon/dragon-tawny.png") !important;
+  background-image: url("./images/charges/dragon/dragon-tawny.png") !important;
 }
 .dragon-senois {
-  background-image: url("./images/dragon/dragon-senois.png") !important;
+  background-image: url("./images/charges/dragon/dragon-senois.png") !important;
 }
 .dragon-rose-pink {
-  background-image: url("./images/dragon/dragon-rose-pink.png") !important;
+  background-image: url("./images/charges/dragon/dragon-rose-pink.png") !important;
 }
 .dragon-carnation {
-  background-image: url("./images/dragon/dragon-carnation.png") !important;
+  background-image: url("./images/charges/dragon/dragon-carnation.png") !important;
 }
 
 .horse {
-  background-image: url("./images/horse/horse.png");
+  background-image: url("./images/charges/horse/horse.png");
 }
 .horse-gules {
-  background-image: url("./images/horse/horse-gules.png") !important;
+  background-image: url("./images/charges/horse/horse-gules.png") !important;
 }
 .horse-azure {
-  background-image: url("./images/horse/horse-azure.png") !important;
+  background-image: url("./images/charges/horse/horse-azure.png") !important;
 }
 .horse-vert {
-  background-image: url("./images/horse/horse-vert.png") !important;
+  background-image: url("./images/charges/horse/horse-vert.png") !important;
 }
 .horse-purpure {
-  background-image: url("./images/horse/horse-purpure.png") !important;
+  background-image: url("./images/charges/horse/horse-purpure.png") !important;
 }
 .horse-murrey {
-  background-image: url("./images/horse/horse-murrey.png") !important;
+  background-image: url("./images/charges/horse/horse-murrey.png") !important;
 }
 .horse-sable {
-  background-image: url("./images/horse/horse-sable.png") !important;
+  background-image: url("./images/charges/horse/horse-sable.png") !important;
 }
 .horse-argent {
-  background-image: url("./images/horse/horse-argent.png") !important;
+  background-image: url("./images/charges/horse/horse-argent.png") !important;
 }
 .horse-or {
-  background-image: url("./images/horse/horse-or.png") !important;
+  background-image: url("./images/charges/horse/horse-or.png") !important;
 }
 .horse-white {
-  background-image: url("./images/horse/horse-white.png") !important;
+  background-image: url("./images/charges/horse/horse-white.png") !important;
 }
 .horse-copper {
-  background-image: url("./images/horse/horse-copper.png") !important;
+  background-image: url("./images/charges/horse/horse-copper.png") !important;
 }
 .horse-sanguine {
-  background-image: url("./images/horse/horse-sanguine.png") !important;
+  background-image: url("./images/charges/horse/horse-sanguine.png") !important;
 }
 .horse-celeste {
-  background-image: url("./images/horse/horse-celeste.png") !important;
+  background-image: url("./images/charges/horse/horse-celeste.png") !important;
 }
 .horse-cendree {
-  background-image: url("./images/horse/horse-cendree.png") !important;
+  background-image: url("./images/charges/horse/horse-cendree.png") !important;
 }
 .horse-tawny {
-  background-image: url("./images/horse/horse-tawny.png") !important;
+  background-image: url("./images/charges/horse/horse-tawny.png") !important;
 }
 .horse-senois {
-  background-image: url("./images/horse/horse-senois.png") !important;
+  background-image: url("./images/charges/horse/horse-senois.png") !important;
 }
 .horse-rose-pink {
-  background-image: url("./images/horse/horse-rose-pink.png") !important;
+  background-image: url("./images/charges/horse/horse-rose-pink.png") !important;
 }
 .horse-carnation {
-  background-image: url("./images/horse/horse-carnation.png") !important;
+  background-image: url("./images/charges/horse/horse-carnation.png") !important;
 }
 
 .panther {
-  background-image: url("./images/panther/panther.png");
+  background-image: url("./images/charges/panther/panther.png");
 }
 .panther-gules {
-  background-image: url("./images/panther/panther-gules.png") !important;
+  background-image: url("./images/charges/panther/panther-gules.png") !important;
 }
 .panther-azure {
-  background-image: url("./images/panther/panther-azure.png") !important;
+  background-image: url("./images/charges/panther/panther-azure.png") !important;
 }
 .panther-vert {
-  background-image: url("./images/panther/panther-vert.png") !important;
+  background-image: url("./images/charges/panther/panther-vert.png") !important;
 }
 .panther-purpure {
-  background-image: url("./images/panther/panther-purpure.png") !important;
+  background-image: url("./images/charges/panther/panther-purpure.png") !important;
 }
 .panther-murrey {
-  background-image: url("./images/panther/panther-murrey.png") !important;
+  background-image: url("./images/charges/panther/panther-murrey.png") !important;
 }
 .panther-sable {
-  background-image: url("./images/panther/panther-sable.png") !important;
+  background-image: url("./images/charges/panther/panther-sable.png") !important;
 }
 .panther-argent {
-  background-image: url("./images/panther/panther-argent.png") !important;
+  background-image: url("./images/charges/panther/panther-argent.png") !important;
 }
 .panther-or {
-  background-image: url("./images/panther/panther-or.png") !important;
+  background-image: url("./images/charges/panther/panther-or.png") !important;
 }
 .panther-white {
-  background-image: url("./images/panther/panther-white.png") !important;
+  background-image: url("./images/charges/panther/panther-white.png") !important;
 }
 .panther-copper {
-  background-image: url("./images/panther/panther-copper.png") !important;
+  background-image: url("./images/charges/panther/panther-copper.png") !important;
 }
 .panther-sanguine {
-  background-image: url("./images/panther/panther-sanguine.png") !important;
+  background-image: url("./images/charges/panther/panther-sanguine.png") !important;
 }
 .panther-celeste {
-  background-image: url("./images/panther/panther-celeste.png") !important;
+  background-image: url("./images/charges/panther/panther-celeste.png") !important;
 }
 .panther-cendree {
-  background-image: url("./images/panther/panther-cendree.png") !important;
+  background-image: url("./images/charges/panther/panther-cendree.png") !important;
 }
 .panther-tawny {
-  background-image: url("./images/panther/panther-tawny.png") !important;
+  background-image: url("./images/charges/panther/panther-tawny.png") !important;
 }
 .panther-senois {
-  background-image: url("./images/panther/panther-senois.png") !important;
+  background-image: url("./images/charges/panther/panther-senois.png") !important;
 }
 .panther-rose-pink {
-  background-image: url("./images/panther/panther-rose-pink.png") !important;
+  background-image: url("./images/charges/panther/panther-rose-pink.png") !important;
 }
 .panther-carnation {
-  background-image: url("./images/panther/panther-carnation.png") !important;
+  background-image: url("./images/charges/panther/panther-carnation.png") !important;
 }
 
 .wolf {
-  background-image: url("./images/wolf/wolf.png") !important;
+  background-image: url("./images/charges/wolf/wolf.png") !important;
 }
 .wolf-gules {
-  background-image: url("./images/wolf/wolf-gules.png") !important;
+  background-image: url("./images/charges/wolf/wolf-gules.png") !important;
 }
 .wolf-azure {
-  background-image: url("./images/wolf/wolf-azure.png") !important;
+  background-image: url("./images/charges/wolf/wolf-azure.png") !important;
 }
 .wolf-vert {
-  background-image: url("./images/wolf/wolf-vert.png") !important;
+  background-image: url("./images/charges/wolf/wolf-vert.png") !important;
 }
 .wolf-purpure {
-  background-image: url("./images/wolf/wolf-purpure.png") !important;
+  background-image: url("./images/charges/wolf/wolf-purpure.png") !important;
 }
 .wolf-murrey {
-  background-image: url("./images/wolf/wolf-murrey.png") !important;
+  background-image: url("./images/charges/wolf/wolf-murrey.png") !important;
 }
 .wolf-sable {
-  background-image: url("./images/wolf/wolf-sable.png") !important;
+  background-image: url("./images/charges/wolf/wolf-sable.png") !important;
 }
 .wolf-argent {
-  background-image: url("./images/wolf/wolf-argent.png") !important;
+  background-image: url("./images/charges/wolf/wolf-argent.png") !important;
 }
 .wolf-or {
-  background-image: url("./images/wolf/wolf-or.png") !important;
+  background-image: url("./images/charges/wolf/wolf-or.png") !important;
 }
 .wolf-white {
-  background-image: url("./images/wolf/wolf-white.png") !important;
+  background-image: url("./images/charges/wolf/wolf-white.png") !important;
 }
 .wolf-copper {
-  background-image: url("./images/wolf/wolf-copper.png") !important;
+  background-image: url("./images/charges/wolf/wolf-copper.png") !important;
 }
 .wolf-sanguine {
-  background-image: url("./images/wolf/wolf-sanguine.png") !important;
+  background-image: url("./images/charges/wolf/wolf-sanguine.png") !important;
 }
 .wolf-celeste {
-  background-image: url("./images/wolf/wolf-celeste.png") !important;
+  background-image: url("./images/charges/wolf/wolf-celeste.png") !important;
 }
 .wolf-cendree {
-  background-image: url("./images/wolf/wolf-cendree.png") !important;
+  background-image: url("./images/charges/wolf/wolf-cendree.png") !important;
 }
 .wolf-tawny {
-  background-image: url("./images/wolf/wolf-tawny.png") !important;
+  background-image: url("./images/charges/wolf/wolf-tawny.png") !important;
 }
 .wolf-senois {
-  background-image: url("./images/wolf/wolf-senois.png") !important;
+  background-image: url("./images/charges/wolf/wolf-senois.png") !important;
 }
 .wolf-rose-pink {
-  background-image: url("./images/wolf/wolf-rose-pink.png") !important;
+  background-image: url("./images/charges/wolf/wolf-rose-pink.png") !important;
 }
 .wolf-carnation {
-  background-image: url("./images/wolf/wolf-carnation.png") !important;
+  background-image: url("./images/charges/wolf/wolf-carnation.png") !important;
 }
 
 .octopus {
-  background-image: url("./images/octopus/octopus.png") !important;
+  background-image: url("./images/charges/octopus/octopus.png") !important;
 }
 .octopus-gules {
-  background-image: url("./images/octopus/octopus-gules.png") !important;
+  background-image: url("./images/charges/octopus/octopus-gules.png") !important;
 }
 .octopus-azure {
-  background-image: url("./images/octopus/octopus-azure.png") !important;
+  background-image: url("./images/charges/octopus/octopus-azure.png") !important;
 }
 .octopus-vert {
-  background-image: url("./images/octopus/octopus-vert.png") !important;
+  background-image: url("./images/charges/octopus/octopus-vert.png") !important;
 }
 .octopus-purpure {
-  background-image: url("./images/octopus/octopus-purpure.png") !important;
+  background-image: url("./images/charges/octopus/octopus-purpure.png") !important;
 }
 .octopus-murrey {
-  background-image: url("./images/octopus/octopus-murrey.png") !important;
+  background-image: url("./images/charges/octopus/octopus-murrey.png") !important;
 }
 .octopus-sable {
-  background-image: url("./images/octopus/octopus-sable.png") !important;
+  background-image: url("./images/charges/octopus/octopus-sable.png") !important;
 }
 .octopus-argent {
-  background-image: url("./images/octopus/octopus-argent.png") !important;
+  background-image: url("./images/charges/octopus/octopus-argent.png") !important;
 }
 .octopus-or {
-  background-image: url("./images/octopus/octopus-or.png") !important;
+  background-image: url("./images/charges/octopus/octopus-or.png") !important;
 }
 .octopus-white {
-  background-image: url("./images/octopus/octopus-white.png") !important;
+  background-image: url("./images/charges/octopus/octopus-white.png") !important;
 }
 .octopus-copper {
-  background-image: url("./images/octopus/octopus-copper.png") !important;
+  background-image: url("./images/charges/octopus/octopus-copper.png") !important;
 }
 .octopus-sanguine {
-  background-image: url("./images/octopus/octopus-sanguine.png") !important;
+  background-image: url("./images/charges/octopus/octopus-sanguine.png") !important;
 }
 .octopus-celeste {
-  background-image: url("./images/octopus/octopus-celeste.png") !important;
+  background-image: url("./images/charges/octopus/octopus-celeste.png") !important;
 }
 .octopus-cendree {
-  background-image: url("./images/octopus/octopus-cendree.png") !important;
+  background-image: url("./images/charges/octopus/octopus-cendree.png") !important;
 }
 .octopus-tawny {
-  background-image: url("./images/octopus/octopus-tawny.png") !important;
+  background-image: url("./images/charges/octopus/octopus-tawny.png") !important;
 }
 .octopus-senois {
-  background-image: url("./images/octopus/octopus-senois.png") !important;
+  background-image: url("./images/charges/octopus/octopus-senois.png") !important;
 }
 .octopus-rose-pink {
-  background-image: url("./images/octopus/octopus-rose-pink.png") !important;
+  background-image: url("./images/charges/octopus/octopus-rose-pink.png") !important;
 }
 .octopus-carnation {
-  background-image: url("./images/octopus/octopus-carnation.png") !important;
+  background-image: url("./images/charges/octopus/octopus-carnation.png") !important;
 }
 /*.octopus, .octopus-sable {
 
@@ -2095,6 +2427,69 @@ input {
   background-image: url("./images/backgrounds/white-fabric.jpg");
 }
 
+.magic {
+  background-image: url("./images/backgrounds/magic.jpg");
+  background-position-x: 44%;
+}
+
+.flower-frame {
+  background-image: url("./images/backgrounds/flower-frame.jpg");
+  background-position-x: 47.5%;
+}
+
+.canvas {
+  background-image: url("./images/backgrounds/canvas.jpg");
+  background-size: cover;
+}
+
+.tile2 {
+  background-image: url("./images/backgrounds/tile2.jpg");
+  background-size: cover;
+}
+.parchment2 {
+  background-image: url("./images/backgrounds/parchment2.jpg");
+  background-size: cover;
+}
+.parchment3 {
+  background-image: url("./images/backgrounds/parchment3.jpg");
+  background-size: cover;
+}
+.rust {
+  background-image: url("./images/backgrounds/rust.jpg");
+  background-size: cover;
+}
+.writing {
+  background-image: url("./images/backgrounds/writing.jpg");
+  background-size: cover;
+}
+.metal-wall {
+  background-image: url("./images/backgrounds/metal-wall.jpg");
+  background-size: cover;
+}
+.berries {
+  background-image: url("./images/backgrounds/berries.jpg");
+  background-size: cover;
+}
+.rug {
+  background-image: url("./images/backgrounds/rug.jpg");
+  background-size: cover;
+}
+.filigree {
+  background-image: url("./images/backgrounds/filigree.jpg");
+  background-size: cover;
+}
+
+.flower-page {
+  background-size: cover;
+  background-image: url("./images/backgrounds/flower-page.png");
+}
+
+.checkers {
+  background-size: cover;
+  background-image: url("./images/backgrounds/checkers.jpg");
+}
+
+
 
 
 .hidden {
@@ -2168,4 +2563,32 @@ input {
   margin: 15% 0%;
   text-align: center;
   padding: 2px;
+}
+
+
+
+
+
+
+
+
+
+.carousel {
+  height: 100px;
+  display: block;
+  background: red;
+}
+
+.slick-list {
+  height: 80px;
+  width: 300px;
+  background: blue;
+  overflow: hidden;
+}
+.slick-list > li {
+  display: block;
+  height: 80px;
+  width: 80px;
+  margin: 0 10px;
+  float: left;
 }
