@@ -20,7 +20,7 @@ PARTITIONS = ["per-fess",
               "enarched-per-fess",
               "enarched-per-pale",
               "angled-per-fess",
-              "angled-per-pale",
-              "RESET"];
+              "angled-per-pale"
+            ];
 
 module.exports = PARTITIONS;

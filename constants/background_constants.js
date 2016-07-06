@@ -28,7 +28,7 @@ BACKGROUNDS = ["parchment",
                "rug",
                "filigree",
                "flower-page",
-               "checkers",
-               "RESET"];
+               "checkers"
+             ];
 
 module.exports = BACKGROUNDS;

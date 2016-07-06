@@ -3,7 +3,7 @@ TABS = ["main",
         "ordinaries-menu",
         "charge-menu",
         "motto-menu",
-        "background-menu",
+        "background-menu"
         ];
 
 module.exports = TABS;

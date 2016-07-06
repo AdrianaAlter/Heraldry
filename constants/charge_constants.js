@@ -13,7 +13,7 @@ CHARGES = ["fleur",
            "horse",
            "panther",
            "octopus",
-           "wolf",
-           "RESET"];
+           "wolf"
+         ];
 
 module.exports = CHARGES;

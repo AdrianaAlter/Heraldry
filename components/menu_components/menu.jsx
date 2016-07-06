@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var Carousel = require('./Carousel/carousel.jsx');
 COLORS = require('../../constants/color_constants.js');
 var ColorItem = require('./color_item.jsx');
 
@@ -31,7 +32,7 @@ var Menu = React.createClass({
              ordinaries: "",
              ordinariesColor: "azure",
              charge: "",
-             chargeColor: "sable",
+             chargeColor: "white",
              background: "",
              motto: "",
              mottoColor: "",
@@ -44,8 +45,8 @@ var Menu = React.createClass({
   },
 
   setColor: function (e) {
-    var color = e.currentTarget.className;
-    this.setState({ color: color });
+    var color = e.currentTarget.className.split(" ");
+    this.setState({ color: color[color.length - 1] });
   },
 
   setMenu: function (e) {
@@ -54,39 +55,36 @@ var Menu = React.createClass({
   },
 
   setPartition: function (e) {
-    var broken = e.currentTarget.className.split("-");
-    var partition = broken[broken.length - 1] == "opt" ? broken.slice(0, broken.length - 1).join("-") : broken[0] + "-" + broken[1] + "-" + broken[2];
-    this.setState({ partition: partition });
+    this.setState({ partition: e.currentTarget.textContent });
   },
 
   setPartitionColor: function (e) {
-    var color = e.currentTarget.className;
-    this.setState({ partitionColor: color })
+    var color = e.currentTarget.className.split(" ");
+    this.setState({ partitionColor: color[color.length - 1] });
   },
 
   setOrdinary: function (e) {
-    var broken = e.currentTarget.className.split("-");
-    var ordinary = broken[broken.length - 1] == "opt" ? broken.slice(0, broken.length - 1).join("-") : broken[0] + "-" + broken[1] + "-" + broken[2];
-    this.setState({ ordinaries: ordinary });
+    this.setState({ ordinaries: e.currentTarget.textContent });
   },
 
   setOrdinaryColor: function (e) {
-    var color = e.currentTarget.className;
-    this.setState({ ordinariesColor: color });
+    var color = e.currentTarget.className.split(" ");
+    this.setState({ ordinariesColor: color[color.length - 1] });
   },
 
   setCharge: function (e) {
-    var charge = e.currentTarget.className.split("-")[0];
+    var charge = e.currentTarget.className.split(" ")[e.currentTarget.className.split(" ").length - 2];
     this.setState({ charge: charge });
   },
 
   setChargeColor: function (e) {
-    var color = e.currentTarget.className;
-    this.setState({ chargeColor: color });
+    var color = e.currentTarget.className.split(" ");
+    this.setState({ chargeColor: color[color.length - 1] });
   },
 
   setBackground: function (e) {
-    var background = e.currentTarget.className;
+    var broken = e.currentTarget.className.split(" ");
+    background = broken.length > 1 ? broken[broken.length - 2] : broken;
     this.setState({ background: background });
   },
 
@@ -94,12 +92,13 @@ var Menu = React.createClass({
     var motto = e.currentTarget.value;
     this.setState({ motto: motto });
   },
+
   setMottoColor: function (e) {
     var color = e.currentTarget.className;
     this.setState({ mottoColor: color });
   },
   setMottoBackground: function (e) {
-    var mottoBackground = e.currentTarget.className;
+    var mottoBackground = e.currentTarget.className.split(" ")[2];
     this.setState({ mottoBackground: mottoBackground });
   },
 
@@ -172,6 +171,9 @@ var Menu = React.createClass({
                   });
   },
 
+  hide: function () {
+    this.setState({ show: false });
+  },
 
   render: function () {
     var menuClass = this.state.show ? "menu-div group" : "hidden";
@@ -208,10 +210,11 @@ var Menu = React.createClass({
     var mainColor = this.state.color.length > 0 ? this.state.color : "";
     var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
     var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
-    var charge = this.state.charge.length > 0 ? ", " + this.state.charge : "";
+    var charge = (this.state.charge && this.state.charge.length > 0) ? ", " + this.state.charge : "";
     var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
-    var mainMenu = <Buttons randomize={this.makeRandom} reset={this.resetAll} />;
+    // var mottoInput = <input type="text" value={this.state.currentMotto} onChange={this.setMotto}></input>;
 
+    var mainMenu = <div><Buttons randomize={this.makeRandom} reset={this.resetAll} hide={this.hide} /></div>;
     var partitionMenu = <PartitionMenu setPartition={this.setPartition} selected={this.state.partition} />;
     var ordinariesMenu = <OrdinaryMenu setOrdinary={this.setOrdinary} selected={this.state.ordinaries} />;
     var chargeMenu = <ChargeMenu setCharge={this.setCharge} selected={this.state.charge} />;
@@ -237,13 +240,7 @@ var Menu = React.createClass({
     var selected = tabOptions[this.state.selected];
 
     return(
-      <div className="group">
-        <h1>{mainColor}{ordinary}{ordinaryColor}</h1>
-        <div className={menuClass}>
-          <Tabs setTab={this.setTab} selected={this.state.selected} />
-          {selected}
-          <ul className="color-menu group">{colorLis}</ul>
-        </div>
+      <div className="main group">
         <Shield background={this.state.background}
                 color={this.state.color}
                 partition={this.state.partition + " " + this.state.partitionColor}
@@ -252,6 +249,11 @@ var Menu = React.createClass({
                 mottoSpecs={this.state.mottoBackground + " " + this.state.mottoColor}
                 motto={this.state.motto} />
 
+        <ul className="colors group">{colorLis}</ul>
+        <div className={menuClass}>
+          <Tabs setTab={this.setTab} selected={this.state.selected} />
+          {selected}
+        </div>
       </div>
     )
 
@@ -259,17 +261,3 @@ var Menu = React.createClass({
 });
 
 module.exports = Menu;
-
-// <div className={"shield-div group " + this.state.background}>
-//     <section className={"left " + this.state.supporterLeft}></section>
-//     <div className="inner group">
-//       <div className={"compartment " + this.state.compartment}></div>
-//         <section className={"shield " + this.state.color}>
-//           <section className={"partition " + this.state.partition + " " + this.state.partitionColor}></section>
-//           <section className={"ordinary " + this.state.ordinaries + " " + this.state.ordinariesColor}></section>
-//           <section className={"icon " + chargeWithColor}></section>
-//         </section>
-//         <section className={"motto " + this.state.mottoBackground + " " + this.state.mottoColor}><p>{this.state.motto}</p></section>
-//       </div>
-//       <section className="right"></section>
-//   </div>

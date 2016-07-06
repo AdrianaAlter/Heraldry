@@ -3,10 +3,16 @@ html, body, ul {
   font-family: 'MedievalSharpBold' !important;
   padding: 0;
   margin: 0;
+  color: oldlace;
   outline: none;
   border: none;
   border-color: inherit;
   list-style: none;
+}
+
+.main {
+  height: 600px;
+  width: 100% !important;
 }
 
 .group:after {
@@ -14,6 +20,7 @@ html, body, ul {
   content: "";
   clear: both;
 }
+
 
 
 h1 {
@@ -38,19 +45,14 @@ li {
 
 .menu-div {
   background: #2b1700;
+  overflow: hidden;
   display: block;
-  width: 21%;
-  float: left;
-  /*height: 402px;*/
+  position: absolute;
+  width: 100%;
+  height: 140px;
   list-style: none;
   border-radius: 2px;
-  border-right: 2px solid #8b0000;
-  border-bottom: 2px solid #8b0000;
-  margin: 0% auto;
-}
-
-.active {
-  color: #8b0000;
+  bottom: 0% !important;
 }
 
 .color-menu {
@@ -63,7 +65,27 @@ li {
   overflow-y: scroll;
 }
 
-.tabs, .color-menu, .partitions-menu {
+.background-opt {
+  color: transparent;
+}
+
+.tabs {
+  width: 100%;
+  display: block;
+  list-style: none;
+  border-bottom: 4px solid #8b0000;
+  text-align: center;
+}
+
+.tabs > li {
+  float: left;
+  padding: 0;
+  width: 10%;
+  color: oldlace;
+  margin: 0;
+  border-radius: 4px 4px 0 0 !important;
+}
+.color-menu, .partitions-menu {
   border-right: 1px solid oldlace;
   width: 48%;
   float: left;
@@ -83,7 +105,8 @@ li {
   padding: 1%;
   margin: 0;
   text-transform: capitalize;
-  float: right;
+  margin-top: 2%;
+  margin-left: 43%;
   width: 47%;
 }
 
@@ -94,54 +117,61 @@ li {
 }
 
 li {
-  border-bottom: 1px solid oldlace;
+  /*border-bottom: 1px solid oldlace;
   background-position: center;
   padding: 1%;
   width: 100%;
   background-position: center;
   background-size: contain;
-  margin-top: 5%;
+  margin-top: 5%;*/
 }
 
 .charge-menu > li, .motto-menu > li, .supporter-menu > li {
   height: 20px;
 }
-
+/*
 .color-menu > li, .background-menu > li {
   height: 26px;
   margin: 0;
-}
+}*/
 
-.color-menu > li:last-child:after, .background-menu > li:last-child:after, .motto-menu > li:last-child:after {
+/*.color-menu > li:last-child:after, .background-menu > li:last-child:after, .motto-menu > li:last-child:after {
   content: "RESET";
   margin-top: 5%;
 }
 
 .background-menu > li {
   background-size: cover;
-}
+}*/
 
 input {
-  width: 96.5%;
-  padding: 4% 0;
-  margin-top: 26%;
+  width: 200px;
+  height: 20px;
+  padding: 2px;
+  cursor: text;
+  position: absolute;
+  top: 50%;
+  left: 1.2%;
+  z-index: 1;
   outline: none;
   border: none;
-  text-align: center;
+  text-align: left;
   border-radius: 2%;
   background: oldlace;
   font: inherit;
 }
+
 /*SHIELD*/
 
 .shield-div {
   display: block;
-  height: 580px;
-  width: 78.5%;
+  height: 77%;
+  width: 100%;
+  float: right;
+  /*border: 1px solid black;*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  float: left;
   position: relative;
 }
 
@@ -149,8 +179,8 @@ input {
   background: transparent;
   position: absolute;
   padding: 10px;
-  top: 10%;
-  left: 30%;
+  margin-left: 36%;
+  margin-top: 2%;
 }
 
 .compartment {
@@ -165,7 +195,7 @@ input {
   bottom: -6%;
 }
 
-.left, .right {
+/*.left, .right {
   height: 420px;
   width: 28%;
   top: 0%;
@@ -185,7 +215,7 @@ input {
   float: right;
   right: 7.5%;
   transform: rotateY(180deg);
-}
+}*/
 
 .goldlion {
   background-image: url("http://www.talkgraphics.com/attachment.php?attachmentid=95186&d=1363858800");
@@ -227,8 +257,22 @@ input {
   margin: 16px 8px;
 }
 
+.main-menu > li, .tabs > li {
+  float: left;
+  display: block;
+  margin-left: 12px;
+  margin-top: 6px;
+  background: darkred;
+  padding: 4px;
+  border-radius: 4px;
+}
 
-""
+label {
+  display: block;
+  float: left;
+  margin-left: 10%;
+
+}
 /*COLORS*/
 
 .honeycomb {
@@ -1404,7 +1448,7 @@ input {
 
 .icon {
   position: absolute;
-  z-index: 3;
+  /*z-index: 3;*/
   display: block;
   height: 100%;
   width: 100%;
@@ -1829,7 +1873,7 @@ input {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url('./images/charges/serpent/serpent.png');
+  background-image: url('./images/charges/serpent/serpent.png') !important;
 }
 
 .serpent-gules {
@@ -1885,7 +1929,7 @@ input {
 }
 
 .bear {
-  background-image: url("./images/charges/bear/bear.png");
+  background-image: url("./images/charges/bear/bear.png") !important;
 }
 
 .bear-gules {
@@ -1941,7 +1985,7 @@ input {
 }
 
 .key {
-  background-image: url("./images/charges/key/key.png");
+  background-image: url("./images/charges/key/key.png") !important;
 }
 
 .key-gules {
@@ -1997,7 +2041,7 @@ input {
 }
 
 .sun {
-  background-image: url("./images/charges/sun/sun.png");
+  background-image: url("./images/charges/sun/sun.png") !important;
 }
 .sun-gules {
   background-image: url("./images/charges/sun/sun-gules.png") !important;
@@ -2052,7 +2096,7 @@ input {
 }
 .dragon {
   /*background-image: url("http://1.bp.blogspot.com/-f6HSKLWTn_s/TdVrvh5LeTI/AAAAAAAAAck/97NvczneE6c/s1600/HandrixSilhouette.png");*/
-  background-image: url("./images/charges/dragon/dragon.png");
+  background-image: url("./images/charges/dragon/dragon.png") !important;
 }
 .dragon-gules {
   background-image: url("./images/charges/dragon/dragon-gules.png") !important;
@@ -2107,7 +2151,7 @@ input {
 }
 
 .horse {
-  background-image: url("./images/charges/horse/horse.png");
+  background-image: url("./images/charges/horse/horse.png") !important;
 }
 .horse-gules {
   background-image: url("./images/charges/horse/horse-gules.png") !important;
@@ -2162,7 +2206,7 @@ input {
 }
 
 .panther {
-  background-image: url("./images/charges/panther/panther.png");
+  background-image: url("./images/charges/panther/panther.png") !important;
 }
 .panther-gules {
   background-image: url("./images/charges/panther/panther-gules.png") !important;
@@ -2338,36 +2382,36 @@ input {
 
 .parchment {
   background-size: cover;
-  background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg);
+  background-image: url(http://www.medievalarchives.com/wp-content/uploads/2011/12/parchment-paper-light-texture.jpg) !important;
 }
 
 .cloak {
-  background-image: url('./images/backgrounds/cloak.png');
+  background-image: url('./images/backgrounds/cloak.png') !important;
   background-size: cover;
 }
 
 .window {
-  background-image: url('./images/backgrounds/window.jpg');
+  background-image: url('./images/backgrounds/window.jpg') !important;
   background-size: cover;
 }
 
 .wall {
-  background-image: url('./images/backgrounds/wall.jpg');
+  background-image: url('./images/backgrounds/wall.jpg') !important;
   background-size: cover;
 }
 
 .tile {
-  background-image: url('./images/backgrounds/tile.gif');
+  background-image: url('./images/backgrounds/tile.gif') !important;
   background-size: cover;
 }
 
 .tapestry {
-  background-image: url('./images/backgrounds/tapestry.jpg');
+  background-image: url('./images/backgrounds/tapestry.jpg') !important;
   background-size: cover;
 }
 
 .frame {
-  background-image: url("./images/frame.png");
+  background-image: url("./images/frame.png") !important;
 }
 
 .wood {
@@ -2398,95 +2442,95 @@ input {
 
 .stone2 {
   background-size: cover;
-  background-image: url("./images/backgrounds/stone2.jpg");
+  background-image: url("./images/backgrounds/stone2.jpg") !important;
 }
 .versailles {
   background-size: cover;
-  background-image: url("./images/backgrounds/versailles.jpg");
+  background-image: url("./images/backgrounds/versailles.jpg") !important;
 }
 .ceiling {
   background-size: cover;
-  background-image: url("./images/backgrounds/ceiling.jpg");
+  background-image: url("./images/backgrounds/ceiling.jpg") !important;
 }
 .book-cover {
   background-size: contain;
   background-position-x: 45.5%;
-  background-image: url("./images/backgrounds/book-cover.jpg");
+  background-image: url("./images/backgrounds/book-cover.jpg") !important;
 }
 .stained-glass {
   background-size: cover;
-  background-image: url("./images/backgrounds/stained-glass.jpg");
+  background-image: url("./images/backgrounds/stained-glass.jpg") !important;
 }
 .window2 {
   background-size: cover;
-  background-image: url("./images/backgrounds/window2.jpg");
+  background-image: url("./images/backgrounds/window2.jpg") !important;
 }
 
 .white-fabric {
   background-size: cover;
-  background-image: url("./images/backgrounds/white-fabric.jpg");
+  background-image: url("./images/backgrounds/white-fabric.jpg") !important;
 }
 
 .magic {
-  background-image: url("./images/backgrounds/magic.jpg");
+  background-image: url("./images/backgrounds/magic.jpg") !important;
   background-position-x: 44%;
 }
 
 .flower-frame {
-  background-image: url("./images/backgrounds/flower-frame.jpg");
+  background-image: url("./images/backgrounds/flower-frame.jpg") !important;
   background-position-x: 47.5%;
 }
 
 .canvas {
-  background-image: url("./images/backgrounds/canvas.jpg");
+  background-image: url("./images/backgrounds/canvas.jpg") !important;
   background-size: cover;
 }
 
 .tile2 {
-  background-image: url("./images/backgrounds/tile2.jpg");
+  background-image: url("./images/backgrounds/tile2.jpg") !important;
   background-size: cover;
 }
 .parchment2 {
-  background-image: url("./images/backgrounds/parchment2.jpg");
+  background-image: url("./images/backgrounds/parchment2.jpg") !important;
   background-size: cover;
 }
 .parchment3 {
-  background-image: url("./images/backgrounds/parchment3.jpg");
+  background-image: url("./images/backgrounds/parchment3.jpg") !important;
   background-size: cover;
 }
 .rust {
-  background-image: url("./images/backgrounds/rust.jpg");
+  background-image: url("./images/backgrounds/rust.jpg") !important;
   background-size: cover;
 }
 .writing {
-  background-image: url("./images/backgrounds/writing.jpg");
+  background-image: url("./images/backgrounds/writing.jpg") !important;
   background-size: cover;
 }
 .metal-wall {
-  background-image: url("./images/backgrounds/metal-wall.jpg");
+  background-image: url("./images/backgrounds/metal-wall.jpg") !important;
   background-size: cover;
 }
 .berries {
-  background-image: url("./images/backgrounds/berries.jpg");
+  background-image: url("./images/backgrounds/berries.jpg") !important;
   background-size: cover;
 }
 .rug {
-  background-image: url("./images/backgrounds/rug.jpg");
+  background-image: url("./images/backgrounds/rug.jpg") !important;
   background-size: cover;
 }
 .filigree {
-  background-image: url("./images/backgrounds/filigree.jpg");
+  background-image: url("./images/backgrounds/filigree.jpg") !important;
   background-size: cover;
 }
 
 .flower-page {
   background-size: cover;
-  background-image: url("./images/backgrounds/flower-page.png");
+  background-image: url("./images/backgrounds/flower-page.png") !important;
 }
 
 .checkers {
   background-size: cover;
-  background-image: url("./images/backgrounds/checkers.jpg");
+  background-image: url("./images/backgrounds/checkers.jpg") !important;
 }
 
 
@@ -2548,7 +2592,7 @@ input {
 }
 
 .motto-four, .motto-five {
-  bottom: -45% !important;
+  bottom: -45%;
 }
 
 .motto-five > p {
@@ -2573,22 +2617,250 @@ input {
 
 
 
-.carousel {
-  height: 100px;
-  display: block;
-  background: red;
+.hidden {
+  display: none;
 }
 
-.slick-list {
-  height: 80px;
-  width: 300px;
-  background: blue;
-  overflow: hidden;
-}
-.slick-list > li {
+/*.carousel {
+  width: 100% !important;
   display: block;
-  height: 80px;
-  width: 80px;
-  margin: 0 10px;
+  position: absolute;
+  bottom: 0;
+}*/
+.carousel li {
+  height: 60px;
+  width: 143px;
+  border-radius: 2%;
+  border: 2px solid transparent;
+  position: absolute;
+  top: 10% !important;
+  display: block;
   float: left;
+  /*background: #2b1700;*/
+  color: #2b1700;
+  text-align: center;
+  /*background-size: cover !important;*/
+}
+
+.inactive {
+  background: bisque;
+}
+.contained {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.covered {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+
+.active {
+  background: darkred;
+  color: oldlace !important;
+}
+
+.left-left{
+  /*transform: rotateY(-45deg) translateX(-175px) translateZ(-450px) translateY(0px);*/
+  height: 58px !important;
+  width: 100px !important;
+  position: absolute;
+left: 4% !important;
+
+
+}
+
+.left {
+
+  /*transform: rotateY(-38deg) translateX(72px) translateZ(-279px) translateY(0px);*/
+  position: absolute;
+  left: 22% !important;
+  height: 58px !important;
+  width: 100px !important;
+  top: 0%;
+
+}
+
+.center {
+  height: 64px;
+
+  position: absolute;
+  left: 40% !important;
+  top: 0%;
+  /*transform: rotate(0deg) translateZ(0px) translateX(510px);*/
+
+}
+.right {
+  /*transform: rotateY(26deg) translateX(600px) translateZ(260px) translateY(0px);*/
+  position: absolute;
+  left: 65.5% !important;
+  height: 58px !important;
+  width: 100px !important;
+}
+
+.right-right {
+  height: 58px !important;
+  width: 100px !important;
+  /*transform: rotateY(44deg) translateX(655px) translateZ(445px) translateY(0px);*/
+  /*transform: rotateY(45deg) translateX(655px) translateZ(450px) translateY(0px);*/
+  position: absolute;
+  left: 83.5% !important;
+}
+
+.carousel ul {
+  display: block;
+  float: left;
+  margin-left: 24% !important;
+  height: 64px;
+  position: relative;
+  /*transform-style: preserve-3d;*/
+  background: transparent;
+  /*-webkit-transform-origin: 50% 50%;*/
+	/*transform-origin: 50% 50% -500px;*/
+	transition: 1s;
+}
+
+.list {
+  position: relative;
+  width: 50%;
+  margin-left: 30%;
+  height: 70px;
+}
+
+.wrapper {
+  margin: auto;
+  width: 100%;
+  padding: 6px;
+  position: relative;
+  /*height: 180px;*/
+  display: block;
+  margin-bottom: 0;
+}
+
+.carousel button {
+  border-radius: 50%;
+  display: block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  color: darkred;
+  top: 30%;
+  outline: none;
+  background: transparent;
+}
+
+.carousel button:first-child {
+  right: 21%;
+}
+
+.carousel button:last-child {
+  left: 22%;
+}
+
+.carousel button:after {
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  top: 25%;
+  left: 31%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid darkred;
+}
+
+.carousel button:nth-child(2):after {
+  border-right: 10px solid darkred;
+  border-left: none;
+  left: 14%;
+}
+
+.dots {
+  display: none !important;
+  height: 5% !important;
+  /*display: block !important;*/
+  padding: 1.5% !important;
+  width: 70% !important;
+  margin: auto !important;
+}
+
+.dots > li {
+  background: oldlace;
+  padding: 0 !important;
+  display: block !important;
+  height: 4px !important;
+  width: 4px !important;
+  border-radius: 50% !important;
+  float: left !important;
+  position: relative;
+  margin-left: 5px;
+}
+
+.dot-active {
+  background: darkred !important;
+}
+
+
+
+.colors {
+  background: transparent !important;
+  /*border-right: 4px #be0000 solid !important;*/
+  /*border-bottom: 4px #be0000 solid !important;*/
+  height: 53%;
+  width: 8%;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.colors li {
+  float: left;
+
+  display: block;
+  height: 25px;
+  z-index: 1;
+  width: 25px;
+  padding: 0;
+  margin: 2px 2px 2px 4px;
+  /*transform: rotate(0deg) translateY(10px) translateX(40px);*/
+  border-radius: 4%;
+}
+
+.colors .list {
+  margin-top: 4%;
+  transform: rotate(90deg);
+}
+
+.colors button:first-child {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+.colors button:last-child {
+  transform: rotate(90deg);
+}
+
+/*.colors .center {
+  top: 20%;
+}
+.colors .left {
+  transform: rotateY(-45deg) translateZ(-32px) translateY(3px);
+  position: absolute;
+  top: 16% !important;
+}
+.colors .right {
+  transform: rotateX(-50deg) translateZ(0px) translateY(3px) translateX(-14px);
+  position: absolute;
+  top: 50% !important;
+}
+.colors .right-right {
+  transform: rotateX(-50deg) translateZ(0px) translateY(3px) translateX(-14px);
+  position: absolute;
+  top: 50% !important;
+}*/
+.colors .dots, .colors buttons {
+  display: none;
 }

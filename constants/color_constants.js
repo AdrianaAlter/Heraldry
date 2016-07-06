@@ -19,6 +19,6 @@ COLORS = ["gules",
           "argent",
           "or",
           "copper",
-          "RESET"];
+          ];
 
 module.exports = COLORS;

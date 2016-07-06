@@ -6,6 +6,6 @@ MOTTOES = ["motto-one",
            "motto-six",
            "motto-seven",
            "motto-eight",
-           "RESET"];
+           ];
 
 module.exports = MOTTOES;

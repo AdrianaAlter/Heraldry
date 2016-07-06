@@ -41,7 +41,7 @@ ORDINARIES = ["fess",
               "roundel",
               "annulet",
               "orle",
-              "pale-and-chief",
-              "RESET"];
+              "pale-and-chief"
+            ];
 
 module.exports = ORDINARIES;
