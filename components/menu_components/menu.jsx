@@ -213,8 +213,8 @@ var Menu = React.createClass({
     var charge = (this.state.charge && this.state.charge.length > 0) ? ", " + this.state.charge : "";
     var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
     // var mottoInput = <input type="text" value={this.state.currentMotto} onChange={this.setMotto}></input>;
-
-    var mainMenu = <div><Buttons randomize={this.makeRandom} reset={this.resetAll} hide={this.hide} /></div>;
+    var links = <section className="links"><a href="http://www.adrianaalter.site/">Adriana Alter</a> <a href="https://github.com/AdrianaAlter/Heraldry">github</a></section>
+    var mainMenu = <div>{links}<Buttons randomize={this.makeRandom} reset={this.resetAll} hide={this.hide} /></div>;
     var partitionMenu = <PartitionMenu setPartition={this.setPartition} selected={this.state.partition} />;
     var ordinariesMenu = <OrdinaryMenu setOrdinary={this.setOrdinary} selected={this.state.ordinaries} />;
     var chargeMenu = <ChargeMenu setCharge={this.setCharge} selected={this.state.charge} />;

@@ -42,7 +42,20 @@ li {
   background-repeat: no-repeat;
 }
 
+.links {
+  height: 100%;
+  width: 135px;
+  display: block;
+  float: left;
+  margin-left: 8px;
+  border-right: 1px solid oldlace;
+}
 
+a {
+  color: oldlace !important;
+  margin: 10px;
+  display: block;
+}
 .menu-div {
   background: #2b1700;
   overflow: hidden;
