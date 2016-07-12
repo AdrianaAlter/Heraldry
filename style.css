@@ -1096,7 +1096,7 @@ label {
   transform: rotate(-45deg);
 }
 
-.bend-cotised:before, .bend-cotised:after, .bend-sinister-cotised:before, .bend-sinister-cotised:after, .bend-enhanced-cotised:before, .bend-enhanced-cotised:after {
+.bend-cotised:before, .bend-cotised:after, .bend-sinister-cotised:before, .bend-sinister-cotised:after, .bend-enhanced-cotised:before, .bend-enhanced-cotised:after, .bend-sinister-enhanced-cotised:before, .bend-sinister-enhanced-cotised:after  {
   content: "";
   display: block;
   position: absolute;
@@ -1112,7 +1112,7 @@ label {
   left: -34%;
 }
 
-.bend-sinister, .bend-sinister-cotised, .bend-sinister-enhanced {
+.bend-sinister, .bend-sinister-cotised, .bend-sinister-enhanced, .bend-sinister-enhanced-cotised {
   height: 709px;
   width: 40px;
   left: 24%;
@@ -1123,17 +1123,21 @@ label {
 .bend-sinister-cotised:before {
   top: 8%;
 }
-.bend-sinister-cotised:after {
+
+ .bend-sinister-enhanced-cotised:before {
+   top: -2%;
+ }
+.bend-sinister-cotised:after, .bend-sinister-enhanced-cotised:after {
   top: 0%;
   left: -33%;
 }
 
-.bend-enhanced, .bend-sinister-enhanced, .bend-enhanced-cotised {
+.bend-enhanced, .bend-sinister-enhanced, .bend-enhanced-cotised, .bend-sinister-enhanced-cotised {
   width: 60px;
   left: 62%;
 }
 
-.bend-sinister-enhanced {
+.bend-sinister-enhanced, .bend-sinister-enhanced-cotised {
   left: -23%;
 }
 
@@ -1397,6 +1401,7 @@ label {
   border-radius: 50%;
   background: transparent !important;
   border-width: 20px !important;
+  border-style: solid !important;
   top: 26%;
   left: 24%;
 }
@@ -1415,6 +1420,7 @@ label {
   top: 7.5%;
   background: transparent !important;
   border-width: 20px;
+  border-style: solid;
   border-radius: 0 0 250px 250px;
 }
 
@@ -2591,6 +2597,7 @@ label {
 .wall {
   background-image: url('./images/backgrounds/wall.jpg') !important;
   background-size: cover;
+  background-position-x: 24px;
 }
 
 .tile {
@@ -2619,7 +2626,7 @@ label {
 
 .scroll {
   background-size: contain;
-  background-position-x: 44%;
+  background-position-x: 53%;
   background-image: url("./images/backgrounds/scroll.png") !important;
 }
 
@@ -2647,11 +2654,12 @@ label {
 }
 .book-cover {
   background-size: contain;
-  background-position-x: 45.5%;
+  background-position-x: 51.5%;
   background-image: url("./images/backgrounds/book-cover.jpg") !important;
 }
 .stained-glass {
   background-size: cover;
+  background-position-x: 18px;
   background-image: url("./images/backgrounds/stained-glass.jpg") !important;
 }
 .window2 {
@@ -2666,12 +2674,12 @@ label {
 
 .magic {
   background-image: url("./images/backgrounds/magic.jpg") !important;
-  background-position-x: 44%;
+  background-position-x: 52.5%;
 }
 
 .flower-frame {
   background-image: url("./images/backgrounds/flower-frame.jpg") !important;
-  background-position-x: 47.5%;
+  background-position-x: 51.5%;
 }
 
 .canvas {
