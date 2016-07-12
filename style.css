@@ -1448,7 +1448,7 @@ label {
 
 .icon {
   position: absolute;
-  /*z-index: 3;*/
+  top: 0;
   display: block;
   height: 100%;
   width: 100%;
@@ -1470,6 +1470,19 @@ label {
 .fleur-vert {
   background-image: url("./images/charges/fleur/fleur-vert.png") !important;
 }
+.fleur-viridian {
+  background-image: url("./images/charges/fleur/fleur-viridian.png") !important;
+}
+.fleur-lead {
+  background-image: url("./images/charges/fleur/fleur-lead.png") !important;
+}
+.fleur-bisque {
+  background-image: url("./images/charges/fleur/fleur-bisque.png") !important;
+}
+.fleur-amaranth {
+  background-image: url("./images/charges/fleur/fleur-amaranth.png") !important;
+}
+
 .fleur-purpure {
   background-image: url("./images/charges/fleur/fleur-purpure.png") !important;
 }
@@ -1534,6 +1547,18 @@ label {
 .lion-vert {
   background-image: url("./images/charges/lion/lion-vert.png") !important;
 }
+.lion-viridian {
+  background-image: url("./images/charges/lion/lion-viridian.png") !important;
+}
+.lion-lead {
+  background-image: url("./images/charges/lion/lion-lead.png") !important;
+}
+.lion-bisque {
+  background-image: url("./images/charges/lion/lion-bisque.png") !important;
+}
+.lion-amaranth {
+  background-image: url("./images/charges/lion/lion-amaranth.png") !important;
+}
 .lion-purpure {
   background-image: url("./images/charges/lion/lion-purpure.png") !important;
 }
@@ -1592,6 +1617,18 @@ label {
 .eagle-vert {
   background-image: url("./images/charges/eagle/eagle-vert.png") !important;
 }
+.eagle-viridian {
+  background-image: url("./images/charges/eagle/eagle-viridian.png") !important;
+}
+.eagle-lead {
+  background-image: url("./images/charges/eagle/eagle-lead.png") !important;
+}
+.eagle-bisque {
+  background-image: url("./images/charges/eagle/eagle-bisque.png") !important;
+}
+.eagle-amaranth {
+  background-image: url("./images/charges/eagle/eagle-amaranth.png") !important;
+}
 .eagle-purpure {
   background-image: url("./images/charges/eagle/eagle-purpure.png") !important;
 }
@@ -1649,6 +1686,18 @@ label {
 }
 .rose-vert {
   background-image: url("./images/charges/rose/rose-vert.png") !important;
+}
+.rose-viridian {
+  background-image: url("./images/charges/rose/rose-viridian.png") !important;
+}
+.rose-lead {
+  background-image: url("./images/charges/rose/rose-lead.png") !important;
+}
+.rose-bisque {
+  background-image: url("./images/charges/rose/rose-bisque.png") !important;
+}
+.rose-amaranth {
+  background-image: url("./images/charges/rose/rose-amaranth.png") !important;
 }
 .rose-purpure {
   background-image: url("./images/charges/rose/rose-purpure.png") !important;
@@ -1709,6 +1758,18 @@ label {
 .unicorn-vert {
   background-image: url("./images/charges/unicorn/unicorn-vert.png") !important;
 }
+.unicorn-viridian {
+  background-image: url("./images/charges/unicorn/unicorn-viridian.png") !important;
+}
+.unicorn-lead {
+  background-image: url("./images/charges/unicorn/unicorn-lead.png") !important;
+}
+.unicorn-bisque {
+  background-image: url("./images/charges/unicorn/unicorn-bisque.png") !important;
+}
+.unicorn-amaranth {
+  background-image: url("./images/charges/unicorn/unicorn-amaranth.png") !important;
+}
 .unicorn-purpure {
   background-image: url("./images/charges/unicorn/unicorn-purpure.png") !important;
 }
@@ -1768,6 +1829,18 @@ label {
 .bow-vert {
   background-image: url("./images/charges/bow/bow-vert.png") !important;
 }
+.bow-viridian {
+  background-image: url("./images/charges/bow/bow-viridian.png") !important;
+}
+.bow-lead {
+  background-image: url("./images/charges/bow/bow-lead.png") !important;
+}
+.bow-bisque {
+  background-image: url("./images/charges/bow/bow-bisque.png") !important;
+}
+.bow-amaranth {
+  background-image: url("./images/charges/bow/bow-amaranth.png") !important;
+}
 .bow-purpure {
   background-image: url("./images/charges/bow/bow-purpure.png") !important;
 }
@@ -1825,6 +1898,18 @@ label {
 }
 .gate-vert {
   background-image: url("./images/charges/gate/gate-vert.png") !important;
+}
+.gate-viridian {
+  background-image: url("./images/charges/gate/gate-viridian.png") !important;
+}
+.gate-lead {
+  background-image: url("./images/charges/gate/gate-lead.png") !important;
+}
+.gate-bisque {
+  background-image: url("./images/charges/gate/gate-bisque.png") !important;
+}
+.gate-amaranth {
+  background-image: url("./images/charges/gate/gate-amaranth.png") !important;
 }
 .gate-purpure {
   background-image: url("./images/charges/gate/gate-purpure.png") !important;
@@ -1885,6 +1970,18 @@ label {
 .serpent-vert {
   background-image: url("./images/charges/serpent/serpent-vert.png") !important;
 }
+.serpent-viridian {
+  background-image: url("./images/charges/serpent/serpent-viridian.png") !important;
+}
+.serpent-lead {
+  background-image: url("./images/charges/serpent/serpent-lead.png") !important;
+}
+.serpent-bisque {
+  background-image: url("./images/charges/serpent/serpent-bisque.png") !important;
+}
+.serpent-amaranth {
+  background-image: url("./images/charges/serpent/serpent-amaranth.png") !important;
+}
 .serpent-purpure {
   background-image: url("./images/charges/serpent/serpent-purpure.png") !important;
 }
@@ -1940,6 +2037,18 @@ label {
 }
 .bear-vert {
   background-image: url("./images/charges/bear/bear-vert.png") !important;
+}
+.bear-viridian {
+  background-image: url("./images/charges/bear/bear-viridian.png") !important;
+}
+.bear-lead {
+  background-image: url("./images/charges/bear/bear-lead.png") !important;
+}
+.bear-bisque {
+  background-image: url("./images/charges/bear/bear-bisque.png") !important;
+}
+.bear-amaranth {
+  background-image: url("./images/charges/bear/bear-amaranth.png") !important;
 }
 .bear-purpure {
   background-image: url("./images/charges/bear/bear-purpure.png") !important;
@@ -1997,6 +2106,18 @@ label {
 .key-vert {
   background-image: url("./images/charges/key/key-vert.png") !important;
 }
+.key-viridian {
+  background-image: url("./images/charges/key/key-viridian.png") !important;
+}
+.key-lead {
+  background-image: url("./images/charges/key/key-lead.png") !important;
+}
+.key-bisque {
+  background-image: url("./images/charges/key/key-bisque.png") !important;
+}
+.key-amaranth {
+  background-image: url("./images/charges/key/key-amaranth.png") !important;
+}
 .key-purpure {
   background-image: url("./images/charges/key/key-purpure.png") !important;
 }
@@ -2051,6 +2172,18 @@ label {
 }
 .sun-vert {
   background-image: url("./images/charges/sun/sun-vert.png") !important;
+}
+.sun-viridian {
+  background-image: url("./images/charges/sun/sun-viridian.png") !important;
+}
+.sun-lead {
+  background-image: url("./images/charges/sun/sun-lead.png") !important;
+}
+.sun-bisque {
+  background-image: url("./images/charges/sun/sun-bisque.png") !important;
+}
+.sun-amaranth {
+  background-image: url("./images/charges/sun/sun-amaranth.png") !important;
 }
 .sun-purpure {
   background-image: url("./images/charges/sun/sun-purpure.png") !important;
@@ -2107,6 +2240,18 @@ label {
 .dragon-vert {
   background-image: url("./images/charges/dragon/dragon-vert.png") !important;
 }
+.dragon-viridian {
+  background-image: url("./images/charges/dragon/dragon-viridian.png") !important;
+}
+.dragon-lead {
+  background-image: url("./images/charges/dragon/dragon-lead.png") !important;
+}
+.dragon-bisque {
+  background-image: url("./images/charges/dragon/dragon-bisque.png") !important;
+}
+.dragon-amaranth {
+  background-image: url("./images/charges/dragon/dragon-amaranth.png") !important;
+}
 .dragon-purpure {
   background-image: url("./images/charges/dragon/dragon-purpure.png") !important;
 }
@@ -2161,6 +2306,18 @@ label {
 }
 .horse-vert {
   background-image: url("./images/charges/horse/horse-vert.png") !important;
+}
+.horse-viridian {
+  background-image: url("./images/charges/horse/horse-viridian.png") !important;
+}
+.horse-lead {
+  background-image: url("./images/charges/horse/horse-lead.png") !important;
+}
+.horse-bisque {
+  background-image: url("./images/charges/horse/horse-bisque.png") !important;
+}
+.horse-amaranth {
+  background-image: url("./images/charges/horse/horse-amaranth.png") !important;
 }
 .horse-purpure {
   background-image: url("./images/charges/horse/horse-purpure.png") !important;
@@ -2217,6 +2374,18 @@ label {
 .panther-vert {
   background-image: url("./images/charges/panther/panther-vert.png") !important;
 }
+.panther-viridian {
+  background-image: url("./images/charges/panther/panther-viridian.png") !important;
+}
+.panther-lead {
+  background-image: url("./images/charges/panther/panther-lead.png") !important;
+}
+.panther-bisque {
+  background-image: url("./images/charges/panther/panther-bisque.png") !important;
+}
+.panther-amaranth {
+  background-image: url("./images/charges/panther/panther-amaranth.png") !important;
+}
 .panther-purpure {
   background-image: url("./images/charges/panther/panther-purpure.png") !important;
 }
@@ -2272,6 +2441,18 @@ label {
 .wolf-vert {
   background-image: url("./images/charges/wolf/wolf-vert.png") !important;
 }
+.wolf-viridian {
+  background-image: url("./images/charges/wolf/wolf-viridian.png") !important;
+}
+.wolf-lead {
+  background-image: url("./images/charges/wolf/wolf-lead.png") !important;
+}
+.wolf-bisque {
+  background-image: url("./images/charges/wolf/wolf-bisque.png") !important;
+}
+.wolf-amaranth {
+  background-image: url("./images/charges/wolf/wolf-amaranth.png") !important;
+}
 .wolf-purpure {
   background-image: url("./images/charges/wolf/wolf-purpure.png") !important;
 }
@@ -2326,6 +2507,18 @@ label {
 }
 .octopus-vert {
   background-image: url("./images/charges/octopus/octopus-vert.png") !important;
+}
+.octopus-viridian {
+  background-image: url("./images/charges/octopus/octopus-viridian.png") !important;
+}
+.octopus-lead {
+  background-image: url("./images/charges/octopus/octopus-lead.png") !important;
+}
+.octopus-bisque {
+  background-image: url("./images/charges/octopus/octopus-bisque.png") !important;
+}
+.octopus-amaranth {
+  background-image: url("./images/charges/octopus/octopus-amaranth.png") !important;
 }
 .octopus-purpure {
   background-image: url("./images/charges/octopus/octopus-purpure.png") !important;
