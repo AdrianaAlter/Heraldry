@@ -1,4 +1,5 @@
-PARTITIONS = ["per-fess",
+PARTITIONS = [
+              "per-fess",
               "per-pale",
               "per-chevron",
               "per-chevron-reversed",

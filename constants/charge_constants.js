@@ -1,4 +1,5 @@
-CHARGES = ["fleur",
+CHARGES = [
+           "fleur",
            "lion",
            "eagle",
            "rose",

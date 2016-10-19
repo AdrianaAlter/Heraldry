@@ -46,10 +46,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	var Header = __webpack_require__(168);
 	var Menu = __webpack_require__(169);
-	
-	// var Shield = require('./shield_components/shield.jsx');
 	
 	var App = React.createClass({
 	  displayName: 'App',
@@ -20159,37 +20156,15 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(33);
-	
-	var Header = React.createClass({
-	  displayName: 'Header',
-	
-	  render: function () {
-	    return React.createElement(
-	      'header',
-	      { className: "group" },
-	      'HERALDRY'
-	    );
-	  }
-	});
-	
-	module.exports = Header;
-
-/***/ },
+/* 168 */,
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	
 	var Carousel = __webpack_require__(170);
 	COLORS = __webpack_require__(176);
 	var ColorItem = __webpack_require__(177);
-	
 	var Tabs = __webpack_require__(178);
 	var Buttons = __webpack_require__(181);
 	var PartitionMenu = __webpack_require__(184);
@@ -20197,10 +20172,7 @@
 	var ChargeMenu = __webpack_require__(190);
 	var BackgroundMenu = __webpack_require__(193);
 	var MottoMenu = __webpack_require__(196);
-	
 	SAMPLE_MOTTOES = __webpack_require__(199);
-	// SUPPORTERS = ["goldlion", "whitelion", "redgryphon", "firebreather", "crownedbear"];
-	
 	var Shield = __webpack_require__(200);
 	
 	var Menu = React.createClass({
@@ -20331,9 +20303,6 @@
 	      mottoBackground: this.randomize(MOTTOES),
 	      motto: this.randomize(SAMPLE_MOTTOES)
 	    });
-	
-	    // this.setState({ supporterLeft: this.randomize(SUPPORTERS)});
-	    // this.setState({ compartment: this.randomize(COLORS)});
 	  },
 	
 	  resetAll: function () {
@@ -20364,12 +20333,6 @@
 	    var menuClass = this.state.show ? "menu-div group" : "hidden";
 	    var self = this;
 	
-	    // var tabs = TABS.map(function(tab) {
-	    //   var active = tab == self.state.selected || (tab + "-tab") == self.state.selected ? " active" : ""
-	    //
-	    //   return <li className={tab + "-tab" + active} key={TABS.indexOf(tab)} onClick={self.setTab}>{tab.split("-")[0]}</li>
-	    // });
-	
 	    MENU_OPTIONS = {
 	      "main": this.setColor,
 	      "partition": this.setPartitionColor,
@@ -20387,17 +20350,11 @@
 	    var colorLis = COLORS.map(function (color) {
 	      return React.createElement(ColorItem, { color: color, key: COLORS.indexOf(color), setColor: clickToSet });
 	    });
-	
-	    // var supporterLis = SUPPORTERS.map(function(supporter) {
-	    //   return <li className={supporter} key={SUPPORTERS.indexOf(supporter)} onClick={self.setSupporter} />
-	    // });
-	
 	    var mainColor = this.state.color.length > 0 ? this.state.color : "";
 	    var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
 	    var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
 	    var charge = this.state.charge && this.state.charge.length > 0 ? ", " + this.state.charge : "";
 	    var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
-	    // var mottoInput = <input type="text" value={this.state.currentMotto} onChange={this.setMotto}></input>;
 	    var links = React.createElement(
 	      'section',
 	      { className: 'links' },
@@ -20424,10 +20381,7 @@
 	    var chargeMenu = React.createElement(ChargeMenu, { setCharge: this.setCharge, selected: this.state.charge });
 	    var backgroundMenu = React.createElement(BackgroundMenu, { setBackground: this.setBackground });
 	    var mottoMenu = React.createElement(MottoMenu, { setMotto: this.setMotto, setMottoBackground: this.setMottoBackground, currentMotto: this.state.motto });
-	
 	    var menu = this.state.menu;
-	
-	    // var supporterMenu =  <ul className="supporter-menu group">{supporterLis}</ul>;
 	
 	    var tabOptions = {
 	      "main-tab": mainMenu,
@@ -20436,7 +20390,6 @@
 	      "charge-menu": chargeMenu,
 	      "background-menu": backgroundMenu,
 	      "motto-menu": mottoMenu
-	      // "supporter-menu": supporterMenu
 	    };
 	
 	    var selected = tabOptions[this.state.selected];
@@ -20749,9 +20702,6 @@
 	
 	  render: function () {
 	
-	    // var handleClick2 = this.props.leftLeft == 0 ? null : this.props.slideBack
-	    // var click = this.props.slide;
-	    // var text = this.props.done ? "TRUE" : "FALSE";
 	    return React.createElement(
 	      'section',
 	      null,
@@ -20836,7 +20786,6 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	
 	TABS = __webpack_require__(179);
 	var TabItem = __webpack_require__(180);
 	
@@ -20980,7 +20929,6 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
-	
 	PARTITIONS = __webpack_require__(185);
 	var PartitionItem = __webpack_require__(186);
 	var Carousel = __webpack_require__(170);
@@ -20996,8 +20944,6 @@
 	});
 	
 	module.exports = PartitionMenu;
-	
-	// var active = partition == self.state.partition ? " active" : "";
 
 /***/ },
 /* 185 */
@@ -21044,15 +20990,9 @@
 	var OrdinaryMenu = React.createClass({
 	  displayName: 'OrdinaryMenu',
 	
-	  render: function () {
 	
+	  render: function () {
 	    return React.createElement(Carousel, { elements: ORDINARIES, category: 'text', handleClick: this.props.setOrdinary });
-	    // var self = this;
-	    // var ordinaryLis = ORDINARIES.map(function(ordinary) {
-	    //   var active = ordinary == self.props.selected ? " active" : "";
-	    //   return <OrdinaryItem ordinary={ordinary + "-opt"} active={active} key={ORDINARIES.indexOf(ordinary)} name={ordinary} setOrdinary={self.props.setOrdinary} />
-	    // });
-	    // return <ul className="ordinaries-menu group">{ordinaryLis}</ul>;
 	  }
 	
 	});
@@ -21098,7 +21038,6 @@
 	var ReactDOM = __webpack_require__(33);
 	var Carousel = __webpack_require__(170);
 	CHARGES = __webpack_require__(191);
-	// CHARGES = ["fleur", "panther", "bear", "serpent", "key"];
 	var ChargeItem = __webpack_require__(192);
 	
 	var ChargeMenu = React.createClass({
@@ -21106,22 +21045,12 @@
 	
 	
 	  render: function () {
-	
 	    return React.createElement(Carousel, { elements: CHARGES, category: 'picture', background: 'contained', handleClick: this.props.setCharge });
-	    // var self = this;
-	
-	    // var chargeLis = CHARGES.map(function(charge) {
-	    //   var active = charge == self.props.selected ? "-gules" : "-white";
-	    //   return <ChargeItem charge={charge} active={active} key={CHARGES.indexOf(charge)} name={charge} setCharge={self.props.setCharge} />
-	    // });
-	    // return <ul className="charge-menu group">{chargeLis}</ul>;
 	  }
 	
 	});
 	
 	module.exports = ChargeMenu;
-	
-	// var activity = charge == self.state.charge ? "-gules" : "-white";
 
 /***/ },
 /* 191 */
@@ -21166,11 +21095,6 @@
 	
 	
 	  render: function () {
-	    // var self = this;
-	    // var backgroundLis = BACKGROUNDS.map(function(background) {
-	    //   return <BackgroundItem background={background} key={BACKGROUNDS.indexOf(background)} name={background} setBackground={self.props.setBackground} />
-	    // });
-	
 	    return React.createElement(Carousel, { elements: BACKGROUNDS, background: 'covered', category: 'picture', handleClick: this.props.setBackground });
 	  }
 	

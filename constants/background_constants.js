@@ -1,4 +1,5 @@
-BACKGROUNDS = ["parchment",
+BACKGROUNDS = [
+               "parchment",
                "wood",
                "window",
                "cloak",
