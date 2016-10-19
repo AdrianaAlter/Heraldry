@@ -1,4 +1,5 @@
-ORDINARIES = ["fess",
+ORDINARIES = [
+              "fess",
               "bar",
               "barrulet",
               "fess-cotised",

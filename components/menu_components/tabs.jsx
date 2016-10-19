@@ -1,6 +1,5 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
 TABS = require('../../constants/tab_constants.js');
 var TabItem = require('./tab_item.jsx');
 

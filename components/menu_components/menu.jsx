@@ -1,10 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
 var Carousel = require('./Carousel/carousel.jsx');
 COLORS = require('../../constants/color_constants.js');
 var ColorItem = require('./color_item.jsx');
-
 var Tabs = require('./tabs.jsx');
 var Buttons = require('./buttons.jsx');
 var PartitionMenu = require('./partition_menu.jsx');
@@ -12,12 +10,8 @@ var OrdinaryMenu = require('./ordinary_menu.jsx');
 var ChargeMenu = require('./charge_menu.jsx');
 var BackgroundMenu = require('./background_menu.jsx');
 var MottoMenu = require('./motto_menu.jsx');
-
 SAMPLE_MOTTOES = require('../../constants/sample_mottoes.js');
-// SUPPORTERS = ["goldlion", "whitelion", "redgryphon", "firebreather", "crownedbear"];
-
 var Shield = require('../shield_components/shield.jsx');
-
 
 var Menu = React.createClass({
 
@@ -145,9 +139,6 @@ var Menu = React.createClass({
                     mottoBackground: this.randomize(MOTTOES),
                     motto: this.randomize(SAMPLE_MOTTOES)
                   });
-
-    // this.setState({ supporterLeft: this.randomize(SUPPORTERS)});
-    // this.setState({ compartment: this.randomize(COLORS)});
     },
 
 
@@ -179,12 +170,6 @@ var Menu = React.createClass({
     var menuClass = this.state.show ? "menu-div group" : "hidden";
     var self = this;
 
-    // var tabs = TABS.map(function(tab) {
-    //   var active = tab == self.state.selected || (tab + "-tab") == self.state.selected ? " active" : ""
-    //
-    //   return <li className={tab + "-tab" + active} key={TABS.indexOf(tab)} onClick={self.setTab}>{tab.split("-")[0]}</li>
-    // });
-
     MENU_OPTIONS = {
       "main": this.setColor,
       "partition": this.setPartitionColor,
@@ -202,17 +187,11 @@ var Menu = React.createClass({
     var colorLis = COLORS.map(function(color) {
       return <ColorItem color={color} key={COLORS.indexOf(color)} setColor={clickToSet} />
     });
-
-    // var supporterLis = SUPPORTERS.map(function(supporter) {
-    //   return <li className={supporter} key={SUPPORTERS.indexOf(supporter)} onClick={self.setSupporter} />
-    // });
-
     var mainColor = this.state.color.length > 0 ? this.state.color : "";
     var ordinary = this.state.ordinaries.length > 0 ? ", a " + this.state.ordinaries : "";
     var ordinaryColor = this.state.ordinaries.length > 0 ? " " + this.state.ordinariesColor : "";
     var charge = (this.state.charge && this.state.charge.length > 0) ? ", " + this.state.charge : "";
     var chargeWithColor = this.state.charge + "-" + this.state.chargeColor;
-    // var mottoInput = <input type="text" value={this.state.currentMotto} onChange={this.setMotto}></input>;
     var links = <section className="links"><a href="http://www.adrianaalter.site/">Adriana Alter</a> <a href="https://github.com/AdrianaAlter/Heraldry">github</a></section>
     var mainMenu = <div>{links}<Buttons randomize={this.makeRandom} reset={this.resetAll} hide={this.hide} /></div>;
     var partitionMenu = <PartitionMenu setPartition={this.setPartition} selected={this.state.partition} />;
@@ -220,12 +199,7 @@ var Menu = React.createClass({
     var chargeMenu = <ChargeMenu setCharge={this.setCharge} selected={this.state.charge} />;
     var backgroundMenu =  <BackgroundMenu setBackground={this.setBackground} />;
     var mottoMenu = <MottoMenu setMotto={this.setMotto} setMottoBackground={this.setMottoBackground} currentMotto={this.state.motto} />;
-
-
     var menu = this.state.menu;
-
-
-    // var supporterMenu =  <ul className="supporter-menu group">{supporterLis}</ul>;
 
     var tabOptions = {
       "main-tab": mainMenu,
@@ -234,7 +208,6 @@ var Menu = React.createClass({
       "charge-menu": chargeMenu,
       "background-menu": backgroundMenu,
       "motto-menu": mottoMenu
-      // "supporter-menu": supporterMenu
     };
 
     var selected = tabOptions[this.state.selected];
