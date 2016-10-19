@@ -99,7 +99,7 @@ a {
   border-radius: 4px 4px 0 0 !important;
 }
 
-li:hover {
+li:hover, .tabs .active {
   text-shadow: 3px 3px 8px #ffb626, -3px -3px 8px #ffb626;
 }
 .color-menu, .partitions-menu {
@@ -133,33 +133,9 @@ li:hover {
   padding-top: 0;
 }
 
-li {
-  /*border-bottom: 1px solid oldlace;
-  background-position: center;
-  padding: 1%;
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  margin-top: 5%;*/
-}
-
 .charge-menu > li, .motto-menu > li, .supporter-menu > li {
   height: 20px;
 }
-/*
-.color-menu > li, .background-menu > li {
-  height: 26px;
-  margin: 0;
-}*/
-
-/*.color-menu > li:last-child:after, .background-menu > li:last-child:after, .motto-menu > li:last-child:after {
-  content: "RESET";
-  margin-top: 5%;
-}
-
-.background-menu > li {
-  background-size: cover;
-}*/
 
 input {
   width: 200px;
@@ -185,7 +161,6 @@ input {
   height: 77%;
   width: 100%;
   float: right;
-  /*border: 1px solid black;*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -210,49 +185,6 @@ input {
   margin: auto;
   position: absolute;
   bottom: -6%;
-}
-
-/*.left, .right {
-  height: 420px;
-  width: 28%;
-  top: 0%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: block;
-  position: absolute;
-  z-index: 1;
-}
-
-.left {
-  float: left;
-  left: 6%;
-}
-
-.right {
-  float: right;
-  right: 7.5%;
-  transform: rotateY(180deg);
-}*/
-
-.goldlion {
-  background-image: url("http://www.talkgraphics.com/attachment.php?attachmentid=95186&d=1363858800");
-}
-
-.whitelion {
-  background-image: url("http://www.heraldry-clipart.com/images/lion_crest6.gif");
-}
-
-.firebreather {
-  background-image: url("https://pixabay.com/static/uploads/photo/2014/04/03/10/32/dragon-310791_960_720.png");
-}
-
-.crownedbear {
-  background-image: url("http://www.pd4pic.com/images800_/black-open-mouth-bear-sword-crown-animal-tongue.png");
-  transform: rotateY(180deg);
-}
-
-.redgryphon {
-    background-image: url("https://pixabay.com/static/uploads/photo/2012/05/03/23/40/red-46772_960_720.png");
 }
 
 .shield {
@@ -292,70 +224,61 @@ label {
 }
 /*COLORS*/
 
-.honeycomb {
-  height: 300px !important;
-  width: 300px !important;
-  background-image: url("http://shotgunshuffle.com/wp-content/uploads/2015/06/Honeycomb.png");
-}
 .gules {
-  background: #be0000 !important;
+  background-color: #be0000 !important;
   border-color: #be0000 !important;
   color: #be0000 !important;
-  /*background: linear-gradient(to right, #8b0000, #f10000, #8b0000) !important;*/
 }
 
 .azure {
-  background: #000099 !important;
+  background-color: #000099 !important;
   border-color: #000099 !important;
   color: #000099 !important;
-  /*background: linear-gradient(to right, #000066, #0000cc, #000066) !important;*/
 }
 
 .celeste {
-  background: #75AADB !important;
+  background-color: #75AADB !important;
   border-color: #75AADB !important;
   color: #75AADB !important;
 }
 
 .vert {
-  background: #008000 !important;
+  background-color: #008000 !important;
   border-color: #008000 !important;
   color: #008000 !important;
-  /*background: linear-gradient(to right, #004d00, #00b300, #004d00) !important;*/
 }
 .viridian {
-  background: #004A00 !important;
+  background-color: #004A00 !important;
   border-color: #004A00 !important;
   color: #004A00 !important;
 }
 
 .purpure {
-  background: #89395E !important;
+  background-color: #89395E !important;
   border-color: #89395E !important;
   color: #89395E !important;
-  /*background: linear-gradient(to right, #4d004d, #b300b3, #4d004d) !important;*/
 }
 
 .sanguine {
-  background: #4d0000 !important;
+  background-color: #4d0000 !important;
   border-color: #4d0000 !important;
   color: #4d0000 !important;
 }
 
 .murrey {
-  background: #800040 !important;
+  background-color: #800040 !important;
   border-color: #800040 !important;
   color: #800040 !important;
 }
 
 .rose-pink {
-  background: #FF006E !important;
+  background-color: #FF006E !important;
   border-color: #FF006E !important;
   color: #FF006E !important;
 }
 
 .sable {
-  background: #000 !important;
+  background-color: #000 !important;
   border-color: #000 !important;
   color: #000 !important;
   /*background: linear-gradient(to right, #000, #333333, #000) !important;*/
@@ -402,91 +325,31 @@ label {
 }
 
 .argent {
-  background: #d8d8d8 !important;
+  background-color: #d8d8d8 !important;
   border-color: #d8d8d8 !important;
   color: #d8d8d8 !important;
-  /*background: linear-gradient(to right, #bfbfbf, #f1f1f1, #bfbfbf) !important;*/
 }
 
 .or {
-  background: #ffd700 !important;
+  background-color: #ffd700 !important;
   border-color: #ffd700 !important;
   color: #ffd700 !important;
-  /*background: linear-gradient(to right, #ccac00, #ffdf33, #ccac00) !important;*/
 }
 
 .white {
-  background: #fff !important;
+  background-color: #fff !important;
   border-color: #fff !important;
   color: #fff !important;
 }
 
 .copper {
-  background: #d06b47 !important;
+  background-color: #d06b47 !important;
   border-color: #d06b47 !important;
   color: #d06b47 !important;
-}-
-/*.RESET-button:after, .RESET-button-gules:after {
-  display: block;
-  content: "RESET";
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-/*PARTITIONS*/
-
-/*.horizontal-opt:before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 5px;
-  background: #8b0000;
-  top: 17.5%;
 }
-
-.vertical-opt:before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 40px;
-  background: #8b0000;
-  left: 13.5%;
-}
-
-.chief-opt:before {
-  content: "";
-  position: absolute;
-  background: #8b0000;
-  width: 40px;
-  height: 16px;
-}
-
-.diagonal-opt:before {
-  content: "";
-  position: absolute;
-  background: #8b0000;
-  width: 5px;
-  height: 48px;
-  top: 45%;
-  left: 13.5%;
-  transform: rotate(45deg);
-  overflow: hidden;
-}*/
 
 .partition {
   position: absolute !important;
-  /*background: #f9e2b7;*/
-    background-image: url("http://shotgunshuffle.com/wp-content/uploads/2015/06/Honeycomb.png");
-  border: 1px solid black;
   transition: background-color 1.5s, border-color 1.5s;
   top: -1%;
   left: -1%;
@@ -497,12 +360,11 @@ label {
   left: -1%;
   height: 51%;
   position: absolute !important;
-    /*background-image: url("https://pixabay.com/static/uploads/photo/2012/04/15/19/14/honeycomb-34984_960_720.png");*/
 }
 
 
 .per-pale {
-  width: 51%;
+  width: 52%;
   height: 101%;
   top: -1%;
   position: absolute !important;
@@ -656,7 +518,7 @@ label {
 .angled-per-fess {
   height: 65%;
   position: absolute !important;
-  width: 51%;
+  width: 52%;
   left: -1%;
   top: 44%;
 }
@@ -676,8 +538,9 @@ label {
 }
 
 .angled-per-pale {
-  height: 50%;
-  width: 46%;
+  height: 102%;
+  width: 52%;
+  left: 51%;
 }
 
 .angled-per-pale:after {
@@ -686,8 +549,8 @@ label {
   background: inherit !important;
   border-color: inherit !important;
   height: 100%;
-  width: 58%;
-  left: 0%;
+  width: 200%;
+  left: -28%;
   top: 50%;
   position: absolute;
 }
@@ -710,7 +573,7 @@ label {
 
 .quarterly {
   height: 51%;
-  width: 51%;
+  width: 52%;
   left: -1%;
   top: -1%;
   position: absolute !important;
@@ -867,7 +730,7 @@ label {
 
 .tierced-in-fess {
   height: 33%;
-  width: 100%;
+  width: 101%;
 }
 
 .tierced-in-fess:after {
@@ -876,15 +739,15 @@ label {
   position: absolute;
   background: inherit !important;
   border-color: inherit !important;
-  height: 100%;
+  height: 107%;
   width: 100%;
-  top: 66%;
+  top: 200%;
 }
 
 .tierced-in-mantle {
   height: 101%;
   width: 101%;
-  left: -51%;
+  left: -52%;
   top: -55%;
   border-radius: 50%;
   position: absolute !important;
@@ -910,12 +773,6 @@ label {
   position: absolute !important;
   border-radius: 0 0 250px 250px;
 }
-
-
-
-
-
-
 
 /*ORDINARIES*/
 
@@ -1076,7 +933,7 @@ label {
 
 .fess-rompu {
   height: 33%;
-  width: 50%;
+  width: 51%;
   top: 18%;
 }
 
@@ -1166,7 +1023,7 @@ label {
 .saltire, .saltire-nowy, .saltire-quadrate {
   height: 709px;
   width: 40px;
-  left: 23%;
+  left: 23.3%;
   top: -84.5%;
   transform: rotate(-45deg);
 }
@@ -1186,7 +1043,7 @@ label {
 .pairle {
   height: 51%;
   width: 40px;
-  left: 44%;
+  left: 45%;
   bottom: -1%;
 }
 
@@ -1194,8 +1051,6 @@ label {
   content: "";
   display: block;
   position: absolute;
-  border: 1px solid black;
-  border-bottom: transparent;
   background: inherit;
   border-color: inherit;
   height: 177%;
@@ -1209,8 +1064,6 @@ label {
   display: block;
   content: "";
   position: absolute;
-  border: 1px solid black;
-  border-bottom: transparent;
   background: inherit;
   border-color: inherit;
   height: 177%;
@@ -1223,7 +1076,7 @@ label {
 .pairle-reversed {
   height: 51%;
   width: 40px;
-  left: 44%;
+  left: 45%;
   top: -1%;
 }
 
@@ -1231,7 +1084,6 @@ label {
   content: "";
   display: block;
   position: absolute;
-  border: 1px solid black;
   border-top: transparent;
   background: inherit;
   border-color: inherit;
@@ -1246,7 +1098,6 @@ label {
   display: block;
   content: "";
   position: absolute;
-  border: 1px solid black;
   border-top: transparent;
   background: inherit;
   border-color: inherit;
@@ -1269,21 +1120,21 @@ label {
   height: 200px;
   width: 200px;
   transform: rotate(45deg);
-  left: 19.5%;
+  left: 20.5%;
   top: 16%;
 }
 
 .delf {
   height: 40%;
   width: 40%;
-  left: 29.5%;
-  top: 29.5%;
+  left: 30.5%;
+  top: 30.5%;
 }
 
 .billet {
   height: 60%;
   width: 30%;
-  left: 35%;
+  left: 35.5%;
   top: 20%;
 }
 
@@ -1339,13 +1190,12 @@ label {
   height: 350px;
   transform: rotate(45deg);
   top: 21%;
-  left: 10.5%;
+  left: 12%;
   position: absolute;
 }
 .chevron:before, .chevron-reversed:before {
   background: inherit !important;
   border-color: inherit !important;
-  /*border: 1px solid black;*/
   content: "";
   width: 30px;
   height: 302px;
@@ -1360,7 +1210,7 @@ label {
   height: 350px;
   transform: rotate(225deg);
   top: -41%;
-  left: 81%;
+  left: 80.8%;
   position: absolute;
 }
 
@@ -1394,7 +1244,7 @@ label {
   border-right: 165px solid transparent !important;
   left: 0%;
   position: absolute;
-  border-top: 159px solid transparent !important;
+  border-top: 156px solid transparent !important;
 }
 
 .tierce {
@@ -1425,7 +1275,7 @@ label {
 
 .quarter {
   height: 51%;
-  width: 51%;
+  width: 52%;
   top: -1%;
   left: -1%;
 }
@@ -1444,8 +1294,7 @@ label {
 .pale-and-chief {
   height: 101%;
   width: 30%;
-  left: 35.5%;
-  border-top-color: transparent;
+  left: 36.5%;
 }
 
 .pale-and-chief:before {
@@ -1453,19 +1302,12 @@ label {
   position: absolute;
   content: "";
   background: inherit !important;
-  border-color: inherit !important;
   border: 1px solid black;
   width: 334%;
   left: -122%;
   top: -1%;
   height: 34%;
 }
-
-
-
-
-
-
 
 /*CHARGES*/
 
@@ -2251,7 +2093,6 @@ label {
   background-image: url("./images/charges/sun/sun-carnation.png") !important;
 }
 .dragon {
-  /*background-image: url("http://1.bp.blogspot.com/-f6HSKLWTn_s/TdVrvh5LeTI/AAAAAAAAAck/97NvczneE6c/s1600/HandrixSilhouette.png");*/
   background-image: url("./images/charges/dragon/dragon.png") !important;
 }
 .dragon-gules {
@@ -2585,13 +2426,9 @@ label {
 .octopus-carnation {
   background-image: url("./images/charges/octopus/octopus-carnation.png") !important;
 }
-/*.octopus, .octopus-sable {
 
-  /*background-image: url("https://pixabay.com/static/uploads/photo/2015/10/04/16/40/silhouette-971335_960_720.png");*/
-  /*background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/56584-200.png");*/
-  /*background-image: url("http://worldartsme.com/images/clip-art-black-griffin-clipart-1.jpg");*/
-/*}*/
 /*BACKGROUNDS*/
+
 .black {
   background: #000;
 }
@@ -2751,9 +2588,6 @@ label {
   background-image: url("./images/backgrounds/checkers.jpg") !important;
 }
 
-
-
-
 .hidden {
   display: none !important;
 }
@@ -2827,24 +2661,12 @@ label {
   padding: 2px;
 }
 
-
-
-
-
-
-
-
-
 .hidden {
   display: none;
 }
 
-/*.carousel {
-  width: 100% !important;
-  display: block;
-  position: absolute;
-  bottom: 0;
-}*/
+/*CAROUSEL*/
+
 .carousel li {
   height: 60px;
   width: 143px;
@@ -2854,10 +2676,8 @@ label {
   top: 10% !important;
   display: block;
   float: left;
-  /*background: #2b1700;*/
   color: #2b1700;
   text-align: center;
-  /*background-size: cover !important;*/
 }
 
 .inactive {
@@ -2880,38 +2700,29 @@ label {
   color: oldlace !important;
 }
 
-.left-left{
-  /*transform: rotateY(-45deg) translateX(-175px) translateZ(-450px) translateY(0px);*/
+.left-left {
   height: 58px !important;
   width: 100px !important;
   position: absolute;
-left: 4% !important;
-
-
+  left: 4% !important;
 }
 
 .left {
-
-  /*transform: rotateY(-38deg) translateX(72px) translateZ(-279px) translateY(0px);*/
   position: absolute;
   left: 22% !important;
   height: 58px !important;
   width: 100px !important;
   top: 0%;
-
 }
 
 .center {
   height: 64px;
-
   position: absolute;
   left: 40% !important;
   top: 0%;
-  /*transform: rotate(0deg) translateZ(0px) translateX(510px);*/
-
 }
+
 .right {
-  /*transform: rotateY(26deg) translateX(600px) translateZ(260px) translateY(0px);*/
   position: absolute;
   left: 65.5% !important;
   height: 58px !important;
@@ -2921,8 +2732,6 @@ left: 4% !important;
 .right-right {
   height: 58px !important;
   width: 100px !important;
-  /*transform: rotateY(44deg) translateX(655px) translateZ(445px) translateY(0px);*/
-  /*transform: rotateY(45deg) translateX(655px) translateZ(450px) translateY(0px);*/
   position: absolute;
   left: 83.5% !important;
 }
@@ -2933,10 +2742,7 @@ left: 4% !important;
   margin-left: 24% !important;
   height: 64px;
   position: relative;
-  /*transform-style: preserve-3d;*/
   background: transparent;
-  /*-webkit-transform-origin: 50% 50%;*/
-	/*transform-origin: 50% 50% -500px;*/
 	transition: 1s;
 }
 
@@ -2952,29 +2758,32 @@ left: 4% !important;
   width: 100%;
   padding: 6px;
   position: relative;
-  /*height: 180px;*/
   display: block;
   margin-bottom: 0;
 }
 
-.carousel button {
+.carousel button, .carousel button:after {
   border-radius: 50%;
   display: block;
   height: 20px;
   width: 20px;
-  position: absolute;
+  position: relative;
   color: darkred;
-  top: 30%;
-  outline: none;
+  margin-top: 1.5%;
   background: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 0;
 }
 
 .carousel button:first-child {
-  right: 21%;
+  float: right;
+  margin-right: 22%;
 }
 
 .carousel button:last-child {
-  left: 22%;
+  float: left;
+  margin-left: -52%;
 }
 
 .carousel button:after {
@@ -2984,14 +2793,14 @@ left: 4% !important;
   position: absolute;
   width: 0;
   top: 25%;
-  left: 31%;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 10px solid darkred;
+  left: 0%;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 27px solid darkred;
 }
 
 .carousel button:nth-child(2):after {
-  border-right: 10px solid darkred;
+  border-right: 27px solid darkred;
   border-left: none;
   left: 14%;
 }
@@ -2999,7 +2808,6 @@ left: 4% !important;
 .dots {
   display: none !important;
   height: 5% !important;
-  /*display: block !important;*/
   padding: 1.5% !important;
   width: 70% !important;
   margin: auto !important;
@@ -3021,12 +2829,8 @@ left: 4% !important;
   background: darkred !important;
 }
 
-
-
-.colors {
+.colors, .patterns {
   background: transparent !important;
-  /*border-right: 4px #be0000 solid !important;*/
-  /*border-bottom: 4px #be0000 solid !important;*/
   height: 53%;
   width: 8%;
   display: block;
@@ -3034,17 +2838,24 @@ left: 4% !important;
   left: 0;
 }
 
-.colors li {
+.colors li, .patterns li {
   float: left;
-
   display: block;
   height: 25px;
   z-index: 1;
   width: 25px;
   padding: 0;
   margin: 2px 2px 2px 4px;
-  /*transform: rotate(0deg) translateY(10px) translateX(40px);*/
   border-radius: 4%;
+}
+.patterns {
+  top: 40%;
+}
+
+.patterns li {
+  border: 1px solid darkred;
+  height: 24px;
+  width: 24px;
 }
 
 .colors .list {
@@ -3061,24 +2872,44 @@ left: 4% !important;
   transform: rotate(90deg);
 }
 
-/*.colors .center {
-  top: 20%;
-}
-.colors .left {
-  transform: rotateY(-45deg) translateZ(-32px) translateY(3px);
-  position: absolute;
-  top: 16% !important;
-}
-.colors .right {
-  transform: rotateX(-50deg) translateZ(0px) translateY(3px) translateX(-14px);
-  position: absolute;
-  top: 50% !important;
-}
-.colors .right-right {
-  transform: rotateX(-50deg) translateZ(0px) translateY(3px) translateX(-14px);
-  position: absolute;
-  top: 50% !important;
-}*/
 .colors .dots, .colors buttons {
   display: none;
+}
+
+
+.honeycombed {
+  /*background-image: url('./images/patterns/honeycomb.png');*/
+  background-image: url("https://pixabay.com/static/uploads/photo/2012/04/15/19/14/honeycomb-34984_960_720.png");
+  background-size: cover;
+}
+
+.pappellony {
+  background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
+}
+
+.masoned {
+  background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
+}
+
+.fretty {
+  background-image: url("https://www.transparenttextures.com/patterns/straws.png");
+}
+
+.ermine {
+  background-image: url("https://openclipart.org/image/2400px/svg_to_png/1015/zeimusu-Ermine-pattern.png");
+  background-size: contain;
+}
+
+.vair {
+  background-image: url("https://www.transparenttextures.com/patterns/soft-kill.png");
+}
+
+.seme-de-lis {
+  background-image: url('http://images.fineartamerica.com/images/artworkimages/medium/1/fleur-de-lis-in-a-black-pattern-03-p0161-custom-home-fashions-transparent.png');
+  background-size: contain;
+}
+
+.gouttee {
+  background-image: url('http://www.angelfire.com/folk/dacia/heraldry/pix/furs-pat/pattern-gouttee.gif');
+  background-size: contain;
 }
