@@ -2854,6 +2854,7 @@ label {
 
 .patterns li {
   border: 1px solid darkred;
+  background-color: #8D4024;
   height: 24px;
   width: 24px;
 }
@@ -2888,11 +2889,21 @@ label {
 }
 
 .masoned {
-  background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
+  background-image: url("http://i53.tinypic.com/245zztf.jpg");
+  background-size: cover;
 }
 
 .fretty {
   background-image: url("https://www.transparenttextures.com/patterns/straws.png");
+}
+
+.fretty2 {
+  /*background-image: url("https://openclipart.org/download/263975/frette.svg");*/
+  /*background-image: url("https://www.pixelscrapper.com/legacy/sites/default/files/imagecache/resize_300_nocrop/templates/user-1/node-2188/image/marisa-lerin-plaid-26-template-grid-overlay-commercial-use.png");*/
+  /*background-image: url("http://www.officialpsds.com/images/thumbs/Chain-link-fence-psd95027.png");*/
+  background-image: url("https://openclipart.org/image/2400px/svg_to_png/247107/Seamless-Lace-Pattern-Optimized-Large.png");
+  /*background-position: center;*/
+  background-size: cover;
 }
 
 .ermine {
@@ -2901,7 +2912,12 @@ label {
 }
 
 .vair {
-  background-image: url("https://www.transparenttextures.com/patterns/soft-kill.png");
+  /*background-image: url("https://www.transparenttextures.com/patterns/soft-kill.png");*/
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+}
+
+.trellised {
+  background-image: url("http://www.rawcuriosite.com/wp-content/uploads/2014/06/trellis-pattern-1024x1024light1.png");
 }
 
 .seme-de-lis {
@@ -2911,5 +2927,5 @@ label {
 
 .gouttee {
   background-image: url('http://www.angelfire.com/folk/dacia/heraldry/pix/furs-pat/pattern-gouttee.gif');
-  background-size: contain;
+  background-size: cover;
 }

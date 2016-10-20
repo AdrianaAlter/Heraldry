@@ -3,10 +3,12 @@ PATTERNS = [
   "pappellony",
   "masoned",
   "fretty",
+  "fretty2",
   "ermine",
   "vair",
   "seme-de-lis",
-  "gouttee"
+  "gouttee",
+  "trellised"
 ];
 
 module.exports = PATTERNS;

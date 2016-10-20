@@ -22647,7 +22647,7 @@
 /* 208 */
 /***/ function(module, exports) {
 
-	PATTERNS = ["honeycombed", "pappellony", "masoned", "fretty", "ermine", "vair", "seme-de-lis", "gouttee"];
+	PATTERNS = ["honeycombed", "pappellony", "masoned", "fretty", "fretty2", "ermine", "vair", "seme-de-lis", "gouttee", "trellised"];
 	
 	module.exports = PATTERNS;
 
