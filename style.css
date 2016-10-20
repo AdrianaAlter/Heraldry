@@ -2859,6 +2859,10 @@ label {
   width: 24px;
 }
 
+.patterns li:last-child {
+  background-color: transparent;
+}
+
 .colors .list {
   margin-top: 4%;
   transform: rotate(90deg);

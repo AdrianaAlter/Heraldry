@@ -21439,18 +21439,18 @@
 	var ReactDOM = __webpack_require__(34);
 	var Carousel = __webpack_require__(173);
 	COLORS = __webpack_require__(179);
-	PATTERNS = __webpack_require__(208);
-	var ColorItem = __webpack_require__(180);
-	var PatternItem = __webpack_require__(209);
-	var Tabs = __webpack_require__(181);
-	var Buttons = __webpack_require__(184);
-	var PartitionMenu = __webpack_require__(187);
-	var OrdinaryMenu = __webpack_require__(190);
-	var ChargeMenu = __webpack_require__(193);
-	var BackgroundMenu = __webpack_require__(196);
-	var MottoMenu = __webpack_require__(199);
-	SAMPLE_MOTTOES = __webpack_require__(202);
-	var Shield = __webpack_require__(203);
+	PATTERNS = __webpack_require__(180);
+	var ColorItem = __webpack_require__(181);
+	var PatternItem = __webpack_require__(182);
+	var Tabs = __webpack_require__(183);
+	var Buttons = __webpack_require__(186);
+	var PartitionMenu = __webpack_require__(189);
+	var OrdinaryMenu = __webpack_require__(192);
+	var ChargeMenu = __webpack_require__(195);
+	var BackgroundMenu = __webpack_require__(198);
+	var MottoMenu = __webpack_require__(201);
+	SAMPLE_MOTTOES = __webpack_require__(204);
+	var Shield = __webpack_require__(205);
 	
 	var Menu = React.createClass({
 	  displayName: 'Menu',
@@ -22088,6 +22088,14 @@
 
 /***/ },
 /* 180 */
+/***/ function(module, exports) {
+
+	PATTERNS = ["honeycombed", "pappellony", "masoned", "fretty", "fretty2", "ermine", "vair", "seme-de-lis", "gouttee", "trellised", ""];
+	
+	module.exports = PATTERNS;
+
+/***/ },
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22106,13 +22114,32 @@
 	module.exports = ColorItem;
 
 /***/ },
-/* 181 */
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	var ReactDom = __webpack_require__(34);
+	
+	var PatternItem = React.createClass({
+	  displayName: 'PatternItem',
+	
+	
+	  render: function () {
+	    return React.createElement('li', { className: this.props.pattern, onClick: this.props.setPattern });
+	  }
+	
+	});
+	
+	module.exports = PatternItem;
+
+/***/ },
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-	TABS = __webpack_require__(182);
-	var TabItem = __webpack_require__(183);
+	TABS = __webpack_require__(184);
+	var TabItem = __webpack_require__(185);
 	
 	var Tabs = React.createClass({
 	  displayName: 'Tabs',
@@ -22144,7 +22171,7 @@
 	module.exports = Tabs;
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports) {
 
 	TABS = ["main", "partition-menu", "ordinaries-menu", "charge-menu", "motto-menu", "background-menu"];
@@ -22152,7 +22179,7 @@
 	module.exports = TABS;
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22177,13 +22204,13 @@
 	module.exports = TabItem;
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-	var Randomizer = __webpack_require__(185);
-	var Resetter = __webpack_require__(186);
+	var Randomizer = __webpack_require__(187);
+	var Resetter = __webpack_require__(188);
 	
 	var Buttons = React.createClass({
 	  displayName: 'Buttons',
@@ -22203,7 +22230,7 @@
 	module.exports = Buttons;
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22226,7 +22253,7 @@
 	module.exports = Randomizer;
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22249,13 +22276,13 @@
 	module.exports = Resetter;
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
-	PARTITIONS = __webpack_require__(188);
-	var PartitionItem = __webpack_require__(189);
+	PARTITIONS = __webpack_require__(190);
+	var PartitionItem = __webpack_require__(191);
 	var Carousel = __webpack_require__(173);
 	
 	var PartitionMenu = React.createClass({
@@ -22271,7 +22298,7 @@
 	module.exports = PartitionMenu;
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports) {
 
 	PARTITIONS = ["per-fess", "per-pale", "per-chevron", "per-chevron-reversed", "quarterly", "per-bend", "per-bend-sinister", "per-saltire", "chaussé", "chapé", "flaunches", "tierced-in-pale", "tierced-in-fess", "tierced-in-mantle", "bordure", "paly", "barry", "bendy", "bendy-sinister", "enarched-per-fess", "enarched-per-pale", "angled-per-fess", "angled-per-pale"];
@@ -22279,7 +22306,7 @@
 	module.exports = PARTITIONS;
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22302,15 +22329,15 @@
 	module.exports = PartitionItem;
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var Carousel = __webpack_require__(173);
 	
-	ORDINARIES = __webpack_require__(191);
-	var OrdinaryItem = __webpack_require__(192);
+	ORDINARIES = __webpack_require__(193);
+	var OrdinaryItem = __webpack_require__(194);
 	
 	var OrdinaryMenu = React.createClass({
 	  displayName: 'OrdinaryMenu',
@@ -22325,7 +22352,7 @@
 	module.exports = OrdinaryMenu;
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports) {
 
 	ORDINARIES = ["fess", "bar", "barrulet", "fess-cotised", "fess-rompu", "pale", "pallet", "endorse", "pale-endorsed", "pale-rompu", "chief", "comble", "bend", "bend-cotised", "bend-sinister", "bend-sinister-cotised", "bend-enhanced", "bend-enhanced-cotised", "bend-sinister-enhanced", "bend-sinister-enhanced-cotised", "quarter", "canton", "lozenge", "billet", "delf", "base", "cross", "cross-nowy", "cross-quadrate", "saltire", "saltire-nowy", "saltire-quadrate", "pairle", "pairle-reversed", "chevron", "chevron-reversed", "gyron", "pile", "pile-reversed", "tierce", "roundel", "annulet", "orle", "pale-and-chief"];
@@ -22333,7 +22360,7 @@
 	module.exports = ORDINARIES;
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22356,14 +22383,14 @@
 	module.exports = OrdinaryItem;
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var Carousel = __webpack_require__(173);
-	CHARGES = __webpack_require__(194);
-	var ChargeItem = __webpack_require__(195);
+	CHARGES = __webpack_require__(196);
+	var ChargeItem = __webpack_require__(197);
 	
 	var ChargeMenu = React.createClass({
 	  displayName: 'ChargeMenu',
@@ -22378,7 +22405,7 @@
 	module.exports = ChargeMenu;
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports) {
 
 	CHARGES = ["fleur", "lion", "eagle", "rose", "unicorn", "bow", "gate", "serpent", "bear", "key", "sun", "dragon", "horse", "panther", "octopus", "wolf"];
@@ -22386,7 +22413,7 @@
 	module.exports = CHARGES;
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22405,15 +22432,15 @@
 	module.exports = ChargeItem;
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var Carousel = __webpack_require__(173);
 	
-	BACKGROUNDS = __webpack_require__(197);
-	var BackgroundItem = __webpack_require__(198);
+	BACKGROUNDS = __webpack_require__(199);
+	var BackgroundItem = __webpack_require__(200);
 	
 	var BackgroundMenu = React.createClass({
 	  displayName: 'BackgroundMenu',
@@ -22428,7 +22455,7 @@
 	module.exports = BackgroundMenu;
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports) {
 
 	BACKGROUNDS = ["parchment", "wood", "window", "cloak", "wall", "tile", "tapestry", "stone", "scroll", "gold", "wood-panels", "stone2", "versailles", "ceiling", "book-cover", "stained-glass", "window2", "white-fabric", "magic", "flower-frame", "canvas", "tile2", "rust", "parchment3", "writing", "metal-wall", "berries", "rug", "filigree", "flower-page", "checkers"];
@@ -22436,7 +22463,7 @@
 	module.exports = BACKGROUNDS;
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22455,15 +22482,15 @@
 	module.exports = BackgroundItem;
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var Carousel = __webpack_require__(173);
 	
-	MOTTOES = __webpack_require__(200);
-	var MottoItem = __webpack_require__(201);
+	MOTTOES = __webpack_require__(202);
+	var MottoItem = __webpack_require__(203);
 	
 	var MottoMenu = React.createClass({
 	  displayName: 'MottoMenu',
@@ -22485,7 +22512,7 @@
 	module.exports = MottoMenu;
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports) {
 
 	MOTTOES = ["motto-one", "motto-two", "motto-three", "motto-four", "motto-five", "motto-six", "motto-seven", "motto-eight"];
@@ -22493,7 +22520,7 @@
 	module.exports = MOTTOES;
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22512,7 +22539,7 @@
 	module.exports = MottoItem;
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports) {
 
 	SAMPLE_MOTTOES = ["Saunz departir", "Loyaulté me lie", "Souvente me souvene", "Lux tua vita mihi", "Piu por dulzura que por fuerza", "Me pompae provexit apex", "Quod me alit, me extinguit", "Sic spectanda fides", "In hac spe vivo", "Aeque tandem", "Undique mors est", "Ainsi sera groigne qui groigne", "Semper eadem", "En ma fin gît mon commencement"];
@@ -22520,16 +22547,16 @@
 	module.exports = SAMPLE_MOTTOES;
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	
-	var Partition = __webpack_require__(204);
-	var Ordinary = __webpack_require__(205);
-	var Charge = __webpack_require__(206);
-	var Motto = __webpack_require__(207);
+	var Partition = __webpack_require__(206);
+	var Ordinary = __webpack_require__(207);
+	var Charge = __webpack_require__(208);
+	var Motto = __webpack_require__(209);
 	
 	var Shield = React.createClass({
 	  displayName: 'Shield',
@@ -22559,7 +22586,7 @@
 	module.exports = Shield;
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22579,7 +22606,7 @@
 	module.exports = Partition;
 
 /***/ },
-/* 205 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22598,7 +22625,7 @@
 	module.exports = Ordinary;
 
 /***/ },
-/* 206 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22617,7 +22644,7 @@
 	module.exports = Charge;
 
 /***/ },
-/* 207 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -22642,33 +22669,6 @@
 	});
 	
 	module.exports = Motto;
-
-/***/ },
-/* 208 */
-/***/ function(module, exports) {
-
-	PATTERNS = ["honeycombed", "pappellony", "masoned", "fretty", "fretty2", "ermine", "vair", "seme-de-lis", "gouttee", "trellised"];
-	
-	module.exports = PATTERNS;
-
-/***/ },
-/* 209 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	var ReactDom = __webpack_require__(34);
-	
-	var PatternItem = React.createClass({
-	  displayName: 'PatternItem',
-	
-	
-	  render: function () {
-	    return React.createElement('li', { className: this.props.pattern, onClick: this.props.setPattern });
-	  }
-	
-	});
-	
-	module.exports = PatternItem;
 
 /***/ }
 /******/ ]);

@@ -8,7 +8,8 @@ PATTERNS = [
   "vair",
   "seme-de-lis",
   "gouttee",
-  "trellised"
+  "trellised",
+  ""
 ];
 
 module.exports = PATTERNS;
