@@ -2883,8 +2883,7 @@ label {
 
 
 .honeycombed {
-  /*background-image: url('./images/patterns/honeycomb.png');*/
-  background-image: url("https://pixabay.com/static/uploads/photo/2012/04/15/19/14/honeycomb-34984_960_720.png");
+  background-image: url('./images/patterns/honeycomb.png');
   background-size: cover;
 }
 
