@@ -2929,6 +2929,8 @@ label {
 }
 
 .gouttee {
-  background-image: url('http://www.angelfire.com/folk/dacia/heraldry/pix/furs-pat/pattern-gouttee.gif');
+  /*background-image: url('http://www.angelfire.com/folk/dacia/heraldry/pix/furs-pat/pattern-gouttee.gif');*/
+  /*background-image: url('https://openclipart.org/image/800px/svg_to_png/241921/Seamless-Geometric-Line-Art-Pattern.png');*/
+  background-image: url('http://publicdomainvectors.org/photos/FleursDeLysPatternBlack.png');
   background-size: cover;
 }
